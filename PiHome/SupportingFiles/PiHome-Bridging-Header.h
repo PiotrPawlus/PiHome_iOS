@@ -8,4 +8,5 @@
 
 @import AFNetworking;
 @import MagicalRecord;
-@import SVProgressHUD;\
+@import SideMenu;
+@import SVProgressHUD;

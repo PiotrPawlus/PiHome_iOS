@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bacground-blue" translatesAutoresizingMaskIntoConstraints="NO" id="fm2-r4-O8l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-pi" translatesAutoresizingMaskIntoConstraints="NO" id="8VM-iw-nfk">
                                 <rect key="frame" x="165" y="310.5" width="45" height="45"/>
                                 <constraints>
@@ -36,12 +39,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.67401995029626538" green="0.27491340035829348" blue="0.18382757049743628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8VM-iw-nfk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8Oz-JQ-MGS"/>
+                            <constraint firstItem="fm2-r4-O8l" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LxJ-FT-w8T"/>
                             <constraint firstItem="Yfg-pD-87o" firstAttribute="centerX" secondItem="8VM-iw-nfk" secondAttribute="centerX" id="NLx-ff-GyJ"/>
+                            <constraint firstAttribute="trailing" secondItem="fm2-r4-O8l" secondAttribute="trailing" id="OEw-YB-C67"/>
                             <constraint firstItem="Yfg-pD-87o" firstAttribute="top" secondItem="8VM-iw-nfk" secondAttribute="bottom" id="V69-1o-bXy"/>
                             <constraint firstItem="8VM-iw-nfk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="e0J-xl-XgS"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fm2-r4-O8l" secondAttribute="bottom" id="raN-za-pK1"/>
+                            <constraint firstItem="fm2-r4-O8l" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xwu-0H-3xV"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -51,6 +57,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bacground-blue" width="260" height="566"/>
         <image name="icon-pi" width="200" height="200"/>
     </resources>
 </document>

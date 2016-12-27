@@ -14,6 +14,8 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        print("Login View Controller")
     }
     
     //MARK: - Deinitialization

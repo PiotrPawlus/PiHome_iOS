@@ -5,6 +5,7 @@ def pods
 
     pod 'AFNetworking'
     pod 'MagicalRecord'
+    pod 'SideMenu'
     pod 'SVProgressHUD'
 end
 
