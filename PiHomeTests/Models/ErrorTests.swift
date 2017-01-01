@@ -19,7 +19,13 @@ class ErrorTests: XCTestCase {
         XCTAssertEqual(error.title, "title")
         
         error = .email
-        XCTAssertNotNil(error.title)
+        XCTAssertEqual(error.title, "Email")
+        
+        error = .noDataFound
+        XCTAssertEqual(error.title, "No data found")
+        
+        error = .passwords
+        XCTAssertEqual(error.title, "Passwords")
     }
     
     func testNameDescription() {
@@ -30,7 +36,13 @@ class ErrorTests: XCTestCase {
         XCTAssertEqual(error.description, "Cannot be empty.")
         
         error = .email
-        XCTAssertNotNil(error.description)
+        XCTAssertEqual(error.description, "Email must be valid.")
+        
+        error = .noDataFound
+        XCTAssertEqual(error.description, "Try again.")
+        
+        error = .passwords
+        XCTAssertEqual(error.description, "Password confirmation and Password must match.")
     }
 }
 

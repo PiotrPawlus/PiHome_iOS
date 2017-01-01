@@ -171,6 +171,9 @@
                             <constraint firstItem="pwV-dI-Wgs" firstAttribute="trailing" secondItem="Wcb-LM-WiP" secondAttribute="trailing" id="hLy-F5-JTb"/>
                             <constraint firstItem="znU-hj-epj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tqr-vA-Ni5"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="07w-Bx-TKl" appends="YES" id="hFp-4j-vRg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="gsE-Tn-SC1" id="9Vb-Lv-FGO"/>
@@ -178,6 +181,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="07w-Bx-TKl">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="OIA-8Y-Tn7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>

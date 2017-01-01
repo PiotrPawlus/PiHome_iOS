@@ -9,6 +9,7 @@
 enum NetworkRequestType {
     
     case login
+    case register
     
     var mockResponse: Any {
         
@@ -16,6 +17,8 @@ enum NetworkRequestType {
         
         switch self {
         case .login:
+            mockResponse = MockResponse.mockDictionaryForUser()
+        case .register:
             mockResponse = MockResponse.mockDictionaryForUser()
         }
         

@@ -22,7 +22,8 @@ class NetworkAssistant: AFHTTPSessionManager {
     var requestType = NetworkRequestType.login
     
     static var shared: NetworkAssistant {
-        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant
+//        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant
+        return MockNetworkAssistant()
     }
     
     //MARK: - Class Methods

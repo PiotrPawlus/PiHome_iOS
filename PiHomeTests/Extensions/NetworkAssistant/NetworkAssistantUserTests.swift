@@ -33,4 +33,27 @@ class NetworkAssistantUserTests: XCTestCase {
             XCTAssertNil(user)
         }
     }
+    
+    func testRegisterWithSuccess() {
+        
+        let expectation = self.expectation(description: "")
+        
+        MockNetworkAssistant().register(with: [:]) { user, error in
+        
+            expectation.fulfill()
+            XCTAssertNotNil(user)
+            XCTAssertNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testRegisterWithFailure() {
+        
+        MockNetworkAssistant(responseType: .failure).register(with: [:]) { user, error in
+        
+            XCTAssertNil(user)
+            XCTAssertNotNil(error)
+        }
+    }
 }

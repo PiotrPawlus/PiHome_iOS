@@ -6,6 +6,8 @@
 //  Copyright © 2016 Piotr Pawluś. All rights reserved.
 //
 
+let LocalizedTitleKey = "LocalizedTitleKey"
+
 open class Error: Swift.Error {
     
     var userInfo = [AnyHashable: Any]()
@@ -20,6 +22,7 @@ open class Error: Swift.Error {
         case cannotBeEmpty(String)
         case email
         case noDataFound
+        case passwords
         
         var title: String {
             
@@ -32,6 +35,8 @@ open class Error: Swift.Error {
                 title = "Email"
             case .noDataFound:
                 title = "No data found"
+            case .passwords:
+                title = "Passwords"
             }
             
             return title
@@ -48,6 +53,8 @@ open class Error: Swift.Error {
                 description = "Email must be valid."
             case .noDataFound:
                 description = "Try again."
+            case .passwords:
+                description = "Password confirmation and Password must match."
             }
             
             return description
@@ -84,6 +91,8 @@ open class Error: Swift.Error {
     init(error: Error.Name) {
         
         userInfo = [
+            
+            LocalizedTitleKey: error.title,
             NSLocalizedDescriptionKey: error.description
         ]
     }

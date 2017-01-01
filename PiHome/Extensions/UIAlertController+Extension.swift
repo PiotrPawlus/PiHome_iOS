@@ -8,31 +8,34 @@
 
 extension UIAlertController {
     
+    //MARK: - Class Methods
+    
     class func show(from error: Error.Name) {
-        show(withMessage: error.description)
+        
+        show(with: error.title, message: error.description)
     }
     
     class func show(from error: Error?, dismiss: Bool = true) {
         
         if let error = error, AFNetworkReachabilityManager.shared().isReachable {
             
-            let message = error.userInfo[NSLocalizedDescriptionKey] as? String ?? error.localizedDescription
+            let errorTitle = error.userInfo[LocalizedTitleKey] as? String ?? "Error"
+            let errorMessage = error.userInfo[NSLocalizedDescriptionKey] as? String ?? error.localizedDescription
             
             if error.code == 401 {
                 
                 Settings.logoutUser()
+                AppContainerViewController.dismissModalControllers()
                 
                 if dismiss {
                     AppContainerViewController.setLoginViewController()
                 }
             }
             
-            show(withMessage: message)
+            show(with: errorTitle, message: errorMessage)
         }
     }
-    
-    //MARK: - Class Methods
-    
+
     //MARK: - Initialization
     
     //MARK: - Deinitialization
@@ -45,16 +48,15 @@ extension UIAlertController {
     
     //MARK: - Private
     
-    class func show(withMessage message: String) {
+    private class func show(with title: String, message: String) {
         
-        let alert = UIAlertController(title: NSLocalizedString("error", comment: ""), message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .default) { action in
             alert.dismiss(animated: true)
         }
         
         alert.addAction(action)
-        
         UIViewController.top()?.present(alert, animated: true)
     }
     

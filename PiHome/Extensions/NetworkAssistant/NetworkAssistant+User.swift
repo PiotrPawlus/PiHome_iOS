@@ -26,4 +26,18 @@ extension NetworkAssistant {
             completion(nil, Error(error: error))
         })
     }
+    
+    func register(with parameters: [AnyHashable: Any], completion: @escaping UserHandler) {
+        
+        requestType = .register
+        
+        _ = post("registration", parameters: parameters, progress: nil, success: { _, response in
+            
+            CoreDataAssistant.parseAndSaveUser(with: response, completion: completion)
+            
+        }, failure: { _, error in
+            
+            completion(nil, Error(error: error))
+        })
+    }
 }
