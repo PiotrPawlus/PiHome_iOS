@@ -30,7 +30,7 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RPi address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldl-vG-YvI">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="30"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="addressTextField"/>
                                         <color key="textColor" red="0.40528047080000001" green="0.47204595799999999" blue="0.60492491719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" keyboardAppearance="alert" returnKeyType="done"/>
@@ -41,7 +41,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuQ-Hc-n6h">
                                         <rect key="frame" x="0.0" y="50" width="344" height="33"/>
                                         <color key="backgroundColor" red="0.63780669759999997" green="0.63780669759999997" blue="0.63780669759999997" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="signInButton"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="connectButton"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Connect">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,6 +52,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you do not have PiHome address, please contact with your RPiHome administrator." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-dU-oLN">
                                         <rect key="frame" x="0.0" y="103" width="344" height="67.333333333333314"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="informationStaticText"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>

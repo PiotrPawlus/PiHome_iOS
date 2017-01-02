@@ -50,6 +50,7 @@
 		C16E56D21E1AC8A100AFFA01 /* UserDefaults+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */; };
 		C16E56D51E1ACADC00AFFA01 /* UserDefaultsServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */; };
 		C16E56D71E1ADDC000AFFA01 /* UserLocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */; };
+		C16E56DA1E1AEDD000AFFA01 /* XCUIElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */; };
 		C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3A1E0D681700944760 /* AppDelegate.swift */; };
 		C1735A3D1E0D681700944760 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3C1E0D681700944760 /* LoginViewController.swift */; };
 		C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1735A411E0D681700944760 /* PiHome.xcdatamodeld */; };
@@ -141,6 +142,7 @@
 		C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Server.swift"; sourceTree = "<group>"; };
 		C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsServerTests.swift; sourceTree = "<group>"; };
 		C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocalAuthentication.swift; sourceTree = "<group>"; };
+		C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extension.swift"; sourceTree = "<group>"; };
 		C1735A371E0D681600944760 /* PiHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1735A3A1E0D681700944760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1735A3C1E0D681700944760 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,14 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		C16E56D81E1AEDAF00AFFA01 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C1735A2E1E0D681600944760 = {
 			isa = PBXGroup;
 			children = (
@@ -399,8 +409,9 @@
 		C1735A5C1E0D681700944760 /* PiHomeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C1735A5D1E0D681700944760 /* PiHomeUITests.swift */,
+				C16E56D81E1AEDAF00AFFA01 /* Extensions */,
 				C1735A771E0D6CE400944760 /* SupportingFiles */,
+				C1735A5D1E0D681700944760 /* PiHomeUITests.swift */,
 			);
 			path = PiHomeUITests;
 			sourceTree = "<group>";
@@ -945,6 +956,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */,
+				C16E56DA1E1AEDD000AFFA01 /* XCUIElement+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
