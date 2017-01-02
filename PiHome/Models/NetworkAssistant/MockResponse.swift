@@ -18,5 +18,12 @@ class MockResponse {
             "last_name": "Little"
         ]
     }
+    
+    class func mockDictionaryForServerAddress(withAddress address: String) -> [AnyHashable: Any] {
+        
+        return [
+            "url": address + NetworkAssistantSufixUrl
+        ]
+    }
 }
     

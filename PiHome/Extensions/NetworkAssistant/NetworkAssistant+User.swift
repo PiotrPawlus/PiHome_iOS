@@ -8,6 +8,18 @@
 
 extension NetworkAssistant {
     
+    //MARK: - Class Methods
+    
+    //MARK: - Initailization
+    
+    //MARK: - Deinitialization
+    
+    //MARK: - Actions
+    
+    //MARK: - Public
+    
+    //MARK: - Internal
+    
     func login(withEmail email: String, password: String, completion: @escaping UserHandler) {
         
         let parameters = [
@@ -40,4 +52,8 @@ extension NetworkAssistant {
             completion(nil, Error(error: error))
         })
     }
+    
+    //MARK: - Private
+    
+    //MARK: - Overridden
 }

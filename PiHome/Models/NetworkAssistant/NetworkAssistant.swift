@@ -6,18 +6,20 @@
 //  Copyright © 2016 Piotr Pawluś. All rights reserved.
 //
 
-typealias ErrorHandler = (Error?) -> Void
 typealias NetworkAssistantSuccessHandler = ((URLSessionDataTask, Any?) -> Void)
 typealias NetworkAssistantFailureHandler = ((URLSessionDataTask?, Swift.Error) -> Void)
 typealias ProgressHandler = ((Progress) -> Void)
 
+typealias ErrorHandler = (Error?) -> Void
+typealias ServerHandler = (String?, Error?) -> Void
 typealias UserHandler = (User?, Error?) -> Void
 
-private let NetworkAssistantBaseURL =  "192.168.1.6/api/v1"
+let NetworkAssistantUrl = "NetworkAssistanUrl"
+let NetworkAssistantSufixUrl = "/api/v1"
 
 class NetworkAssistant: AFHTTPSessionManager {
-    
-    private static let networkAssistant = NetworkAssistant(baseURL: URL(string: NetworkAssistantBaseURL))
+
+    private static let networkAssistant = NetworkAssistant(baseURL: URL(string: UserDefaults.standard.value(forKey: NetworkAssistantUrl) as! String))
     
     var requestType = NetworkRequestType.login
     

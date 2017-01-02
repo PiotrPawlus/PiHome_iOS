@@ -8,8 +8,10 @@
 
 extension CoreDataAssistant {
 
+    //MARK: - Class Methods
+    
     class func parseAndSaveUser(with response: Any?, completion: @escaping UserHandler) {
-     
+        
         if let dictionary = response as? [AnyHashable: Any] {
             
             var identifier: Int64 = 1
@@ -24,4 +26,18 @@ extension CoreDataAssistant {
             })
         }
     }
+    
+    //MARK: - Initailization
+    
+    //MARK: - Deinitialization
+    
+    //MARK: - Actions
+    
+    //MARK: - Public
+    
+    //MARK: - Internal
+    
+    //MARK: - Private
+    
+    //MARK: - Overridden
 }

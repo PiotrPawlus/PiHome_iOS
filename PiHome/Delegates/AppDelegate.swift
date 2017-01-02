@@ -6,8 +6,8 @@
 //  Copyright © 2016 Piotr Pawluś. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

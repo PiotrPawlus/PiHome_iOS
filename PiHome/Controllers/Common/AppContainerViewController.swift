@@ -51,7 +51,8 @@ class AppContainerViewController: ContainerViewController {
         SideMenuManager.menuWidth = 260
         
         AppContainerViewController.appContainer = self
-        AppContainerViewController.setLoginViewController()
+        
+        UserDefaults.isServerAddres ? AppContainerViewController.setLoginViewController() : AppContainerViewController.setConnectViewController()
     }
     
     //MARK: - Deinitialization

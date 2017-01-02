@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nKw-UG-Eap">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,33 +19,39 @@
                         <viewControllerLayoutGuide type="bottom" id="VmS-Nf-rKf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6X4-jn-Vv6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bacground-blue" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-aq-mh1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Df-f6-0s7" userLabel="Helper View">
-                                <rect key="frame" x="31" y="293.5" width="313" height="170.5"/>
+                                <rect key="frame" x="35" y="303" width="344" height="170.33333333333331"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RPi address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldl-vG-YvI">
-                                        <rect key="frame" x="0.0" y="0.0" width="313" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                         <color key="textColor" red="0.40528047080000001" green="0.47204595799999999" blue="0.60492491719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="nKw-UG-Eap" id="a0m-ka-EIS"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuQ-Hc-n6h">
-                                        <rect key="frame" x="0.0" y="50" width="313" height="33"/>
+                                        <rect key="frame" x="0.0" y="50" width="344" height="33"/>
                                         <color key="backgroundColor" red="0.63780669759999997" green="0.63780669759999997" blue="0.63780669759999997" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="signInButton"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Connect">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="connectButtonTapped:" destination="nKw-UG-Eap" eventType="touchUpInside" id="lFO-7W-nju"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you do not have PiHome address, please contacy with your RPi administrator." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-dU-oLN">
-                                        <rect key="frame" x="0.0" y="103" width="313" height="67.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you do not have PiHome address, please contact with your RPiHome administrator." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-dU-oLN">
+                                        <rect key="frame" x="0.0" y="103" width="344" height="67.333333333333314"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -86,7 +92,7 @@
                             <constraint firstItem="5Df-f6-0s7" firstAttribute="centerY" secondItem="6X4-jn-Vv6" secondAttribute="centerY" id="I2C-Fk-3g7"/>
                             <constraint firstItem="2zd-aq-mh1" firstAttribute="top" secondItem="6X4-jn-Vv6" secondAttribute="top" id="JTw-SZ-yHk"/>
                             <constraint firstItem="5Df-f6-0s7" firstAttribute="leading" secondItem="6X4-jn-Vv6" secondAttribute="leadingMargin" constant="15" id="Ji4-5I-dZO"/>
-                            <constraint firstItem="5Df-f6-0s7" firstAttribute="centerY" secondItem="6X4-jn-Vv6" secondAttribute="centerY" constant="45" id="aAG-Z3-BuP"/>
+                            <constraint firstItem="5Df-f6-0s7" firstAttribute="centerY" secondItem="6X4-jn-Vv6" secondAttribute="centerY" constant="20" id="aAG-Z3-BuP"/>
                             <constraint firstItem="5Df-f6-0s7" firstAttribute="centerX" secondItem="2zd-aq-mh1" secondAttribute="centerX" id="ohX-QR-Vwh"/>
                         </constraints>
                         <variation key="default">
@@ -103,9 +109,20 @@
                                 <include reference="ohX-QR-Vwh"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="FZT-RM-e32" appends="YES" id="Ebb-i1-g46"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="connectTextField" destination="Ldl-vG-YvI" id="wbJ-mQ-9cO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTY-aa-qg1" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FZT-RM-e32">
+                    <connections>
+                        <action selector="viewTapped:" destination="nKw-UG-Eap" id="Es8-oZ-C8t"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>

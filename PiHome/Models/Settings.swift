@@ -7,6 +7,8 @@
 //
 
 let CurrentUserIdentifierKey = "CurrentUserIdentifierKey"
+let EmailKeychain = "EmailKeychain"
+let PasswordKeychain = "PasswordKeychain"
 
 class Settings {
     

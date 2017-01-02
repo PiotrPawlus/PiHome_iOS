@@ -10,16 +10,17 @@ enum NetworkRequestType {
     
     case login
     case register
+    case server(String)
     
     var mockResponse: Any {
         
         var mockResponse: Any?
         
         switch self {
-        case .login:
+        case .login, .register:
             mockResponse = MockResponse.mockDictionaryForUser()
-        case .register:
-            mockResponse = MockResponse.mockDictionaryForUser()
+        case .server(let address):
+            mockResponse = address == "www.example.com" ? MockResponse.mockDictionaryForServerAddress(withAddress: address) : nil
         }
         
         return mockResponse ?? [:]

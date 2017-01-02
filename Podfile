@@ -4,6 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 def pods
 
     pod 'AFNetworking'
+    pod 'Keychain'
     pod 'MagicalRecord'
     pod 'SideMenu'
     pod 'SVProgressHUD'

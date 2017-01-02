@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znU-hj-epj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwV-dI-Wgs" userLabel="Helper View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
@@ -158,18 +158,45 @@
                                     </mask>
                                 </variation>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXd-Go-APu" customClass="AttributedNavigationBar" customModule="PiHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Login" id="dj1-uA-CT9">
+                                        <barButtonItem key="leftBarButtonItem" title="" id="egz-lc-CEg">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="backBarButtonTapped:" destination="BYZ-38-t0r" id="qKS-xt-jcf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="icomoonLeftBarButtonItems" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="transparentBackground" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </navigationBar>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="znU-hj-epj" firstAttribute="top" secondItem="oXd-Go-APu" secondAttribute="bottom" id="5QM-bV-0MX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wcb-LM-WiP" secondAttribute="bottom" id="6za-TR-vQy"/>
                             <constraint firstItem="Wcb-LM-WiP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Abt-7C-7fx"/>
                             <constraint firstItem="Wcb-LM-WiP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C7H-Vk-I0W"/>
                             <constraint firstItem="pwV-dI-Wgs" firstAttribute="leading" secondItem="Wcb-LM-WiP" secondAttribute="leading" id="EOC-h5-Vb4"/>
-                            <constraint firstItem="znU-hj-epj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Fg0-6F-fW6"/>
+                            <constraint firstItem="oXd-Go-APu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FpC-Hr-6Xq"/>
                             <constraint firstAttribute="trailing" secondItem="Wcb-LM-WiP" secondAttribute="trailing" id="OC2-Ht-5xo"/>
                             <constraint firstAttribute="trailing" secondItem="znU-hj-epj" secondAttribute="trailing" id="QyZ-yv-luG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="znU-hj-epj" secondAttribute="bottom" id="f5W-Pi-2fJ"/>
                             <constraint firstItem="pwV-dI-Wgs" firstAttribute="trailing" secondItem="Wcb-LM-WiP" secondAttribute="trailing" id="hLy-F5-JTb"/>
+                            <constraint firstItem="oXd-Go-APu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nCt-zD-1W5"/>
                             <constraint firstItem="znU-hj-epj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tqr-vA-Ni5"/>
+                            <constraint firstAttribute="trailing" secondItem="oXd-Go-APu" secondAttribute="trailing" id="vMW-jv-1ha"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="07w-Bx-TKl" appends="YES" id="hFp-4j-vRg"/>

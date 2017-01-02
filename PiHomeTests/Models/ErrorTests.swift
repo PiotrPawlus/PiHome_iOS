@@ -26,6 +26,9 @@ class ErrorTests: XCTestCase {
         
         error = .passwords
         XCTAssertEqual(error.title, "Passwords")
+        
+        error = .touchIdNotAvailable
+        XCTAssertEqual(error.title, "Touch ID not available")
     }
     
     func testNameDescription() {
@@ -43,6 +46,9 @@ class ErrorTests: XCTestCase {
         
         error = .passwords
         XCTAssertEqual(error.description, "Password confirmation and Password must match.")
+        
+        error = .touchIdNotAvailable
+        XCTAssertEqual(error.description, "Your device is not configured for Touch ID.")
     }
 }
 

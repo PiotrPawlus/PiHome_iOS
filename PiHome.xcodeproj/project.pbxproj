@@ -1,0 +1,1248 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13F136D0F96FFA648FD3687D /* Pods_PiHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62542766ABD25EE9D5C36EA6 /* Pods_PiHome.framework */; };
+		989A34E7EB3B3B394E56B5FC /* Pods_PiHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2D118C512042F846DB338 /* Pods_PiHomeTests.framework */; };
+		B7D36F8A777B22B9F7A5823D /* Pods_PiHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E11098F5A0A2EAD76256D7 /* Pods_PiHomeUITests.framework */; };
+		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
+		C12CE9571E12C3ED0070EF53 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Home.storyboard */; };
+		C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9581E12CB090070EF53 /* AttributedTextView.swift */; };
+		C12CE95B1E12CB580070EF53 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE95A1E12CB580070EF53 /* UIFont+Extension.swift */; };
+		C12CE95E1E12CBD30070EF53 /* UIFontExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */; };
+		C12CE9601E12CC190070EF53 /* AttributetTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE95F1E12CC190070EF53 /* AttributetTextViewTests.swift */; };
+		C12CE9621E12CFDC0070EF53 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9611E12CFDC0070EF53 /* UIColor+Extension.swift */; };
+		C12CE9641E12D0010070EF53 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */; };
+		C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */; };
+		C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */; };
+		C12CE96C1E12D3A00070EF53 /* NewDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96B1E12D3A00070EF53 /* NewDeviceViewController.swift */; };
+		C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96D1E16C7DC0070EF53 /* Settings.swift */; };
+		C12CE9701E16C9830070EF53 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96F1E16C9830070EF53 /* String+Extension.swift */; };
+		C12CE9721E16C99E0070EF53 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */; };
+		C12CE9741E16CDBD0070EF53 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9731E16CDBD0070EF53 /* Error.swift */; };
+		C12CE9771E16CFCB0070EF53 /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9761E16CFCB0070EF53 /* ErrorTests.swift */; };
+		C12CE9791E16CFD40070EF53 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9781E16CFD40070EF53 /* SettingsTests.swift */; };
+		C12CE97C1E16D1310070EF53 /* CoreDataAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE97B1E16D1310070EF53 /* CoreDataAssistant.swift */; };
+		C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE97F1E16D18B0070EF53 /* MockNetworkAssistant.swift */; };
+		C12CE9821E16D1930070EF53 /* MockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9811E16D1930070EF53 /* MockResponse.swift */; };
+		C12CE9841E16D19C0070EF53 /* NetworkAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9831E16D19C0070EF53 /* NetworkAssistant.swift */; };
+		C12CE9861E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9851E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift */; };
+		C12CE9881E16D1FD0070EF53 /* NetworkRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9871E16D1FD0070EF53 /* NetworkRequestType.swift */; };
+		C12CE98A1E16D2080070EF53 /* NetworkResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9891E16D2080070EF53 /* NetworkResponseType.swift */; };
+		C12CE98F1E16D64F0070EF53 /* ProcesInfo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE98E1E16D64F0070EF53 /* ProcesInfo+Extension.swift */; };
+		C12CE9911E16D6A90070EF53 /* MagicalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9901E16D6A90070EF53 /* MagicalRecord.swift */; };
+		C12CE9931E16D7360070EF53 /* NetworkAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9921E16D7360070EF53 /* NetworkAssistantTests.swift */; };
+		C12CE9951E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9941E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift */; };
+		C12CE9981E16D82B0070EF53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9971E16D82B0070EF53 /* User.swift */; };
+		C12CE99A1E16D9520070EF53 /* CoreDataTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9991E16D9520070EF53 /* CoreDataTestCase.swift */; };
+		C12CE99C1E16DB190070EF53 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE99B1E16DB190070EF53 /* UserTests.swift */; };
+		C12CE9A01E16DF9E0070EF53 /* CoreDataAssistant+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE99F1E16DF9E0070EF53 /* CoreDataAssistant+User.swift */; };
+		C12CE9A31E16E1670070EF53 /* CoreDataAssistantUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9A21E16E1670070EF53 /* CoreDataAssistantUserTests.swift */; };
+		C12CE9A51E16E3020070EF53 /* NetworkAssistant+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9A41E16E3020070EF53 /* NetworkAssistant+User.swift */; };
+		C12CE9A81E16E3970070EF53 /* NetworkAssistantUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9A71E16E3970070EF53 /* NetworkAssistantUserTests.swift */; };
+		C12CE9AA1E16E4D50070EF53 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9A91E16E4D50070EF53 /* UIAlertController+Extension.swift */; };
+		C12CE9AC1E16E5030070EF53 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9AB1E16E5030070EF53 /* UIViewController+Extension.swift */; };
+		C16E56D21E1AC8A100AFFA01 /* UserDefaults+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */; };
+		C16E56D51E1ACADC00AFFA01 /* UserDefaultsServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */; };
+		C16E56D71E1ADDC000AFFA01 /* UserLocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */; };
+		C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3A1E0D681700944760 /* AppDelegate.swift */; };
+		C1735A3D1E0D681700944760 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3C1E0D681700944760 /* LoginViewController.swift */; };
+		C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1735A411E0D681700944760 /* PiHome.xcdatamodeld */; };
+		C1735A451E0D681700944760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1735A441E0D681700944760 /* Assets.xcassets */; };
+		C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A461E0D681700944760 /* LaunchScreen.storyboard */; };
+		C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A5D1E0D681700944760 /* PiHomeUITests.swift */; };
+		C1735A741E0D6C0100944760 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A721E0D6C0100944760 /* Login.storyboard */; };
+		C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
+		C1D82FAA1E197E59007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
+		C1D82FAB1E197E5A007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
+		C1D82FAD1E197ECE007379CA /* AttributedNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */; };
+		C1D82FAF1E197F01007379CA /* AttributedNavigationBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */; };
+		C1D82FB11E1AB937007379CA /* NetworkAssistant+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D82FB01E1AB937007379CA /* NetworkAssistant+Server.swift */; };
+		C1D82FB31E1ABA7C007379CA /* NetworkAssistantServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D82FB21E1ABA7C007379CA /* NetworkAssistantServerTests.swift */; };
+		C1E9BB281E0DBA6E009A59E1 /* PiHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */; };
+		C1E9BB2B1E0DBAD7009A59E1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB2A1E0DBAD7009A59E1 /* ContainerViewController.swift */; };
+		C1E9BB2D1E0DBB34009A59E1 /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB2C1E0DBB34009A59E1 /* AppContainerViewController.swift */; };
+		C1E9BB301E0DBC28009A59E1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB2F1E0DBC28009A59E1 /* MenuViewController.swift */; };
+		C1E9BB391E0DE746009A59E1 /* Backgrounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E9BB381E0DE746009A59E1 /* Backgrounds.xcassets */; };
+		C1E9BB3D1E0DE8BA009A59E1 /* AttributedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */; };
+		C1E9BB411E0DE93D009A59E1 /* AttributedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */; };
+		C1E9BB461E0F5BF8009A59E1 /* Connect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */; };
+		C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB481E0F5C31009A59E1 /* ConnectViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1735A4F1E0D681700944760 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1735A2F1E0D681600944760 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1735A361E0D681600944760;
+			remoteInfo = PiHome;
+		};
+		C1735A5A1E0D681700944760 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1735A2F1E0D681600944760 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1735A361E0D681600944760;
+			remoteInfo = PiHome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		299D141A82DB4824F6FA59DB /* Pods-PiHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiHomeUITests/Pods-PiHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C2FAB25D540C43F60B30A9C /* Pods-PiHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiHomeTests/Pods-PiHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		62542766ABD25EE9D5C36EA6 /* Pods_PiHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6460B7F9D6747C62F2EC1B7A /* Pods-PiHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiHome/Pods-PiHome.debug.xcconfig"; sourceTree = "<group>"; };
+		7AB2D118C512042F846DB338 /* Pods_PiHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB7FE92A347F1A435E25FEB /* Pods-PiHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHomeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiHomeTests/Pods-PiHomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8035415279CD557F33B67E4 /* Pods-PiHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiHome/Pods-PiHome.release.xcconfig"; sourceTree = "<group>"; };
+		B3A582817A8D8BF07EF1CCEB /* Pods-PiHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiHomeUITests/Pods-PiHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
+		C12CE9561E12C3ED0070EF53 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C12CE9581E12CB090070EF53 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
+		C12CE95A1E12CB580070EF53 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensionTests.swift; sourceTree = "<group>"; };
+		C12CE95F1E12CC190070EF53 /* AttributetTextViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributetTextViewTests.swift; sourceTree = "<group>"; };
+		C12CE9611E12CFDC0070EF53 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
+		C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
+		C12CE96B1E12D3A00070EF53 /* NewDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDeviceViewController.swift; sourceTree = "<group>"; };
+		C12CE96D1E16C7DC0070EF53 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C12CE96F1E16C9830070EF53 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		C12CE9731E16CDBD0070EF53 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		C12CE9761E16CFCB0070EF53 /* ErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
+		C12CE9781E16CFD40070EF53 /* SettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
+		C12CE97B1E16D1310070EF53 /* CoreDataAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataAssistant.swift; sourceTree = "<group>"; };
+		C12CE97F1E16D18B0070EF53 /* MockNetworkAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkAssistant.swift; sourceTree = "<group>"; };
+		C12CE9811E16D1930070EF53 /* MockResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockResponse.swift; sourceTree = "<group>"; };
+		C12CE9831E16D19C0070EF53 /* NetworkAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistant.swift; sourceTree = "<group>"; };
+		C12CE9851E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantRequestSerializer.swift; sourceTree = "<group>"; };
+		C12CE9871E16D1FD0070EF53 /* NetworkRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestType.swift; sourceTree = "<group>"; };
+		C12CE9891E16D2080070EF53 /* NetworkResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseType.swift; sourceTree = "<group>"; };
+		C12CE98E1E16D64F0070EF53 /* ProcesInfo+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProcesInfo+Extension.swift"; sourceTree = "<group>"; };
+		C12CE9901E16D6A90070EF53 /* MagicalRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicalRecord.swift; sourceTree = "<group>"; };
+		C12CE9921E16D7360070EF53 /* NetworkAssistantTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantTests.swift; sourceTree = "<group>"; };
+		C12CE9941E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantRequestSerializerTests.swift; sourceTree = "<group>"; };
+		C12CE9971E16D82B0070EF53 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C12CE9991E16D9520070EF53 /* CoreDataTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTestCase.swift; sourceTree = "<group>"; };
+		C12CE99B1E16DB190070EF53 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		C12CE99F1E16DF9E0070EF53 /* CoreDataAssistant+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataAssistant+User.swift"; sourceTree = "<group>"; };
+		C12CE9A21E16E1670070EF53 /* CoreDataAssistantUserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataAssistantUserTests.swift; sourceTree = "<group>"; };
+		C12CE9A41E16E3020070EF53 /* NetworkAssistant+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkAssistant+User.swift"; sourceTree = "<group>"; };
+		C12CE9A71E16E3970070EF53 /* NetworkAssistantUserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantUserTests.swift; sourceTree = "<group>"; };
+		C12CE9A91E16E4D50070EF53 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		C12CE9AB1E16E5030070EF53 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Server.swift"; sourceTree = "<group>"; };
+		C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsServerTests.swift; sourceTree = "<group>"; };
+		C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocalAuthentication.swift; sourceTree = "<group>"; };
+		C1735A371E0D681600944760 /* PiHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1735A3A1E0D681700944760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1735A3C1E0D681700944760 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C1735A421E0D681700944760 /* PiHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PiHome.xcdatamodel; sourceTree = "<group>"; };
+		C1735A441E0D681700944760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1735A471E0D681700944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1735A491E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1735A4E1E0D681700944760 /* PiHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1735A541E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1735A591E0D681700944760 /* PiHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1735A5D1E0D681700944760 /* PiHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHomeUITests.swift; sourceTree = "<group>"; };
+		C1735A5F1E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1735A731E0D6C0100944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C1D82FA81E197E53007379CA /* Icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icomoon.ttf; sourceTree = "<group>"; };
+		C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBar.swift; sourceTree = "<group>"; };
+		C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBarTests.swift; sourceTree = "<group>"; };
+		C1D82FB01E1AB937007379CA /* NetworkAssistant+Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkAssistant+Server.swift"; sourceTree = "<group>"; };
+		C1D82FB21E1ABA7C007379CA /* NetworkAssistantServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantServerTests.swift; sourceTree = "<group>"; };
+		C1E9BB261E0D708B009A59E1 /* PiHome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiHome-Bridging-Header.h"; sourceTree = "<group>"; };
+		C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PiHome.storyboard; path = Base.lproj/PiHome.storyboard; sourceTree = "<group>"; };
+		C1E9BB2A1E0DBAD7009A59E1 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		C1E9BB2C1E0DBB34009A59E1 /* AppContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
+		C1E9BB2F1E0DBC28009A59E1 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C1E9BB381E0DE746009A59E1 /* Backgrounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Backgrounds.xcassets; sourceTree = "<group>"; };
+		C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedView.swift; sourceTree = "<group>"; };
+		C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedViewTests.swift; sourceTree = "<group>"; };
+		C1E9BB451E0F5BF8009A59E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Connect.storyboard; sourceTree = "<group>"; };
+		C1E9BB481E0F5C31009A59E1 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		C5E11098F5A0A2EAD76256D7 /* Pods_PiHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1735A341E0D681600944760 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F136D0F96FFA648FD3687D /* Pods_PiHome.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1735A4B1E0D681700944760 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989A34E7EB3B3B394E56B5FC /* Pods_PiHomeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1735A561E0D681700944760 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7D36F8A777B22B9F7A5823D /* Pods_PiHomeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A194B1B842F8D2BD71FCA73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62542766ABD25EE9D5C36EA6 /* Pods_PiHome.framework */,
+				7AB2D118C512042F846DB338 /* Pods_PiHomeTests.framework */,
+				C5E11098F5A0A2EAD76256D7 /* Pods_PiHomeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C12CE95C1E12CBBA0070EF53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9A11E16E1410070EF53 /* CoreDataAssistant */,
+				C12CE9A61E16E3740070EF53 /* NetworkAssistant */,
+				C16E56D31E1ACAA000AFFA01 /* UserDefaults */,
+				C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */,
+				C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */,
+				C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C12CE9651E12D2A10070EF53 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C12CE9681E12D33E0070EF53 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */,
+				C12CE96B1E12D3A00070EF53 /* NewDeviceViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C12CE9751E16CFA60070EF53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9961E16D7B10070EF53 /* Entities */,
+				C12CE98B1E16D5410070EF53 /* NetworkAssistant */,
+				C12CE9761E16CFCB0070EF53 /* ErrorTests.swift */,
+				C12CE9781E16CFD40070EF53 /* SettingsTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C12CE97A1E16D1090070EF53 /* CoreDataAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE97B1E16D1310070EF53 /* CoreDataAssistant.swift */,
+			);
+			path = CoreDataAssistant;
+			sourceTree = "<group>";
+		};
+		C12CE97D1E16D1480070EF53 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9971E16D82B0070EF53 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C12CE97E1E16D16A0070EF53 /* NetworkAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE97F1E16D18B0070EF53 /* MockNetworkAssistant.swift */,
+				C12CE9811E16D1930070EF53 /* MockResponse.swift */,
+				C12CE9831E16D19C0070EF53 /* NetworkAssistant.swift */,
+				C12CE9851E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift */,
+				C12CE9871E16D1FD0070EF53 /* NetworkRequestType.swift */,
+				C12CE9891E16D2080070EF53 /* NetworkResponseType.swift */,
+			);
+			path = NetworkAssistant;
+			sourceTree = "<group>";
+		};
+		C12CE98B1E16D5410070EF53 /* NetworkAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9921E16D7360070EF53 /* NetworkAssistantTests.swift */,
+				C12CE9941E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift */,
+			);
+			path = NetworkAssistant;
+			sourceTree = "<group>";
+		};
+		C12CE9961E16D7B10070EF53 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE99B1E16DB190070EF53 /* UserTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C12CE99D1E16DF550070EF53 /* CoreDataAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE99F1E16DF9E0070EF53 /* CoreDataAssistant+User.swift */,
+			);
+			path = CoreDataAssistant;
+			sourceTree = "<group>";
+		};
+		C12CE99E1E16DF6D0070EF53 /* NetworkAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				C1D82FB01E1AB937007379CA /* NetworkAssistant+Server.swift */,
+				C12CE9A41E16E3020070EF53 /* NetworkAssistant+User.swift */,
+			);
+			path = NetworkAssistant;
+			sourceTree = "<group>";
+		};
+		C12CE9A11E16E1410070EF53 /* CoreDataAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9A21E16E1670070EF53 /* CoreDataAssistantUserTests.swift */,
+			);
+			path = CoreDataAssistant;
+			sourceTree = "<group>";
+		};
+		C12CE9A61E16E3740070EF53 /* NetworkAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				C1D82FB21E1ABA7C007379CA /* NetworkAssistantServerTests.swift */,
+				C12CE9A71E16E3970070EF53 /* NetworkAssistantUserTests.swift */,
+			);
+			path = NetworkAssistant;
+			sourceTree = "<group>";
+		};
+		C16E56D01E1AC87000AFFA01 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		C16E56D31E1ACAA000AFFA01 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		C1735A2E1E0D681600944760 = {
+			isa = PBXGroup;
+			children = (
+				C1735A391E0D681600944760 /* PiHome */,
+				C1735A511E0D681700944760 /* PiHomeTests */,
+				C1735A5C1E0D681700944760 /* PiHomeUITests */,
+				C1735A381E0D681600944760 /* Products */,
+				C5A9F0EB6B7DA637411E66F1 /* Pods */,
+				3A194B1B842F8D2BD71FCA73 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C1735A381E0D681600944760 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A371E0D681600944760 /* PiHome.app */,
+				C1735A4E1E0D681700944760 /* PiHomeTests.xctest */,
+				C1735A591E0D681700944760 /* PiHomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1735A391E0D681600944760 /* PiHome */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A6B1E0D6A5300944760 /* Assets */,
+				C1735A6C1E0D6A9B00944760 /* Controllers */,
+				C1735A6D1E0D6AC900944760 /* Delegates */,
+				C1E9BB3B1E0DE830009A59E1 /* Extensions */,
+				C1735A6E1E0D6B5300944760 /* Models */,
+				C1735A711E0D6BC800944760 /* Storyboard */,
+				C1735A701E0D6B9200944760 /* SupportingFiles */,
+				C1E9BB3A1E0DE817009A59E1 /* Views */,
+			);
+			path = PiHome;
+			sourceTree = "<group>";
+		};
+		C1735A511E0D681700944760 /* PiHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE9991E16D9520070EF53 /* CoreDataTestCase.swift */,
+				C12CE95C1E12CBBA0070EF53 /* Extensions */,
+				C12CE9751E16CFA60070EF53 /* Models */,
+				C1E9BB3F1E0DE91B009A59E1 /* Views */,
+				C1735A761E0D6CAC00944760 /* SupportingFiles */,
+			);
+			path = PiHomeTests;
+			sourceTree = "<group>";
+		};
+		C1735A5C1E0D681700944760 /* PiHomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A5D1E0D681700944760 /* PiHomeUITests.swift */,
+				C1735A771E0D6CE400944760 /* SupportingFiles */,
+			);
+			path = PiHomeUITests;
+			sourceTree = "<group>";
+		};
+		C1735A6B1E0D6A5300944760 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A441E0D681700944760 /* Assets.xcassets */,
+				C1E9BB381E0DE746009A59E1 /* Backgrounds.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C1735A6C1E0D6A9B00944760 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9BB291E0DBAB0009A59E1 /* Common */,
+				C1E9BB471E0F5C05009A59E1 /* Connect */,
+				C12CE9681E12D33E0070EF53 /* Home */,
+				C1E9BB371E0DE08A009A59E1 /* Login */,
+				C1E9BB2E1E0DBC13009A59E1 /* Menu */,
+				C12CE9651E12D2A10070EF53 /* Register */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C1735A6D1E0D6AC900944760 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A3A1E0D681700944760 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C1735A6E1E0D6B5300944760 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A6F1E0D6B5B00944760 /* CoreData */,
+				C12CE97A1E16D1090070EF53 /* CoreDataAssistant */,
+				C12CE97D1E16D1480070EF53 /* Entities */,
+				C12CE97E1E16D16A0070EF53 /* NetworkAssistant */,
+				C12CE9731E16CDBD0070EF53 /* Error.swift */,
+				C12CE96D1E16C7DC0070EF53 /* Settings.swift */,
+				C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1735A6F1E0D6B5B00944760 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A411E0D681700944760 /* PiHome.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C1735A701E0D6B9200944760 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C1D82FA71E197E35007379CA /* Fonts */,
+				C1735A491E0D681700944760 /* Info.plist */,
+				C1E9BB261E0D708B009A59E1 /* PiHome-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C1735A711E0D6BC800944760 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */,
+				C12CE9561E12C3ED0070EF53 /* Home.storyboard */,
+				C1735A461E0D681700944760 /* LaunchScreen.storyboard */,
+				C1735A721E0D6C0100944760 /* Login.storyboard */,
+				C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */,
+				C12CE9531E12AE820070EF53 /* Register.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C1735A761E0D6CAC00944760 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A541E0D681700944760 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C1735A771E0D6CE400944760 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A5F1E0D681700944760 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C1D82FA71E197E35007379CA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C1D82FA81E197E53007379CA /* Icomoon.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C1E9BB291E0DBAB0009A59E1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9BB2C1E0DBB34009A59E1 /* AppContainerViewController.swift */,
+				C1E9BB2A1E0DBAD7009A59E1 /* ContainerViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C1E9BB2E1E0DBC13009A59E1 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9BB2F1E0DBC28009A59E1 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		C1E9BB371E0DE08A009A59E1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C1735A3C1E0D681700944760 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C1E9BB3A1E0DE817009A59E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */,
+				C12CE9581E12CB090070EF53 /* AttributedTextView.swift */,
+				C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1E9BB3B1E0DE830009A59E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C12CE99D1E16DF550070EF53 /* CoreDataAssistant */,
+				C12CE99E1E16DF6D0070EF53 /* NetworkAssistant */,
+				C16E56D01E1AC87000AFFA01 /* UserDefaults */,
+				C12CE9901E16D6A90070EF53 /* MagicalRecord.swift */,
+				C12CE98E1E16D64F0070EF53 /* ProcesInfo+Extension.swift */,
+				C12CE96F1E16C9830070EF53 /* String+Extension.swift */,
+				C12CE9A91E16E4D50070EF53 /* UIAlertController+Extension.swift */,
+				C12CE9611E12CFDC0070EF53 /* UIColor+Extension.swift */,
+				C12CE95A1E12CB580070EF53 /* UIFont+Extension.swift */,
+				C12CE9AB1E16E5030070EF53 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1E9BB3F1E0DE91B009A59E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */,
+				C12CE95F1E12CC190070EF53 /* AttributetTextViewTests.swift */,
+				C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1E9BB471E0F5C05009A59E1 /* Connect */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9BB481E0F5C31009A59E1 /* ConnectViewController.swift */,
+			);
+			path = Connect;
+			sourceTree = "<group>";
+		};
+		C5A9F0EB6B7DA637411E66F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6460B7F9D6747C62F2EC1B7A /* Pods-PiHome.debug.xcconfig */,
+				A8035415279CD557F33B67E4 /* Pods-PiHome.release.xcconfig */,
+				4C2FAB25D540C43F60B30A9C /* Pods-PiHomeTests.debug.xcconfig */,
+				9FB7FE92A347F1A435E25FEB /* Pods-PiHomeTests.release.xcconfig */,
+				B3A582817A8D8BF07EF1CCEB /* Pods-PiHomeUITests.debug.xcconfig */,
+				299D141A82DB4824F6FA59DB /* Pods-PiHomeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1735A361E0D681600944760 /* PiHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1735A621E0D681700944760 /* Build configuration list for PBXNativeTarget "PiHome" */;
+			buildPhases = (
+				3478620C327C66A9970E05DD /* [CP] Check Pods Manifest.lock */,
+				C1735A331E0D681600944760 /* Sources */,
+				C1735A341E0D681600944760 /* Frameworks */,
+				C1735A351E0D681600944760 /* Resources */,
+				6D74CDC5AC32403BB85CA300 /* [CP] Embed Pods Frameworks */,
+				44102A042242D51DB723442A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PiHome;
+			productName = PiHome;
+			productReference = C1735A371E0D681600944760 /* PiHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1735A4D1E0D681700944760 /* PiHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1735A651E0D681700944760 /* Build configuration list for PBXNativeTarget "PiHomeTests" */;
+			buildPhases = (
+				4DF5C369DD9474E293EFF99C /* [CP] Check Pods Manifest.lock */,
+				C1735A4A1E0D681700944760 /* Sources */,
+				C1735A4B1E0D681700944760 /* Frameworks */,
+				C1735A4C1E0D681700944760 /* Resources */,
+				D4C9EB7893EF84EB70287725 /* [CP] Embed Pods Frameworks */,
+				51E785511FB26FDEF4884F56 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1735A501E0D681700944760 /* PBXTargetDependency */,
+			);
+			name = PiHomeTests;
+			productName = PiHomeTests;
+			productReference = C1735A4E1E0D681700944760 /* PiHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1735A581E0D681700944760 /* PiHomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1735A681E0D681700944760 /* Build configuration list for PBXNativeTarget "PiHomeUITests" */;
+			buildPhases = (
+				20BA62EF7A5371E7AA464F14 /* [CP] Check Pods Manifest.lock */,
+				C1735A551E0D681700944760 /* Sources */,
+				C1735A561E0D681700944760 /* Frameworks */,
+				C1735A571E0D681700944760 /* Resources */,
+				F414DF4F7A3A518CF0B4E707 /* [CP] Embed Pods Frameworks */,
+				F408C9F62B89EFE9CAACBCB4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1735A5B1E0D681700944760 /* PBXTargetDependency */,
+			);
+			name = PiHomeUITests;
+			productName = PiHomeUITests;
+			productReference = C1735A591E0D681700944760 /* PiHomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1735A2F1E0D681600944760 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Piotr Pawluś";
+				TargetAttributes = {
+					C1735A361E0D681600944760 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DYB2FX8XD7;
+						ProvisioningStyle = Manual;
+					};
+					C1735A4D1E0D681700944760 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DYB2FX8XD7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C1735A361E0D681600944760;
+					};
+					C1735A581E0D681700944760 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DYB2FX8XD7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C1735A361E0D681600944760;
+					};
+				};
+			};
+			buildConfigurationList = C1735A321E0D681600944760 /* Build configuration list for PBXProject "PiHome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1735A2E1E0D681600944760;
+			productRefGroup = C1735A381E0D681600944760 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1735A361E0D681600944760 /* PiHome */,
+				C1735A4D1E0D681700944760 /* PiHomeTests */,
+				C1735A581E0D681700944760 /* PiHomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1735A351E0D681600944760 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1735A741E0D6C0100944760 /* Login.storyboard in Resources */,
+				C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */,
+				C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */,
+				C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */,
+				C1E9BB281E0DBA6E009A59E1 /* PiHome.storyboard in Resources */,
+				C1E9BB461E0F5BF8009A59E1 /* Connect.storyboard in Resources */,
+				C1735A451E0D681700944760 /* Assets.xcassets in Resources */,
+				C1E9BB391E0DE746009A59E1 /* Backgrounds.xcassets in Resources */,
+				C12CE9571E12C3ED0070EF53 /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1735A4C1E0D681700944760 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D82FAB1E197E5A007379CA /* Icomoon.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1735A571E0D681700944760 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D82FAA1E197E59007379CA /* Icomoon.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20BA62EF7A5371E7AA464F14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3478620C327C66A9970E05DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44102A042242D51DB723442A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiHome/Pods-PiHome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DF5C369DD9474E293EFF99C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		51E785511FB26FDEF4884F56 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiHomeTests/Pods-PiHomeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D74CDC5AC32403BB85CA300 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiHome/Pods-PiHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C9EB7893EF84EB70287725 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiHomeTests/Pods-PiHomeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F408C9F62B89EFE9CAACBCB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiHomeUITests/Pods-PiHomeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F414DF4F7A3A518CF0B4E707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiHomeUITests/Pods-PiHomeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1735A331E0D681600944760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12CE9701E16C9830070EF53 /* String+Extension.swift in Sources */,
+				C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */,
+				C1D82FB11E1AB937007379CA /* NetworkAssistant+Server.swift in Sources */,
+				C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */,
+				C12CE9861E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift in Sources */,
+				C1E9BB301E0DBC28009A59E1 /* MenuViewController.swift in Sources */,
+				C12CE9981E16D82B0070EF53 /* User.swift in Sources */,
+				C12CE9AA1E16E4D50070EF53 /* UIAlertController+Extension.swift in Sources */,
+				C1E9BB3D1E0DE8BA009A59E1 /* AttributedView.swift in Sources */,
+				C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */,
+				C12CE9911E16D6A90070EF53 /* MagicalRecord.swift in Sources */,
+				C12CE98A1E16D2080070EF53 /* NetworkResponseType.swift in Sources */,
+				C12CE9AC1E16E5030070EF53 /* UIViewController+Extension.swift in Sources */,
+				C12CE98F1E16D64F0070EF53 /* ProcesInfo+Extension.swift in Sources */,
+				C12CE9821E16D1930070EF53 /* MockResponse.swift in Sources */,
+				C12CE9621E12CFDC0070EF53 /* UIColor+Extension.swift in Sources */,
+				C1735A3D1E0D681700944760 /* LoginViewController.swift in Sources */,
+				C16E56D71E1ADDC000AFFA01 /* UserLocalAuthentication.swift in Sources */,
+				C12CE9A01E16DF9E0070EF53 /* CoreDataAssistant+User.swift in Sources */,
+				C1E9BB2B1E0DBAD7009A59E1 /* ContainerViewController.swift in Sources */,
+				C12CE97C1E16D1310070EF53 /* CoreDataAssistant.swift in Sources */,
+				C12CE9741E16CDBD0070EF53 /* Error.swift in Sources */,
+				C16E56D21E1AC8A100AFFA01 /* UserDefaults+Server.swift in Sources */,
+				C12CE9881E16D1FD0070EF53 /* NetworkRequestType.swift in Sources */,
+				C1D82FAD1E197ECE007379CA /* AttributedNavigationBar.swift in Sources */,
+				C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */,
+				C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */,
+				C1E9BB2D1E0DBB34009A59E1 /* AppContainerViewController.swift in Sources */,
+				C12CE9A51E16E3020070EF53 /* NetworkAssistant+User.swift in Sources */,
+				C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */,
+				C12CE95B1E12CB580070EF53 /* UIFont+Extension.swift in Sources */,
+				C12CE9841E16D19C0070EF53 /* NetworkAssistant.swift in Sources */,
+				C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */,
+				C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */,
+				C12CE96C1E12D3A00070EF53 /* NewDeviceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1735A4A1E0D681700944760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12CE95E1E12CBD30070EF53 /* UIFontExtensionTests.swift in Sources */,
+				C1E9BB411E0DE93D009A59E1 /* AttributedViewTests.swift in Sources */,
+				C12CE9771E16CFCB0070EF53 /* ErrorTests.swift in Sources */,
+				C12CE9951E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift in Sources */,
+				C12CE9A31E16E1670070EF53 /* CoreDataAssistantUserTests.swift in Sources */,
+				C1D82FAF1E197F01007379CA /* AttributedNavigationBarTests.swift in Sources */,
+				C12CE9601E12CC190070EF53 /* AttributetTextViewTests.swift in Sources */,
+				C12CE9791E16CFD40070EF53 /* SettingsTests.swift in Sources */,
+				C12CE9931E16D7360070EF53 /* NetworkAssistantTests.swift in Sources */,
+				C16E56D51E1ACADC00AFFA01 /* UserDefaultsServerTests.swift in Sources */,
+				C12CE9721E16C99E0070EF53 /* StringExtensionTests.swift in Sources */,
+				C12CE99A1E16D9520070EF53 /* CoreDataTestCase.swift in Sources */,
+				C12CE9A81E16E3970070EF53 /* NetworkAssistantUserTests.swift in Sources */,
+				C12CE9641E12D0010070EF53 /* UIColorExtensionTests.swift in Sources */,
+				C12CE99C1E16DB190070EF53 /* UserTests.swift in Sources */,
+				C1D82FB31E1ABA7C007379CA /* NetworkAssistantServerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1735A551E0D681700944760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1735A501E0D681700944760 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1735A361E0D681600944760 /* PiHome */;
+			targetProxy = C1735A4F1E0D681700944760 /* PBXContainerItemProxy */;
+		};
+		C1735A5B1E0D681700944760 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1735A361E0D681600944760 /* PiHome */;
+			targetProxy = C1735A5A1E0D681700944760 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C12CE9531E12AE820070EF53 /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C12CE9541E12AE820070EF53 /* Base */,
+			);
+			name = Register.storyboard;
+			sourceTree = "<group>";
+		};
+		C1735A461E0D681700944760 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1735A471E0D681700944760 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C1735A721E0D6C0100944760 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1735A731E0D6C0100944760 /* Base */,
+			);
+			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
+		C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1E9BB451E0F5BF8009A59E1 /* Base */,
+			);
+			name = Connect.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1735A601E0D681700944760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1735A611E0D681700944760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1735A631E0D681700944760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6460B7F9D6747C62F2EC1B7A /* Pods-PiHome.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DYB2FX8XD7;
+				INFOPLIST_FILE = PiHome/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.PiHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "915c3b63-efc7-493c-a5db-13aa09101ddb";
+				PROVISIONING_PROFILE_SPECIFIER = PiHome;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "PiHome/SupportingFiles/PiHome-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C1735A641E0D681700944760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8035415279CD557F33B67E4 /* Pods-PiHome.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DYB2FX8XD7;
+				INFOPLIST_FILE = PiHome/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.PiHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "915c3b63-efc7-493c-a5db-13aa09101ddb";
+				PROVISIONING_PROFILE_SPECIFIER = PiHome;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "PiHome/SupportingFiles/PiHome-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C1735A661E0D681700944760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2FAB25D540C43F60B30A9C /* Pods-PiHomeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DYB2FX8XD7;
+				INFOPLIST_FILE = PiHomeTests/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.PiHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PiHome.app/PiHome";
+			};
+			name = Debug;
+		};
+		C1735A671E0D681700944760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB7FE92A347F1A435E25FEB /* Pods-PiHomeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DYB2FX8XD7;
+				INFOPLIST_FILE = PiHomeTests/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.PiHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PiHome.app/PiHome";
+			};
+			name = Release;
+		};
+		C1735A691E0D681700944760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A582817A8D8BF07EF1CCEB /* Pods-PiHomeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DYB2FX8XD7;
+				INFOPLIST_FILE = PiHomeUITests/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.PiHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PiHome;
+			};
+			name = Debug;
+		};
+		C1735A6A1E0D681700944760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 299D141A82DB4824F6FA59DB /* Pods-PiHomeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DYB2FX8XD7;
+				INFOPLIST_FILE = PiHomeUITests/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.PiHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PiHome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1735A321E0D681600944760 /* Build configuration list for PBXProject "PiHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1735A601E0D681700944760 /* Debug */,
+				C1735A611E0D681700944760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1735A621E0D681700944760 /* Build configuration list for PBXNativeTarget "PiHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1735A631E0D681700944760 /* Debug */,
+				C1735A641E0D681700944760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1735A651E0D681700944760 /* Build configuration list for PBXNativeTarget "PiHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1735A661E0D681700944760 /* Debug */,
+				C1735A671E0D681700944760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1735A681E0D681700944760 /* Build configuration list for PBXNativeTarget "PiHomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1735A691E0D681700944760 /* Debug */,
+				C1735A6A1E0D681700944760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C1735A411E0D681700944760 /* PiHome.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C1735A421E0D681700944760 /* PiHome.xcdatamodel */,
+			);
+			currentVersion = C1735A421E0D681700944760 /* PiHome.xcdatamodel */;
+			path = PiHome.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C1735A2F1E0D681600944760 /* Project object */;
+}

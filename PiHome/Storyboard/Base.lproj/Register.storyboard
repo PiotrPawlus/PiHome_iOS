@@ -24,6 +24,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bacground-blue" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-uG-ohM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fm6-HF-u4P" customClass="AttributedNavigationBar" customModule="PiHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Register" id="F4C-k3-FWO">
+                                        <barButtonItem key="leftBarButtonItem" title="" id="1Fb-60-ZXK">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="backBarButtonTapped:" destination="VFS-rs-6JW" id="WVL-g8-xru"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="icomoonLeftBarButtonItems" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="transparentBackground" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBS-Nl-rGo">
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <subviews>
@@ -187,30 +211,6 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fm6-HF-u4P" customClass="AttributedNavigationBar" customModule="PiHome" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Register" id="F4C-k3-FWO">
-                                        <barButtonItem key="leftBarButtonItem" title="" id="1Fb-60-ZXK">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="backBarButtonTapped:" destination="VFS-rs-6JW" id="WVL-g8-xru"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                        <real key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="icomoonLeftBarButtonItems" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="transparentBackground" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </navigationBar>
                         </subviews>
                         <constraints>
                             <constraint firstItem="JO1-H8-i05" firstAttribute="top" secondItem="4Dl-uG-ohM" secondAttribute="bottom" id="0LN-tC-1W6"/>

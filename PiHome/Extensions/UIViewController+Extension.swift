@@ -31,7 +31,6 @@ extension UIViewController {
         return base
     }
     
-    
     class func dismissModalControllers(completion: (() -> ())? = nil) {
         
         if top()?.presentingViewController != nil {
@@ -50,6 +49,10 @@ extension UIViewController {
     //MARK: - Deinitialization
     
     //MARK: - Actions
+    
+    @IBAction func viewTapped(_ sender: UIGestureRecognizer) {
+        view.endEditing(true)
+    }
     
     //MARK: - Public
     

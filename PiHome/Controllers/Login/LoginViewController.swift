@@ -15,9 +15,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Initailization
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        quickLogin()
+    }
+    
     //MARK: - Deinitialization
     
     //MARK: - Actions
+    
+    @IBAction func backBarButtonTapped(_ sender: UIBarButtonItem) {
+        
+        UserDefaults.standard.removeObject(forKey: NetworkAssistantUrl)
+        
+        _ = Keychain.delete(EmailKeychain)
+        _ = Keychain.delete(PasswordKeychain)
+        
+        AppContainerViewController.setConnectViewController()
+    }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
         
@@ -32,15 +48,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         AppContainerViewController.setRegisterViewController()
     }
     
-    @IBAction func viewTapped(_ sender: UIGestureRecognizer) {
-        view.endEditing(true)
-    }
-    
     //MARK: - Public
     
     //MARK: - Internal
     
     //MARK: - Private
+    
+    private func login(withEmail email: String, password: String) {
+        
+        SVProgressHUD.show()
+        NetworkAssistant.shared.login(withEmail: email, password: password) { user, error in
+            
+            SVProgressHUD.dismiss()
+            UIAlertController.show(from: error)
+            
+            if let user = user, error == nil {
+                
+                _ = Keychain.save(self.emailTextField.text!, forKey: EmailKeychain)
+                _ = Keychain.save(self.passwordTextField.text!, forKey: PasswordKeychain)
+                
+                Settings.currentUser = user
+                
+                AppContainerViewController.setHomeViewController()
+            }
+        }
+    }
     
     private func login() throws {
         
@@ -52,17 +84,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             throw Error.Name.cannotBeEmpty("Password")
         }
         
-        SVProgressHUD.show()
-        NetworkAssistant.shared.login(withEmail: emailTextField.text!, password: passwordTextField.text!) { user, error in
-            
-            SVProgressHUD.dismiss()
-            UIAlertController.show(from: error)
-            
-            if let user = user, error == nil {
-                
-                Settings.currentUser = user
-                AppContainerViewController.setHomeViewController()
-            }
+        login(withEmail: emailTextField.text!, password: passwordTextField.text!)
+    }
+    
+    private func quickLogin() {
+        
+        guard let email = Keychain.load(EmailKeychain) else {
+            return
+        }
+        
+        guard let password = Keychain.load(PasswordKeychain) else {
+            return
+        }
+        
+        UserLocalAuthentication.authenticate {
+            self.login(withEmail: email, password: password)
         }
     }
     

@@ -18,6 +18,7 @@ class CoreDataAssistatntUserTests: XCTestCase {
         CoreDataAssistant.parseAndSaveUser(with: NetworkRequestType.login.mockResponse) { user, error in
             
             expectation.fulfill()
+            
             XCTAssertNil(error)
             XCTAssertNotNil(user)
         }

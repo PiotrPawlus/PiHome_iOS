@@ -41,10 +41,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func viewTapped(_ sender: UIGestureRecognizer) {
-        view.endEditing(true)
-    }
-    
     //MARK: - Public
     
     //MARK: - Internal
@@ -93,7 +89,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             if error == nil {
                 
+                _ = Keychain.save(self.emailTextField.text!, forKey: EmailKeychain)
+                _ = Keychain.save(self.passwordTextField.text!, forKey: PasswordKeychain)
+                
                 Settings.currentUser = user
+                
                 AppContainerViewController.setHomeViewController()
             }
         }
