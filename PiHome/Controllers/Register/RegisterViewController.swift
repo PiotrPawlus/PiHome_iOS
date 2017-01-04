@@ -89,12 +89,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             if error == nil {
                 
-                _ = Keychain.save(self.emailTextField.text!, forKey: EmailKeychain)
-                _ = Keychain.save(self.passwordTextField.text!, forKey: PasswordKeychain)
+                _ = Keychain.save(self.emailTextField.text!, forKey: EmailPiHomeKeychain)
+                _ = Keychain.save(self.passwordTextField.text!, forKey: PasswordPiHomeKeychain)
                 
                 Settings.currentUser = user
                 
-                AppContainerViewController.setHomeViewController()
+                if let user = user, user.isAuthorized {
+                    AppContainerViewController.setHomeViewController()
+                } else {
+                 
+                    UIAlertController.show(from: Error(error: Error.Name.unauthorized))
+                    AppContainerViewController.setLoginViewController()
+                }
             }
         }
     }

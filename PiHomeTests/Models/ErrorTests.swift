@@ -29,6 +29,9 @@ class ErrorTests: XCTestCase {
         
         error = .touchIdNotAvailable
         XCTAssertEqual(error.title, "Touch ID not available")
+        
+        error = .unauthorized
+        XCTAssertEqual(error.title, "Please wait...")
     }
     
     func testNameDescription() {
@@ -49,6 +52,9 @@ class ErrorTests: XCTestCase {
         
         error = .touchIdNotAvailable
         XCTAssertEqual(error.description, "Your device is not configured for Touch ID.")
+        
+        error = .unauthorized
+        XCTAssertEqual(error.description, "Please wait for permission from system administrator.")
     }
 }
 

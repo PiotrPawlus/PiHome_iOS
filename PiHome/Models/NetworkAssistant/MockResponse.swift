@@ -8,14 +8,15 @@
 
 class MockResponse {
     
-    class func mockDictionaryForUser(withIdentifier identifier: Int = 1) -> [AnyHashable: Any] {
+    class func mockDictionaryForUser(withIdentifier identifier: Int = 1, role: String = "user") -> [AnyHashable: Any] {
         
         return [
             "authentication_token": "12345",
             "email": "john.little@example.com",
             "id": identifier,
             "first_name": "John",
-            "last_name": "Little"
+            "last_name": "Little",
+            "role": role
         ]
     }
     

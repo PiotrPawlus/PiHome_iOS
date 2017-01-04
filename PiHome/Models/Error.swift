@@ -24,6 +24,7 @@ open class Error: Swift.Error {
         case noDataFound
         case passwords
         case touchIdNotAvailable
+        case unauthorized
         
         var title: String {
             
@@ -40,6 +41,8 @@ open class Error: Swift.Error {
                 title = "Passwords"
             case .touchIdNotAvailable:
                 title = "Touch ID not available"
+            case .unauthorized:
+                title = "Please wait..."
             }
             
             return title
@@ -60,6 +63,8 @@ open class Error: Swift.Error {
                 description = "Password confirmation and Password must match."
             case .touchIdNotAvailable:
                 description = "Your device is not configured for Touch ID."
+            case .unauthorized:
+                description = "Please wait for permission from system administrator."
             }
             
             return description

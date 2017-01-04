@@ -32,6 +32,7 @@ class UserTests: CoreDataTestCase {
         XCTAssertEqual(user.firstName, "John")
         XCTAssertEqual(user.lastName, "Little")
         XCTAssertEqual(user.authenticationToken, "12345")
+        XCTAssertEqual(user.role, "user")
     }
     
     func testFindUserWithIdentifier() {

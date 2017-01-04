@@ -7,8 +7,8 @@
 //
 
 let CurrentUserIdentifierKey = "CurrentUserIdentifierKey"
-let EmailKeychain = "EmailKeychain"
-let PasswordKeychain = "PasswordKeychain"
+let EmailPiHomeKeychain = "EmailPiHomeKeychain"
+let PasswordPiHomeKeychain = "PasswordPiHomeKeychain"
 
 class Settings {
     

@@ -14,9 +14,14 @@ class User: NSManagedObject {
     @NSManaged var firstName: String
     @NSManaged var identifier: Int64
     @NSManaged var lastName: String
+    @NSManaged var role: String
     
     var fullName: String {
         return firstName + " " + lastName
+    }
+    
+    var isAuthorized: Bool {
+        return role != "unauthorized"
     }
     
     //MARK: - Class Methods
@@ -46,6 +51,10 @@ class User: NSManagedObject {
         
         if let lastName = dictionary["last_name"] as? String {
             user!.lastName = lastName
+        }
+        
+        if let role = dictionary["role"] as? String {
+            user!.role = role
         }
         
         return user!

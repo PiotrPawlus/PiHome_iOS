@@ -21,6 +21,7 @@ class PiHomeUITests: XCTestCase {
     private var lastNameAlert: XCUIElement!
     private var passwordAlert: XCUIElement!
     private var passwordsAlert: XCUIElement!
+    private var unauthorizedAlert: XCUIElement!
 
     //BarButtonItems
     
@@ -63,6 +64,7 @@ class PiHomeUITests: XCTestCase {
         lastNameAlert = app.alerts["Last Name"]
         passwordAlert = app.alerts["Password"]
         passwordsAlert = app.alerts["Passwords"]
+        unauthorizedAlert = app.alerts["Please wait..."]
 
         //BarButtonItems
         
@@ -124,28 +126,6 @@ class PiHomeUITests: XCTestCase {
         addressTextField.type(text: "www.example.com")
         connectButton.tap()
         
-        emailTextField.pressReturn()
-        passwordTextField.pressReturn()
-        
-        XCTAssertTrue(emailAlert.exists)
-        
-        emailAlert.confirm()
-        emailTextField.type(text: "john.little")
-        informationStaticText.tap()
-        signInButton.tap()
-        
-        XCTAssertTrue(emailAlert.exists)
-        
-        emailAlert.confirm()
-        emailTextField.clear()
-        emailTextField.type(text: "john.little@example.com")
-        signInButton.tap()
-        
-        XCTAssertTrue(passwordAlert.exists)
-        
-        passwordAlert.confirm()
-        passwordTextField.tap() // TO DO - type password and logout
-        
         signUpButton.tap()
         backBarButtonItem.tap()
         signUpButton.tap()
@@ -159,7 +139,7 @@ class PiHomeUITests: XCTestCase {
         XCTAssertTrue(firstNameAlert.exists)
         
         firstNameAlert.confirm()
-        firstNameAlert.tap()
+        firstNameTextField.tap()
         informationStaticText.tap()
         
         firstNameTextField.type(text: "John")
@@ -201,6 +181,33 @@ class PiHomeUITests: XCTestCase {
         
         passwordsAlert.confirm()
         confirmPasswordTextField.type(text: "Password1")
+        submitButton.tap()
+        
+        XCTAssertTrue(unauthorizedAlert.exists)
+        
+        unauthorizedAlert.confirm()
+        emailTextField.pressReturn()
+        passwordTextField.pressReturn()
+        
+        XCTAssertTrue(emailAlert.exists)
+        
+        emailAlert.confirm()
+        emailTextField.type(text: "john.little")
+        informationStaticText.tap()
+        signInButton.tap()
+        
+        XCTAssertTrue(emailAlert.exists)
+        
+        emailAlert.confirm()
+        emailTextField.clear()
+        emailTextField.type(text: "john.little@example.com")
+        signInButton.tap()
+        
+        XCTAssertTrue(passwordAlert.exists)
+        
+        passwordAlert.confirm()
+        passwordTextField.type(text: "Password1")
+        signInButton.tap()
     }
     
     //MARK: - Private
