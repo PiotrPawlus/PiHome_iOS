@@ -26,6 +26,7 @@ class PiHomeUITests: XCTestCase {
     //BarButtonItems
     
     private var backBarButtonItem: XCUIElement!
+    private var menuBarButtonItem: XCUIElement!
     
     //Buttons
     
@@ -42,6 +43,16 @@ class PiHomeUITests: XCTestCase {
     private var firstNameTextField: XCUIElement!
     private var lastNameTextField: XCUIElement!
     private var passwordTextField: XCUIElement!
+    
+    //TableViews
+    
+    private var menuTableView: XCUIElement!
+    
+    //TableViewCells
+    
+    private var devicesTableViewCell: XCUIElement!
+    private var settingsTableViewCell: XCUIElement!
+    private var logOutTableViewCell: XCUIElement!
     
     //StaticText
     
@@ -69,6 +80,7 @@ class PiHomeUITests: XCTestCase {
         //BarButtonItems
         
         backBarButtonItem = app.buttons["backBarButtonItem"]
+        menuBarButtonItem = app.buttons["menuBarButtonItem"]
         
         //Buttons
         
@@ -85,6 +97,16 @@ class PiHomeUITests: XCTestCase {
         firstNameTextField = app.textFields["firstNameTextField"]
         lastNameTextField = app.textFields["lastNameTextField"]
         passwordTextField = app.secureTextFields["passwordTextField"]
+        
+        //TableViews
+        
+        menuTableView = app.tables["menuTableView"]
+        
+        //TableViewCells
+        
+        devicesTableViewCell = menuTableView.cells["devicesTableViewCell"]
+        settingsTableViewCell = menuTableView.cells["settingsTableViewCell"]
+        logOutTableViewCell = menuTableView.cells["logOutTableViewCell"]
         
         //StaticText
         
@@ -105,7 +127,7 @@ class PiHomeUITests: XCTestCase {
     
     func testPiHome() {
         
-        backBarButtonItem.tap()
+        backIfEnabled()
         
         connectButton.tap()
         
@@ -200,7 +222,7 @@ class PiHomeUITests: XCTestCase {
         
         emailAlert.confirm()
         emailTextField.clear()
-        emailTextField.type(text: "john.little@example.com")
+        emailTextField.type(text: "j.l@example.com")
         signInButton.tap()
         
         XCTAssertTrue(passwordAlert.exists)
@@ -208,9 +230,24 @@ class PiHomeUITests: XCTestCase {
         passwordAlert.confirm()
         passwordTextField.type(text: "Password1")
         signInButton.tap()
+        
+        menuBarButtonItem.tap()
+        devicesTableViewCell.tapIfExists()
+        menuBarButtonItem.tap()
+        settingsTableViewCell.tapIfExists()
+        sleep(1)
+        menuBarButtonItem.tap()
+        logOutTableViewCell.tapIfExists()
     }
     
     //MARK: - Private
+    
+    private func backIfEnabled() {
+        
+        if backBarButtonItem.exists {
+            backBarButtonItem.tap()
+        }
+    }
     
     //MARK: - Overridden
 }

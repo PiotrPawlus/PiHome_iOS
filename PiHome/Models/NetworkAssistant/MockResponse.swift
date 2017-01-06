@@ -12,7 +12,7 @@ class MockResponse {
         
         return [
             "authentication_token": "12345",
-            "email": "john.little@example.com",
+            "email": "j.l@example.com",
             "id": identifier,
             "first_name": "John",
             "last_name": "Little",

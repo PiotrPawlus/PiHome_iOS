@@ -10,6 +10,24 @@ extension CoreDataAssistant {
 
     //MARK: - Class Methods
     
+    class func logOut(_ user: User?, completion: @escaping ErrorHandler) {
+    
+        if let user = user {
+            
+            MagicalRecord.save({ context in
+                
+                User.delete(user, in: context)
+                
+            }) { _, error in
+                
+                completion(Error(error: error))
+            }
+        } else {
+            
+            completion(Error(error: Error.Name.noDataFound))
+        }
+    }
+    
     class func parseAndSaveUser(with response: Any?, completion: @escaping UserHandler) {
         
         if let dictionary = response as? [AnyHashable: Any] {

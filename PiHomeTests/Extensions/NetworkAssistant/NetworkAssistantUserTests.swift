@@ -15,7 +15,7 @@ class NetworkAssistantUserTests: XCTestCase {
         
         let expectation = self.expectation(description: "")
         
-        MockNetworkAssistant().login(withEmail: "", password: "") { user, error in
+        MockNetworkAssistant().login(withEmail: "j.l@example.com", password: "") { user, error in
             
             expectation.fulfill()
             XCTAssertNotNil(user)

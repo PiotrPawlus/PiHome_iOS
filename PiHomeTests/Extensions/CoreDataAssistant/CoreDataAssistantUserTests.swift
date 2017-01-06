@@ -11,11 +11,36 @@ import XCTest
 
 class CoreDataAssistatntUserTests: XCTestCase {
     
+    func testLogOutCurrentUserWithSuccess() {
+        
+        let user = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        XCTAssertNotNil(User.find(withIdentifier: 1))
+    
+        let expectation = self.expectation(description: "")
+
+        CoreDataAssistant.logOut(user) { error in
+            
+            expectation.fulfill()
+            
+            XCTAssertNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testLogOutCurrentUserWithFailure() {
+        
+        CoreDataAssistant.logOut(nil) { error in
+            
+            XCTAssertNotNil(error)
+        }
+    }
+    
     func testParseAndSaveCurrentUserWithCorrectResponse() {
         
         let expectation = self.expectation(description: "")
         
-        CoreDataAssistant.parseAndSaveUser(with: NetworkRequestType.login.mockResponse) { user, error in
+        CoreDataAssistant.parseAndSaveUser(with: NetworkRequestType.login("j.l@example.com").mockResponse) { user, error in
             
             expectation.fulfill()
             

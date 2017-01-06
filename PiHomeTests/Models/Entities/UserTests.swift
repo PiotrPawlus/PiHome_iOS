@@ -28,11 +28,19 @@ class UserTests: CoreDataTestCase {
         let user = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
         
         XCTAssertEqual(user.identifier, 1)
-        XCTAssertEqual(user.email, "john.little@example.com")
+        XCTAssertEqual(user.email, "j.l@example.com")
         XCTAssertEqual(user.firstName, "John")
         XCTAssertEqual(user.lastName, "Little")
         XCTAssertEqual(user.authenticationToken, "12345")
         XCTAssertEqual(user.role, "user")
+    }
+    
+    func testDelete() {
+        
+        let user = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        User.delete(user, in: MagicalRecord.context)
+
+        XCTAssertNil(User.mr_findFirst(byAttribute: "identifier", withValue: user.identifier, in: MagicalRecord.context))
     }
     
     func testFindUserWithIdentifier() {

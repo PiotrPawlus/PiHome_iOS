@@ -8,7 +8,7 @@
 
 enum NetworkRequestType {
     
-    case login
+    case login(String)
     case register
     case server(String)
     
@@ -17,8 +17,8 @@ enum NetworkRequestType {
         var mockResponse: Any?
         
         switch self {
-        case .login:
-            mockResponse = MockResponse.mockDictionaryForUser()
+        case .login(let email):
+            mockResponse = email == "j.l@example.com" ? MockResponse.mockDictionaryForUser() : nil
         case .register:
             mockResponse = MockResponse.mockDictionaryForUser(withIdentifier: 2, role: "unauthorized")
         case .server(let address):

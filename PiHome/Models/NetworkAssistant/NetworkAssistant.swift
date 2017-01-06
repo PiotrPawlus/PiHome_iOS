@@ -21,7 +21,7 @@ class NetworkAssistant: AFHTTPSessionManager {
 
     private static let networkAssistant = NetworkAssistant(baseURL: URL(string: UserDefaults.standard.value(forKey: NetworkAssistantUrl) as! String))
     
-    var requestType = NetworkRequestType.login
+    var requestType = NetworkRequestType.register
     
     static var shared: NetworkAssistant {
 //        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant

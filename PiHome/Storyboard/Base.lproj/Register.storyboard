@@ -94,7 +94,7 @@
                                             <outlet property="delegate" destination="VFS-rs-6JW" id="zp6-HO-smN"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5R-za-6Jc">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5R-za-6Jc">
                                         <rect key="frame" x="20" y="173.66666666666669" width="374" height="30.000000000000028"/>
                                         <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
                                         <color key="textColor" red="0.40528047080000001" green="0.47204595799999999" blue="0.60492491719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

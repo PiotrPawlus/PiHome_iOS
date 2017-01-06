@@ -69,7 +69,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 Settings.currentUser = user
                 
-                AppContainerViewController.setHomeViewController()
+                AppContainerViewController.setDevicesViewController()
             }
         }
     }

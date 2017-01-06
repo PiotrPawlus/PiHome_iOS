@@ -30,12 +30,16 @@ class AppContainerViewController: ContainerViewController {
         loadControllerIntoContainer(controller: UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController())
     }
     
-    class func setHomeViewController() {
-        loadControllerIntoContainer(controller: UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController())
+    class func setDevicesViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Device", bundle: nil).instantiateInitialViewController())
     }
     
     class func setRegisterViewController() {
         loadControllerIntoContainer(controller: UIStoryboard(name: "Register", bundle: nil).instantiateInitialViewController())
+    }
+    
+    class func setSettingsViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Settings", bundle: nil).instantiateInitialViewController())
     }
     
     //MARK: - Initialization

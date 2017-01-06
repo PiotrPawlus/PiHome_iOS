@@ -1,12 +1,12 @@
 //
-//  DevicesViewController.swift
+//  SettingsViewController.swift
 //  PiHome
 //
-//  Created by Piotr Pawluś on 27/12/2016.
-//  Copyright © 2016 Piotr Pawluś. All rights reserved.
+//  Created by Piotr Pawluś on 06/01/2017.
+//  Copyright © 2017 Piotr Pawluś. All rights reserved.
 //
 
-class DevicesViewController: UITableViewController {
+class SettingsViewController: UIViewController {
     
     //MARK: - Class Methods
     
@@ -15,7 +15,7 @@ class DevicesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Devices View Controller")
+        setupMenuGestureRecognizer()
     }
     
     //MARK: - Deinitialization

@@ -58,8 +58,8 @@ extension UIViewController {
     
     //MARK: - Internal
     
-    func setupMenuGestureRecognizer() -> UIPanGestureRecognizer {
-        return SideMenuManager.menuAddPanGestureToPresent(toView: view)
+    func setupMenuGestureRecognizer() {
+        SideMenuManager.menuAddPanGestureToPresent(toView: view)
     }
     
     //MARK: - Private

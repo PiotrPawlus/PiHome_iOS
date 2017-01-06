@@ -19,9 +19,19 @@ class SettingsTests: XCTestCase {
     
     func testIsUserLoggedIn() {
         
+        Settings.logoutUser()
+        XCTAssertFalse(Settings.isUserLoggedIn)
+        
+        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+
+        XCTAssertTrue(Settings.isUserLoggedIn)
     }
     
     func testLogoutCurrentUser() {
-        
+
+        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        Settings.logoutUser()
+    
+        XCTAssertNil(Settings.currentUser)
     }
 }

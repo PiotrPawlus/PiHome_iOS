@@ -6,16 +6,24 @@
 //  Copyright © 2016 Piotr Pawluś. All rights reserved.
 //
 
-class MenuViewController: UIViewController {
+private let DevicesRestorationIdentifier = "DevicesRestorationIdentifier"
+private let LogoutRestorationIdentifier = "LogoutRestorationIdentifier"
+private let SettingsRestorationIdentifier = "SettingsRestorationIdentifier"
 
+class MenuViewController: UITableViewController {
+
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
+    
     //MARK: - Class Methods
     
     //MARK: - Initailization
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        print("Menu View Controller")
+        userNameLabel.text = Settings.currentUser?.fullName
+        userEmailLabel.text = Settings.currentUser?.email
     }
     
     //MARK: - Deinitialization
@@ -29,4 +37,25 @@ class MenuViewController: UIViewController {
     //MARK: - Private
     
     //MARK: - Overridden
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let restorationIdentifier = tableView.cellForRow(at: indexPath)?.restorationIdentifier {
+
+            if case DevicesRestorationIdentifier = restorationIdentifier {
+                
+                AppContainerViewController.setDevicesViewController()
+                
+            } else if case SettingsRestorationIdentifier = restorationIdentifier {
+                
+                AppContainerViewController.setSettingsViewController()
+                
+            } else if case LogoutRestorationIdentifier = restorationIdentifier {
+                
+                Settings.logoutUser()
+            }
+            
+            AppContainerViewController.dismissMenuViewController()
+        }
+    }
 }

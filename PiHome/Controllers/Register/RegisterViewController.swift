@@ -95,7 +95,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 Settings.currentUser = user
                 
                 if let user = user, user.isAuthorized {
-                    AppContainerViewController.setHomeViewController()
+                    AppContainerViewController.setDevicesViewController()
                 } else {
                  
                     UIAlertController.show(from: Error(error: Error.Name.unauthorized))

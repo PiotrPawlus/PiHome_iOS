@@ -11,7 +11,7 @@
 		989A34E7EB3B3B394E56B5FC /* Pods_PiHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2D118C512042F846DB338 /* Pods_PiHomeTests.framework */; };
 		B7D36F8A777B22B9F7A5823D /* Pods_PiHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E11098F5A0A2EAD76256D7 /* Pods_PiHomeUITests.framework */; };
 		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
-		C12CE9571E12C3ED0070EF53 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Home.storyboard */; };
+		C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Device.storyboard */; };
 		C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9581E12CB090070EF53 /* AttributedTextView.swift */; };
 		C12CE95B1E12CB580070EF53 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE95A1E12CB580070EF53 /* UIFont+Extension.swift */; };
 		C12CE95E1E12CBD30070EF53 /* UIFontExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */; };
@@ -20,7 +20,7 @@
 		C12CE9641E12D0010070EF53 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */; };
 		C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */; };
 		C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */; };
-		C12CE96C1E12D3A00070EF53 /* NewDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96B1E12D3A00070EF53 /* NewDeviceViewController.swift */; };
+		C12CE96C1E12D3A00070EF53 /* ShowDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96B1E12D3A00070EF53 /* ShowDeviceViewController.swift */; };
 		C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96D1E16C7DC0070EF53 /* Settings.swift */; };
 		C12CE9701E16C9830070EF53 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96F1E16C9830070EF53 /* String+Extension.swift */; };
 		C12CE9721E16C99E0070EF53 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */; };
@@ -51,6 +51,7 @@
 		C16E56D51E1ACADC00AFFA01 /* UserDefaultsServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */; };
 		C16E56D71E1ADDC000AFFA01 /* UserLocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */; };
 		C16E56DA1E1AEDD000AFFA01 /* XCUIElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */; };
+		C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56DB1E1FC3BC00AFFA01 /* SplitViewController.swift */; };
 		C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3A1E0D681700944760 /* AppDelegate.swift */; };
 		C1735A3D1E0D681700944760 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3C1E0D681700944760 /* LoginViewController.swift */; };
 		C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1735A411E0D681700944760 /* PiHome.xcdatamodeld */; };
@@ -58,6 +59,8 @@
 		C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A461E0D681700944760 /* LaunchScreen.storyboard */; };
 		C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A5D1E0D681700944760 /* PiHomeUITests.swift */; };
 		C1735A741E0D6C0100944760 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A721E0D6C0100944760 /* Login.storyboard */; };
+		C1B5E34D1E1FDD6B00F043CE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5E34B1E1FDD6B00F043CE /* Settings.storyboard */; };
+		C1B5E3501E1FE30A00F043CE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5E34F1E1FE30A00F043CE /* SettingsViewController.swift */; };
 		C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
 		C1D82FAA1E197E59007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
 		C1D82FAB1E197E5A007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
@@ -103,7 +106,7 @@
 		A8035415279CD557F33B67E4 /* Pods-PiHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiHome/Pods-PiHome.release.xcconfig"; sourceTree = "<group>"; };
 		B3A582817A8D8BF07EF1CCEB /* Pods-PiHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiHomeUITests/Pods-PiHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
-		C12CE9561E12C3ED0070EF53 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C12CE9561E12C3ED0070EF53 /* Device.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		C12CE9581E12CB090070EF53 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
 		C12CE95A1E12CB580070EF53 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensionTests.swift; sourceTree = "<group>"; };
@@ -112,7 +115,7 @@
 		C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
-		C12CE96B1E12D3A00070EF53 /* NewDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDeviceViewController.swift; sourceTree = "<group>"; };
+		C12CE96B1E12D3A00070EF53 /* ShowDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDeviceViewController.swift; sourceTree = "<group>"; };
 		C12CE96D1E16C7DC0070EF53 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C12CE96F1E16C9830070EF53 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsServerTests.swift; sourceTree = "<group>"; };
 		C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocalAuthentication.swift; sourceTree = "<group>"; };
 		C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extension.swift"; sourceTree = "<group>"; };
+		C16E56DB1E1FC3BC00AFFA01 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		C1735A371E0D681600944760 /* PiHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1735A3A1E0D681700944760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1735A3C1E0D681700944760 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		C1735A5D1E0D681700944760 /* PiHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHomeUITests.swift; sourceTree = "<group>"; };
 		C1735A5F1E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1735A731E0D6C0100944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C1B5E34C1E1FDD6B00F043CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		C1B5E34F1E1FE30A00F043CE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C1D82FA81E197E53007379CA /* Icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icomoon.ttf; sourceTree = "<group>"; };
 		C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBar.swift; sourceTree = "<group>"; };
 		C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBarTests.swift; sourceTree = "<group>"; };
@@ -233,13 +239,13 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		C12CE9681E12D33E0070EF53 /* Home */ = {
+		C12CE9681E12D33E0070EF53 /* Device */ = {
 			isa = PBXGroup;
 			children = (
 				C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */,
-				C12CE96B1E12D3A00070EF53 /* NewDeviceViewController.swift */,
+				C12CE96B1E12D3A00070EF53 /* ShowDeviceViewController.swift */,
 			);
-			path = Home;
+			path = Device;
 			sourceTree = "<group>";
 		};
 		C12CE9751E16CFA60070EF53 /* Models */ = {
@@ -430,10 +436,11 @@
 			children = (
 				C1E9BB291E0DBAB0009A59E1 /* Common */,
 				C1E9BB471E0F5C05009A59E1 /* Connect */,
-				C12CE9681E12D33E0070EF53 /* Home */,
+				C12CE9681E12D33E0070EF53 /* Device */,
 				C1E9BB371E0DE08A009A59E1 /* Login */,
 				C1E9BB2E1E0DBC13009A59E1 /* Menu */,
 				C12CE9651E12D2A10070EF53 /* Register */,
+				C1B5E34E1E1FE2F100F043CE /* Settings */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -482,11 +489,12 @@
 			isa = PBXGroup;
 			children = (
 				C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */,
-				C12CE9561E12C3ED0070EF53 /* Home.storyboard */,
+				C12CE9561E12C3ED0070EF53 /* Device.storyboard */,
 				C1735A461E0D681700944760 /* LaunchScreen.storyboard */,
 				C1735A721E0D6C0100944760 /* Login.storyboard */,
 				C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */,
 				C12CE9531E12AE820070EF53 /* Register.storyboard */,
+				C1B5E34B1E1FDD6B00F043CE /* Settings.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -507,6 +515,14 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		C1B5E34E1E1FE2F100F043CE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5E34F1E1FE30A00F043CE /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C1D82FA71E197E35007379CA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +536,7 @@
 			children = (
 				C1E9BB2C1E0DBB34009A59E1 /* AppContainerViewController.swift */,
 				C1E9BB2A1E0DBAD7009A59E1 /* ContainerViewController.swift */,
+				C16E56DB1E1FC3BC00AFFA01 /* SplitViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -725,7 +742,8 @@
 				C1E9BB461E0F5BF8009A59E1 /* Connect.storyboard in Resources */,
 				C1735A451E0D681700944760 /* Assets.xcassets in Resources */,
 				C1E9BB391E0DE746009A59E1 /* Backgrounds.xcassets in Resources */,
-				C12CE9571E12C3ED0070EF53 /* Home.storyboard in Resources */,
+				C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */,
+				C1B5E34D1E1FDD6B00F043CE /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,7 +931,9 @@
 				C12CE97C1E16D1310070EF53 /* CoreDataAssistant.swift in Sources */,
 				C12CE9741E16CDBD0070EF53 /* Error.swift in Sources */,
 				C16E56D21E1AC8A100AFFA01 /* UserDefaults+Server.swift in Sources */,
+				C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */,
 				C12CE9881E16D1FD0070EF53 /* NetworkRequestType.swift in Sources */,
+				C1B5E3501E1FE30A00F043CE /* SettingsViewController.swift in Sources */,
 				C1D82FAD1E197ECE007379CA /* AttributedNavigationBar.swift in Sources */,
 				C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */,
 				C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */,
@@ -924,7 +944,7 @@
 				C12CE9841E16D19C0070EF53 /* NetworkAssistant.swift in Sources */,
 				C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */,
 				C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */,
-				C12CE96C1E12D3A00070EF53 /* NewDeviceViewController.swift in Sources */,
+				C12CE96C1E12D3A00070EF53 /* ShowDeviceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1018,14 @@
 				C1735A731E0D6C0100944760 /* Base */,
 			);
 			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
+		C1B5E34B1E1FDD6B00F043CE /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B5E34C1E1FDD6B00F043CE /* Base */,
+			);
+			name = Settings.storyboard;
 			sourceTree = "<group>";
 		};
 		C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */ = {

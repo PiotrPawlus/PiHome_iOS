@@ -27,7 +27,7 @@ extension NetworkAssistant {
             "password": password
         ]
         
-        requestType = .login
+        requestType = .login(email)
         
         _ = post("session", parameters: parameters, progress: nil, success: { _, response in
             

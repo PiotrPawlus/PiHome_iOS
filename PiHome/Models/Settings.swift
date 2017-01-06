@@ -12,17 +12,7 @@ let PasswordPiHomeKeychain = "PasswordPiHomeKeychain"
 
 class Settings {
     
-    static var currentUser: User? {
-        
-        didSet {
-            
-            if let user = currentUser {
-                
-                UserDefaults.standard.set(Int(user.identifier), forKey: CurrentUserIdentifierKey)
-                UserDefaults.standard.synchronize()
-            }
-        }
-    }
+    static var currentUser: User?
     
     static var isUserLoggedIn: Bool {
         return currentUser != nil
@@ -31,7 +21,17 @@ class Settings {
     //MARK: - Class Methods
     
     class func logoutUser() {
-        currentUser = nil
+        
+        CoreDataAssistant.logOut(currentUser) { error in
+            
+            UIAlertController.show(from: error)
+            
+            if error == nil {
+                
+                currentUser = nil
+                AppContainerViewController.setLoginViewController()
+            }
+        }
     }
     
     //MARK: - Initailization

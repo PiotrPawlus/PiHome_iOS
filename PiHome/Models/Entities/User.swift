@@ -60,6 +60,10 @@ class User: NSManagedObject {
         return user!
     }
     
+    class func delete(_ user: User, in context: NSManagedObjectContext) {
+        _ = user.mr_deleteEntity(in: context)
+    }
+    
     class func find(withIdentifier identifier: Int, in context: NSManagedObjectContext = NSManagedObjectContext.mr_default()) -> User? {
         return User.mr_findFirst(byAttribute: "identifier", withValue: identifier, in: context)
     }
