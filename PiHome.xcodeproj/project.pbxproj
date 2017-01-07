@@ -47,8 +47,12 @@
 		C12CE9A81E16E3970070EF53 /* NetworkAssistantUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9A71E16E3970070EF53 /* NetworkAssistantUserTests.swift */; };
 		C12CE9AA1E16E4D50070EF53 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9A91E16E4D50070EF53 /* UIAlertController+Extension.swift */; };
 		C12CE9AC1E16E5030070EF53 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9AB1E16E5030070EF53 /* UIViewController+Extension.swift */; };
-		C16E56D21E1AC8A100AFFA01 /* UserDefaults+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */; };
-		C16E56D51E1ACADC00AFFA01 /* UserDefaultsServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */; };
+		C13514AB1E20366600AC0C21 /* NetworkAssistantDeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13514AA1E20366600AC0C21 /* NetworkAssistantDeviceTests.swift */; };
+		C13514AD1E20372100AC0C21 /* NetworkAssistant+Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13514AC1E20372100AC0C21 /* NetworkAssistant+Devices.swift */; };
+		C13514AF1E203B9000AC0C21 /* CoreDataAssistant+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13514AE1E203B9000AC0C21 /* CoreDataAssistant+Device.swift */; };
+		C13CE79C1E2041D000F6D8FF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CE79B1E2041D000F6D8FF /* Device.swift */; };
+		C13CE79E1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CE79D1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift */; };
+		C13CE7A01E20F8F800F6D8FF /* DeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CE79F1E20F8F800F6D8FF /* DeviceTests.swift */; };
 		C16E56D71E1ADDC000AFFA01 /* UserLocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */; };
 		C16E56DA1E1AEDD000AFFA01 /* XCUIElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */; };
 		C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56DB1E1FC3BC00AFFA01 /* SplitViewController.swift */; };
@@ -142,8 +146,12 @@
 		C12CE9A71E16E3970070EF53 /* NetworkAssistantUserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantUserTests.swift; sourceTree = "<group>"; };
 		C12CE9A91E16E4D50070EF53 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		C12CE9AB1E16E5030070EF53 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Server.swift"; sourceTree = "<group>"; };
-		C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsServerTests.swift; sourceTree = "<group>"; };
+		C13514AA1E20366600AC0C21 /* NetworkAssistantDeviceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantDeviceTests.swift; sourceTree = "<group>"; };
+		C13514AC1E20372100AC0C21 /* NetworkAssistant+Devices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkAssistant+Devices.swift"; sourceTree = "<group>"; };
+		C13514AE1E203B9000AC0C21 /* CoreDataAssistant+Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataAssistant+Device.swift"; sourceTree = "<group>"; };
+		C13CE79B1E2041D000F6D8FF /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C13CE79D1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataAssistantDeviceTests.swift; sourceTree = "<group>"; };
+		C13CE79F1E20F8F800F6D8FF /* DeviceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTests.swift; sourceTree = "<group>"; };
 		C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocalAuthentication.swift; sourceTree = "<group>"; };
 		C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extension.swift"; sourceTree = "<group>"; };
 		C16E56DB1E1FC3BC00AFFA01 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
@@ -223,7 +231,6 @@
 			children = (
 				C12CE9A11E16E1410070EF53 /* CoreDataAssistant */,
 				C12CE9A61E16E3740070EF53 /* NetworkAssistant */,
-				C16E56D31E1ACAA000AFFA01 /* UserDefaults */,
 				C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */,
 				C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */,
 				C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */,
@@ -270,6 +277,7 @@
 		C12CE97D1E16D1480070EF53 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				C13CE79B1E2041D000F6D8FF /* Device.swift */,
 				C12CE9971E16D82B0070EF53 /* User.swift */,
 			);
 			path = Entities;
@@ -300,6 +308,7 @@
 		C12CE9961E16D7B10070EF53 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				C13CE79F1E20F8F800F6D8FF /* DeviceTests.swift */,
 				C12CE99B1E16DB190070EF53 /* UserTests.swift */,
 			);
 			path = Entities;
@@ -308,6 +317,7 @@
 		C12CE99D1E16DF550070EF53 /* CoreDataAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				C13514AE1E203B9000AC0C21 /* CoreDataAssistant+Device.swift */,
 				C12CE99F1E16DF9E0070EF53 /* CoreDataAssistant+User.swift */,
 			);
 			path = CoreDataAssistant;
@@ -316,6 +326,7 @@
 		C12CE99E1E16DF6D0070EF53 /* NetworkAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				C13514AC1E20372100AC0C21 /* NetworkAssistant+Devices.swift */,
 				C1D82FB01E1AB937007379CA /* NetworkAssistant+Server.swift */,
 				C12CE9A41E16E3020070EF53 /* NetworkAssistant+User.swift */,
 			);
@@ -325,6 +336,7 @@
 		C12CE9A11E16E1410070EF53 /* CoreDataAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				C13CE79D1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift */,
 				C12CE9A21E16E1670070EF53 /* CoreDataAssistantUserTests.swift */,
 			);
 			path = CoreDataAssistant;
@@ -333,26 +345,11 @@
 		C12CE9A61E16E3740070EF53 /* NetworkAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				C13514AA1E20366600AC0C21 /* NetworkAssistantDeviceTests.swift */,
 				C1D82FB21E1ABA7C007379CA /* NetworkAssistantServerTests.swift */,
 				C12CE9A71E16E3970070EF53 /* NetworkAssistantUserTests.swift */,
 			);
 			path = NetworkAssistant;
-			sourceTree = "<group>";
-		};
-		C16E56D01E1AC87000AFFA01 /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-				C16E56D11E1AC8A100AFFA01 /* UserDefaults+Server.swift */,
-			);
-			path = UserDefaults;
-			sourceTree = "<group>";
-		};
-		C16E56D31E1ACAA000AFFA01 /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-				C16E56D41E1ACADC00AFFA01 /* UserDefaultsServerTests.swift */,
-			);
-			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		C16E56D81E1AEDAF00AFFA01 /* Extensions */ = {
@@ -572,7 +569,6 @@
 			children = (
 				C12CE99D1E16DF550070EF53 /* CoreDataAssistant */,
 				C12CE99E1E16DF6D0070EF53 /* NetworkAssistant */,
-				C16E56D01E1AC87000AFFA01 /* UserDefaults */,
 				C12CE9901E16D6A90070EF53 /* MagicalRecord.swift */,
 				C12CE98E1E16D64F0070EF53 /* ProcesInfo+Extension.swift */,
 				C12CE96F1E16C9830070EF53 /* String+Extension.swift */,
@@ -917,6 +913,7 @@
 				C12CE9981E16D82B0070EF53 /* User.swift in Sources */,
 				C12CE9AA1E16E4D50070EF53 /* UIAlertController+Extension.swift in Sources */,
 				C1E9BB3D1E0DE8BA009A59E1 /* AttributedView.swift in Sources */,
+				C13514AF1E203B9000AC0C21 /* CoreDataAssistant+Device.swift in Sources */,
 				C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */,
 				C12CE9911E16D6A90070EF53 /* MagicalRecord.swift in Sources */,
 				C12CE98A1E16D2080070EF53 /* NetworkResponseType.swift in Sources */,
@@ -930,13 +927,13 @@
 				C1E9BB2B1E0DBAD7009A59E1 /* ContainerViewController.swift in Sources */,
 				C12CE97C1E16D1310070EF53 /* CoreDataAssistant.swift in Sources */,
 				C12CE9741E16CDBD0070EF53 /* Error.swift in Sources */,
-				C16E56D21E1AC8A100AFFA01 /* UserDefaults+Server.swift in Sources */,
 				C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */,
 				C12CE9881E16D1FD0070EF53 /* NetworkRequestType.swift in Sources */,
 				C1B5E3501E1FE30A00F043CE /* SettingsViewController.swift in Sources */,
 				C1D82FAD1E197ECE007379CA /* AttributedNavigationBar.swift in Sources */,
 				C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */,
 				C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */,
+				C13514AD1E20372100AC0C21 /* NetworkAssistant+Devices.swift in Sources */,
 				C1E9BB2D1E0DBB34009A59E1 /* AppContainerViewController.swift in Sources */,
 				C12CE9A51E16E3020070EF53 /* NetworkAssistant+User.swift in Sources */,
 				C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */,
@@ -945,6 +942,7 @@
 				C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */,
 				C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */,
 				C12CE96C1E12D3A00070EF53 /* ShowDeviceViewController.swift in Sources */,
+				C13CE79C1E2041D000F6D8FF /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,17 +953,19 @@
 				C12CE95E1E12CBD30070EF53 /* UIFontExtensionTests.swift in Sources */,
 				C1E9BB411E0DE93D009A59E1 /* AttributedViewTests.swift in Sources */,
 				C12CE9771E16CFCB0070EF53 /* ErrorTests.swift in Sources */,
+				C13514AB1E20366600AC0C21 /* NetworkAssistantDeviceTests.swift in Sources */,
 				C12CE9951E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift in Sources */,
 				C12CE9A31E16E1670070EF53 /* CoreDataAssistantUserTests.swift in Sources */,
 				C1D82FAF1E197F01007379CA /* AttributedNavigationBarTests.swift in Sources */,
+				C13CE7A01E20F8F800F6D8FF /* DeviceTests.swift in Sources */,
 				C12CE9601E12CC190070EF53 /* AttributetTextViewTests.swift in Sources */,
 				C12CE9791E16CFD40070EF53 /* SettingsTests.swift in Sources */,
 				C12CE9931E16D7360070EF53 /* NetworkAssistantTests.swift in Sources */,
-				C16E56D51E1ACADC00AFFA01 /* UserDefaultsServerTests.swift in Sources */,
 				C12CE9721E16C99E0070EF53 /* StringExtensionTests.swift in Sources */,
 				C12CE99A1E16D9520070EF53 /* CoreDataTestCase.swift in Sources */,
 				C12CE9A81E16E3970070EF53 /* NetworkAssistantUserTests.swift in Sources */,
 				C12CE9641E12D0010070EF53 /* UIColorExtensionTests.swift in Sources */,
+				C13CE79E1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift in Sources */,
 				C12CE99C1E16DB190070EF53 /* UserTests.swift in Sources */,
 				C1D82FB31E1ABA7C007379CA /* NetworkAssistantServerTests.swift in Sources */,
 			);

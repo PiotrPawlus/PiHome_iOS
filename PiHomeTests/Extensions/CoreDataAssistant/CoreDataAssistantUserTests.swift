@@ -9,7 +9,7 @@
 import XCTest
 @testable import PiHome
 
-class CoreDataAssistatntUserTests: XCTestCase {
+class CoreDataAssistatntUserTests: CoreDataTestCase {
     
     func testLogOutCurrentUserWithSuccess() {
         
@@ -33,6 +33,7 @@ class CoreDataAssistatntUserTests: XCTestCase {
         CoreDataAssistant.logOut(nil) { error in
             
             XCTAssertNotNil(error)
+            XCTAssertNil(Settings.currentUser)
         }
     }
     
@@ -43,9 +44,8 @@ class CoreDataAssistatntUserTests: XCTestCase {
         CoreDataAssistant.parseAndSaveUser(with: NetworkRequestType.login("j.l@example.com").mockResponse) { user, error in
             
             expectation.fulfill()
-            
-            XCTAssertNil(error)
             XCTAssertNotNil(user)
+            XCTAssertNil(error)
         }
         
         waitForExpectations(timeout: 2)

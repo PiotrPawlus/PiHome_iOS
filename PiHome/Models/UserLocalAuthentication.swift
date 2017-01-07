@@ -10,12 +10,12 @@ private let UserLocalAuthenticationMessage = "Use Touch ID for unlock PiHome."
 
 class UserLocalAuthentication: LAContext {
     
-    private static let context = LAContext()
-    
     //MARK: - Class Methods
     
     class func authenticate(completion: @escaping () -> ()) {
-        
+    
+        let context = LAContext()
+
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: UserLocalAuthenticationMessage, reply: { success, error in

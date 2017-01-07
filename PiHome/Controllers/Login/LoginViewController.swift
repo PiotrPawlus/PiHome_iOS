@@ -97,7 +97,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if let user = Settings.currentUser, user.isAuthorized {
+        if !Settings.isUserLoggedIn {
+         
             UserLocalAuthentication.authenticate {
                 self.login(withEmail: email, password: password)
             }

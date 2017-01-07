@@ -27,8 +27,8 @@ extension NetworkAssistant {
             "password": password
         ]
         
-        requestType = .login(email)
-        
+        requestType = .login("j.l@example.com")
+
         _ = post("session", parameters: parameters, progress: nil, success: { _, response in
             
             CoreDataAssistant.parseAndSaveUser(with: response, completion: completion)

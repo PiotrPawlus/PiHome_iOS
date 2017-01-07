@@ -23,17 +23,22 @@ extension NetworkAssistant {
     func connect(toAddress address: String, completion: @escaping ErrorHandler) {
         
         requestType = .server(address)
-    
-        let networkAssistantBaseUrl = address + NetworkAssistantSufixUrl
         
-        _ = get(networkAssistantBaseUrl, parameters: nil, progress: nil, success: { _, response in
+        _ = get("", parameters: nil, progress: nil, success: { _, response in
             
-            UserDefaults.parseAndSaveServerAddress(with: response, completion: completion)
+            if let dictionary = response as? [AnyHashable: Any], let address = dictionary["url"] as? String {
+                
+                UserDefaults.standard.set(address, forKey: NetworkAssistantUrl)
+                UserDefaults.standard.synchronize()
+                
+                completion(nil)
+            }
             
         }, failure: { _, error in
             
-            completion(Error(error: error))
+            UserDefaults.standard.removeObject(forKey: NetworkAssistantUrl)
             
+            completion(Error(error: error))
         })
     }
     

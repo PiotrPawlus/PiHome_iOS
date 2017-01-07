@@ -15,17 +15,23 @@ typealias ServerHandler = (String?, Error?) -> Void
 typealias UserHandler = (User?, Error?) -> Void
 
 let NetworkAssistantUrl = "NetworkAssistanUrl"
-let NetworkAssistantSufixUrl = "/api/v1"
+let NetworkAssistantSufixUrl = "/pihome/api/v1"
 
 class NetworkAssistant: AFHTTPSessionManager {
 
-    private static let networkAssistant = NetworkAssistant(baseURL: URL(string: UserDefaults.standard.value(forKey: NetworkAssistantUrl) as! String))
+    static var networkAssistant: NetworkAssistant? {
+        
+        if let address = UserDefaults.standard.string(forKey: NetworkAssistantUrl) {
+            return NetworkAssistant(baseURL: URL(string: address))
+        }
+        
+        return nil
+    }
     
     var requestType = NetworkRequestType.register
     
     static var shared: NetworkAssistant {
-//        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant
-        return MockNetworkAssistant()
+        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant!
     }
     
     //MARK: - Class Methods

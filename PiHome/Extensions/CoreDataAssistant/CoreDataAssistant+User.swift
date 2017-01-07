@@ -22,8 +22,8 @@ extension CoreDataAssistant {
                 
                 completion(Error(error: error))
             }
-        } else {
             
+        } else {
             completion(Error(error: Error.Name.noDataFound))
         }
     }
@@ -31,17 +31,18 @@ extension CoreDataAssistant {
     class func parseAndSaveUser(with response: Any?, completion: @escaping UserHandler) {
         
         if let dictionary = response as? [AnyHashable: Any] {
-            
-            var identifier: Int64 = 1
-            
+        
             MagicalRecord.save({ context in
                 
-                identifier = User.createOrUpdate(with: dictionary, in: context).identifier
+                _ = User.createOrUpdate(with: dictionary, in: context)
                 
             }, completion: { _, error in
                 
-                completion(User.find(withIdentifier: Int(identifier)), Error(error: error))
+                completion(User.find(withIdentifier: dictionary["id"] as! Int), Error(error: error))
             })
+            
+        } else {
+            completion(nil, Error(error: .noDataFound))
         }
     }
     

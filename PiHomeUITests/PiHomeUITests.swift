@@ -21,6 +21,7 @@ class PiHomeUITests: XCTestCase {
     private var lastNameAlert: XCUIElement!
     private var passwordAlert: XCUIElement!
     private var passwordsAlert: XCUIElement!
+    private var touchIdAlert: XCUIElement!
     private var unauthorizedAlert: XCUIElement!
 
     //BarButtonItems
@@ -75,6 +76,7 @@ class PiHomeUITests: XCTestCase {
         lastNameAlert = app.alerts["Last Name"]
         passwordAlert = app.alerts["Password"]
         passwordsAlert = app.alerts["Passwords"]
+        touchIdAlert = app.alerts["Touch ID for \"PiHome\""]
         unauthorizedAlert = app.alerts["Please wait..."]
 
         //BarButtonItems
@@ -127,6 +129,7 @@ class PiHomeUITests: XCTestCase {
     
     func testPiHome() {
         
+        dismissTouchIdAlertIfExist()
         backIfEnabled()
         
         connectButton.tap()
@@ -246,6 +249,13 @@ class PiHomeUITests: XCTestCase {
         
         if backBarButtonItem.exists {
             backBarButtonItem.tap()
+        }
+    }
+    
+    private func dismissTouchIdAlertIfExist() {
+        
+        if touchIdAlert.exists {
+            touchIdAlert.cancel()
         }
     }
     

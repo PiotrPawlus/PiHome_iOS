@@ -9,29 +9,20 @@
 import XCTest
 @testable import PiHome
 
-class SettingsTests: XCTestCase {
+class SettingsTests: CoreDataTestCase {
     
-    override func tearDown() {
-        super.tearDown()
+    override func setUp() {
+        super.setUp()
         
-        Settings.logoutUser()
+        if Settings.currentUser != nil {
+            Settings.logoutUser()
+        }
     }
     
     func testIsUserLoggedIn() {
         
-        Settings.logoutUser()
-        XCTAssertFalse(Settings.isUserLoggedIn)
-        
         Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
 
         XCTAssertTrue(Settings.isUserLoggedIn)
-    }
-    
-    func testLogoutCurrentUser() {
-
-        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
-        Settings.logoutUser()
-    
-        XCTAssertNil(Settings.currentUser)
     }
 }

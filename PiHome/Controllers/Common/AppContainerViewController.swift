@@ -56,7 +56,7 @@ class AppContainerViewController: ContainerViewController {
         
         AppContainerViewController.appContainer = self
         
-        UserDefaults.isServerAddres ? AppContainerViewController.setLoginViewController() : AppContainerViewController.setConnectViewController()
+        UserDefaults.standard.string(forKey: NetworkAssistantUrl) != nil ? AppContainerViewController.setLoginViewController() : AppContainerViewController.setConnectViewController()
     }
     
     //MARK: - Deinitialization

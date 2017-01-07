@@ -22,6 +22,10 @@ extension XCUIElement {
     
     //MARK: - Internal
     
+    func cancel() {
+        buttons["Cancel"].tap()
+    }
+    
     func confirm() {
         buttons["OK"].tap()
     }

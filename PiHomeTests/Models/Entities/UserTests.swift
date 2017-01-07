@@ -11,12 +11,6 @@ import XCTest
 
 class UserTests: CoreDataTestCase {
     
-    override func setUp() {
-        super.setUp()
-        
-        User.mr_deleteAll(matching: NSPredicate(value: true), in: MagicalRecord.context)
-    }
-    
     func testFullName() {
         
         let user = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
@@ -32,7 +26,7 @@ class UserTests: CoreDataTestCase {
         XCTAssertEqual(user.firstName, "John")
         XCTAssertEqual(user.lastName, "Little")
         XCTAssertEqual(user.authenticationToken, "12345")
-        XCTAssertEqual(user.role, "user")
+        XCTAssertTrue(user.isAuthorized)
     }
     
     func testDelete() {

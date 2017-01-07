@@ -14,14 +14,12 @@ class User: NSManagedObject {
     @NSManaged var firstName: String
     @NSManaged var identifier: Int64
     @NSManaged var lastName: String
-    @NSManaged var role: String
+    @NSManaged var isAuthorized: Bool
+    
+    @NSManaged var devices: Set<Device>
     
     var fullName: String {
         return firstName + " " + lastName
-    }
-    
-    var isAuthorized: Bool {
-        return role != "unauthorized"
     }
     
     //MARK: - Class Methods
@@ -29,11 +27,7 @@ class User: NSManagedObject {
     class func createOrUpdate(with dictionary: [AnyHashable: Any], in context: NSManagedObjectContext) -> User {
         
         let identifier = dictionary["id"] as! Int
-        var user = find(withIdentifier: identifier, in: context)
-        
-        if user == nil {
-            user = User.mr_createEntity(in: context)
-        }
+        let user = find(withIdentifier: identifier, in: context) ?? User.mr_createEntity(in: context)
         
         user!.identifier = Int64(identifier)
 
@@ -53,9 +47,11 @@ class User: NSManagedObject {
             user!.lastName = lastName
         }
         
-        if let role = dictionary["role"] as? String {
-            user!.role = role
+        if let isAuthorized = dictionary["is_authorized"] as? Bool {
+            user!.isAuthorized = isAuthorized
         }
+        
+        Device.removeOrphaned(in: context)
         
         return user!
     }
