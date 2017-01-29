@@ -17,7 +17,33 @@ class CoreDataAssistatntDeviceTests: CoreDataTestCase {
         Device.mr_deleteAll(matching: NSPredicate(value: true), in: MagicalRecord.context)
     }
     
-    func testParseAndSaveCurrentUserWithCorrectResponse() {
+    func testParseAndSaveDeviceWithCorrectResponse() {
+        
+        let expectation = self.expectation(description: "")
+
+        CoreDataAssistant.parseAndSaveDevice(with: NetworkRequestType.device.mockResponse) { error in
+            
+            expectation.fulfill()
+            XCTAssertNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testParseAndSaveDeviceWithIncorrectResponse() {
+        
+        let expectation = self.expectation(description: "")
+        
+        CoreDataAssistant.parseAndSaveDevice(with: nil) { error in
+            
+            expectation.fulfill()
+            XCTAssertNotNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testParseAndSaveDevicesWithCorrectResponse() {
         
         let expectation = self.expectation(description: "")
         let user = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
@@ -31,7 +57,7 @@ class CoreDataAssistatntDeviceTests: CoreDataTestCase {
         waitForExpectations(timeout: 2)
     }
     
-    func testParseAndSaveCurrentUserWithIncorrectResponse() {
+    func testParseAndSaveDevicesWithIncorrectResponse() {
         
         CoreDataAssistant.parseAndSaveDevices(with: nil, user: nil) { error in
             XCTAssertNotNil(error)

@@ -29,8 +29,47 @@ class NetworkAssistantDeviceTests: CoreDataTestCase {
     
     func testDevicesWithFailure() {
         
-        MockNetworkAssistant().devices { error in
+        let expectation = self.expectation(description: "")
+        
+        MockNetworkAssistant(responseType: .failure).devices { error in
+            
+            expectation.fulfill()
+
             XCTAssertNotNil(error)
         }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testDeviceChangeStateWithSuccess() {
+        
+        let expectation = self.expectation(description: "")
+        
+        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        let device = Device.createOrUpdate(with: MockResponse.mockDictionaryForDevice(), in: MagicalRecord.context)
+        
+        MockNetworkAssistant().changeState(of: device) { error in
+            
+            expectation.fulfill()
+            
+            XCTAssertNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testDeviceChangeStateWithFailure() {
+        
+        let expectation = self.expectation(description: "")
+        let device = Device.createOrUpdate(with: MockResponse.mockDictionaryForDevice(), in: MagicalRecord.context)
+        
+        MockNetworkAssistant(responseType: .failure).changeState(of: device) { error in
+            
+            expectation.fulfill()
+
+            XCTAssertNotNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
     }
 }

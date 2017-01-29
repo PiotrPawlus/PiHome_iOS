@@ -11,6 +11,7 @@ typealias NetworkAssistantFailureHandler = ((URLSessionDataTask?, Swift.Error) -
 typealias ProgressHandler = ((Progress) -> Void)
 
 typealias ErrorHandler = (Error?) -> Void
+typealias DeviceHandler = (Device?, Error?) -> Void
 typealias ServerHandler = (String?, Error?) -> Void
 typealias UserHandler = (User?, Error?) -> Void
 

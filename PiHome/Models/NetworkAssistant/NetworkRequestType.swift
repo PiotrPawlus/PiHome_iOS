@@ -8,7 +8,7 @@
 
 enum NetworkRequestType {
     
-    case device(Int)
+    case device
     case devices
     case login(String)
     case register
@@ -19,9 +19,9 @@ enum NetworkRequestType {
         var mockResponse: Any?
         
         switch self {
-        case .device(let identifier):
+        case .device:
             
-            mockResponse = MockResponse.mockDictionaryForDevice(withIdentifier: identifier, state: true)
+            mockResponse = MockResponse.mockDictionaryForDevice(state: true)
             
         case .devices:
             

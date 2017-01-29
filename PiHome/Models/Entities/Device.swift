@@ -27,7 +27,7 @@ class Device: NSManagedObject {
         
         device!.identifier = Int64(identifier)
     
-        if let information = dictionary["info"] as? String {
+        if let information = dictionary["description"] as? String {
             device!.information = information
         }
         
@@ -50,7 +50,7 @@ class Device: NSManagedObject {
         return device!
     }
     
-    class func find(withIdentifier identifier: Int, in context: NSManagedObjectContext) -> Device? {
+    class func find(withIdentifier identifier: Int, in context: NSManagedObjectContext = NSManagedObjectContext.mr_default()) -> Device? {
         return Device.mr_findFirst(byAttribute: "identifier", withValue: identifier, in: context)
     }
     

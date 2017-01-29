@@ -20,6 +20,22 @@ extension NetworkAssistant {
     
     //MARK: - Internal
     
+    func changeState(of device: Device, completion: @escaping ErrorHandler) {
+        
+        requestType = .device
+        
+        let query = "device/\(device.identifier)/state"
+        
+        _ = post(query, parameters: nil, progress: nil, success: { _, response in
+            
+            CoreDataAssistant.parseAndSaveDevice(with: response, completion: completion)
+            
+        }, failure: { _, error in
+            
+            completion(Error(error: error))
+        })
+    }
+    
     func devices(completion: @escaping ErrorHandler) {
      
         requestType = .devices

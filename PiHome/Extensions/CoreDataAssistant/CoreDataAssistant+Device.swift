@@ -10,6 +10,28 @@ extension CoreDataAssistant {
     
     //MARK: - Class Methods
     
+    class func parseAndSaveDevice(with response: Any?, completion: @escaping ErrorHandler) {
+        
+        if let dictionary = response as? [AnyHashable: Any] {
+            
+            MagicalRecord.save({ context in
+                
+                if let user = Settings.currentUser?.mr_(in: context) {
+                
+                    let device = Device.createOrUpdate(with: dictionary, in: context)
+                    device.user = user
+                }
+
+            }, completion: { _, error in
+                
+                completion(Error(error: error))
+            })
+        
+        } else {
+            completion(Error(error: .noDataFound))
+        }
+    }
+    
     class func parseAndSaveDevices(with response: Any?, user: User?, completion: @escaping ErrorHandler) {
         
         if let dictionaries = (response as? [AnyHashable: Any])?["devices"] as? [[AnyHashable: Any]] {
