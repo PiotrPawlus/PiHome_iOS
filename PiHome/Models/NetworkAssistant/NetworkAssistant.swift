@@ -15,7 +15,7 @@ typealias ServerHandler = (String?, Error?) -> Void
 typealias UserHandler = (User?, Error?) -> Void
 
 let NetworkAssistantUrl = "NetworkAssistanUrl"
-let NetworkAssistantSufixUrl = "/pihome/api/v1"
+let NetworkAssistantSufixUrl = ":9090/api/v1"
 
 class NetworkAssistant: AFHTTPSessionManager {
 

@@ -35,7 +35,7 @@ class MockResponse {
     class func mockDictionaryForServerAddress(withAddress address: String) -> [AnyHashable: Any] {
         
         return [
-            "url": address + ""//NetworkAssistantSufixUrl
+            "url": address + NetworkAssistantSufixUrl
         ]
     }
 }

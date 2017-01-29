@@ -25,7 +25,7 @@ class UserTests: CoreDataTestCase {
         XCTAssertEqual(user.email, "j.l@example.com")
         XCTAssertEqual(user.firstName, "John")
         XCTAssertEqual(user.lastName, "Little")
-        XCTAssertEqual(user.authenticationToken, "12345")
+        XCTAssertEqual(user.authenticationToken, "MTIzNDU6dW51c2Vk")
         XCTAssertTrue(user.isAuthorized)
     }
     

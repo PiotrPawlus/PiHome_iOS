@@ -29,7 +29,7 @@ extension NetworkAssistant {
         
         requestType = .login("j.l@example.com")
 
-        _ = post("session", parameters: parameters, progress: nil, success: { _, response in
+        _ = post("authentication", parameters: parameters, progress: nil, success: { _, response in
             
             CoreDataAssistant.parseAndSaveUser(with: response, completion: completion)
             

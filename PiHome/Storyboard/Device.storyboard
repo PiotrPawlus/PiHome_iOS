@@ -52,85 +52,70 @@
         <scene sceneID="oks-9i-b5V">
             <objects>
                 <tableViewController id="B9O-Sc-DlL" customClass="DevicesViewController" customModule="PiHome" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PCc-Tq-IKW">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PCc-Tq-IKW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="tN6-Yw-T1r">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCellIdentifier" rowHeight="110" id="enH-kS-7I9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="enH-kS-7I9" id="3f4-kZ-W4r">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109.66666666666667"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LHd-wW-aOJ">
-                                                    <rect key="frame" x="15" y="10" width="100" height="89"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="zCf-em-MPW"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceTableViewCellIdentifier" rowHeight="100" id="enH-kS-7I9" customClass="TableViewCell" customModule="PiHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="enH-kS-7I9" id="3f4-kZ-W4r">
+                                    <rect key="frame" x="0.0" y="0.0" width="347" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage doors " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-Se-Ruh">
+                                            <rect key="frame" x="28" y="18" width="231" height="63.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEM-MI-bM8" customClass="DeviceStateButton" customModule="PiHome" customModuleProvider="target">
+                                            <rect key="frame" x="274" y="25" width="50" height="50"/>
+                                            <color key="backgroundColor" red="0.57647058823529407" green="0.78431372549019607" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="stateButton"/>
                                             <constraints>
-                                                <constraint firstItem="LHd-wW-aOJ" firstAttribute="leading" secondItem="3f4-kZ-W4r" secondAttribute="leading" constant="15" id="ac9-ws-Y7N"/>
-                                                <constraint firstItem="LHd-wW-aOJ" firstAttribute="top" secondItem="3f4-kZ-W4r" secondAttribute="top" constant="10" id="cSl-Uy-gFY"/>
-                                                <constraint firstAttribute="bottom" secondItem="LHd-wW-aOJ" secondAttribute="bottom" constant="10" id="dwR-R4-ALM"/>
+                                                <constraint firstAttribute="height" constant="50" id="TRY-l8-jpo"/>
+                                                <constraint firstAttribute="width" constant="50" id="xqu-wA-4NM"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="mdl-FS-TId" kind="showDetail" trigger="accessoryAction" id="sk0-P5-rRj">
-                                                <segue key="commit" inheritsFrom="parent" id="Kez-Ef-YZc"/>
-                                                <segue key="preview" inheritsFrom="commit" id="Syw-4T-2Pp"/>
-                                            </segue>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCellIdentifier" rowHeight="110" id="zJP-ex-tla">
-                                        <rect key="frame" x="0.0" y="110" width="414" height="110"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zJP-ex-tla" id="rVR-bZ-UU0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109.66666666666667"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-UA-usH">
-                                                    <rect key="frame" x="15" y="10" width="100" height="89"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="vEd-CG-vPK"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="nGY-UA-usH" firstAttribute="top" secondItem="rVR-bZ-UU0" secondAttribute="top" constant="10" id="JVP-HJ-0m1"/>
-                                                <constraint firstAttribute="bottom" secondItem="nGY-UA-usH" secondAttribute="bottom" constant="10" id="fcI-qx-Az8"/>
-                                                <constraint firstItem="nGY-UA-usH" firstAttribute="leading" secondItem="rVR-bZ-UU0" secondAttribute="leading" constant="15" id="n1c-M6-Bg0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCellIdentifier" rowHeight="110" id="NA3-Iz-54N">
-                                        <rect key="frame" x="0.0" y="220" width="414" height="110"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NA3-Iz-54N" id="tug-nG-QV0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109.66666666666667"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ew-QQ-iia">
-                                                    <rect key="frame" x="15" y="10" width="100" height="89"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="CeQ-6k-wp3"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="3ew-QQ-iia" firstAttribute="leading" secondItem="tug-nG-QV0" secondAttribute="leading" constant="15" id="9Hl-kO-QDm"/>
-                                                <constraint firstAttribute="bottom" secondItem="3ew-QQ-iia" secondAttribute="bottom" constant="10" id="EvO-Mw-Dpn"/>
-                                                <constraint firstItem="3ew-QQ-iia" firstAttribute="top" secondItem="tug-nG-QV0" secondAttribute="top" constant="10" id="ko7-vA-aU8"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                            <state key="normal" title="ON">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="changeDeviceState:" destination="enH-kS-7I9" eventType="touchUpInside" id="GZl-xa-CR3"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DEM-MI-bM8" firstAttribute="centerY" secondItem="3f4-kZ-W4r" secondAttribute="centerY" id="69k-Ty-YIm"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="JlR-Se-Ruh" secondAttribute="bottom" constant="10" id="Y8H-8u-iZ0"/>
+                                        <constraint firstItem="JlR-Se-Ruh" firstAttribute="centerY" secondItem="3f4-kZ-W4r" secondAttribute="centerY" id="Yvh-Do-iwd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="DEM-MI-bM8" secondAttribute="trailing" constant="15" id="eQE-T7-lbv"/>
+                                        <constraint firstItem="DEM-MI-bM8" firstAttribute="leading" secondItem="JlR-Se-Ruh" secondAttribute="trailing" constant="15" id="jFg-NN-EiI"/>
+                                        <constraint firstItem="JlR-Se-Ruh" firstAttribute="top" secondItem="3f4-kZ-W4r" secondAttribute="topMargin" constant="10" id="q2x-QH-FnA"/>
+                                        <constraint firstItem="JlR-Se-Ruh" firstAttribute="leading" secondItem="3f4-kZ-W4r" secondAttribute="leadingMargin" constant="20" id="yR4-gy-psc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="stateButton" destination="DEM-MI-bM8" id="rmY-Qe-nf3"/>
+                                    <outlet property="titleLabel" destination="JlR-Se-Ruh" id="6km-MP-q3a"/>
+                                    <segue destination="mdl-FS-TId" kind="showDetail" identifier="DetailDeviceSegueIdentifier" trigger="accessoryAction" id="PXP-hz-mWd">
+                                        <segue key="commit" inheritsFrom="parent" id="MAT-41-kPF"/>
+                                        <segue key="preview" inheritsFrom="commit" id="qEJ-9O-jAD"/>
+                                    </segue>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="devicesTableView"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="B9O-Sc-DlL" id="y6e-lP-gAy"/>
                             <outlet property="delegate" destination="B9O-Sc-DlL" id="iBH-pz-2C1"/>
@@ -152,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="1355" y="594"/>
         </scene>
-        <!--Show Device View Controller-->
+        <!--Detail Device View Controller-->
         <scene sceneID="vsF-9r-U4E">
             <objects>
-                <viewController id="mdl-FS-TId" customClass="ShowDeviceViewController" customModule="PiHome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mdl-FS-TId" customClass="DetailDeviceViewController" customModule="PiHome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kU6-kL-1t7"/>
                         <viewControllerLayoutGuide type="bottom" id="6VS-jJ-I6S"/>
@@ -327,11 +312,7 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Add new device" id="C3m-RT-VES">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="phj-Vz-hXF">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Add new device" id="C3m-RT-VES"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -361,6 +342,6 @@
         <image name="bacground-blue" width="260" height="566"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sk0-P5-rRj"/>
+        <segue reference="PXP-hz-mWd"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -50,7 +50,7 @@ class AppContainerViewController: ContainerViewController {
         let piHomeNavigationController =  UIStoryboard(name: "PiHome", bundle: nil).instantiateViewController(withIdentifier: SideMenuNavigationControllerIdentifier) as? UISideMenuNavigationController
         piHomeNavigationController?.leftSide = true
         
-        SideMenuManager.menuAnimationBackgroundColor = UIColor.red
+        SideMenuManager.menuAnimationBackgroundColor = UIColor.frenchGray
         SideMenuManager.menuLeftNavigationController = piHomeNavigationController
         SideMenuManager.menuWidth = 260
         

@@ -24,7 +24,7 @@ extension NetworkAssistant {
      
         requestType = .devices
         
-        _ = get("/devices", parameters: nil, progress: nil, success: { _, response in
+        _ = get("devices", parameters: nil, progress: nil, success: { _, response in
 
             if let user = Settings.currentUser {
                 CoreDataAssistant.parseAndSaveDevices(with: response, user: user, completion: completion)

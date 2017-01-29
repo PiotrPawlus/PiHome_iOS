@@ -17,6 +17,11 @@ class StringExtensionTests: XCTestCase {
         XCTAssertTrue("taylor@hou.realtor".isValidEmail)
     }
     
+    func testBase68() {
+        XCTAssertEqual("base:unused".base68, "YmFzZTp1bnVzZWQ=")
+        
+    }
+    
     func testIsMatchingRegularExpressionReturnsTrue() {
         
         let matched = try! "654".isMatching(regularExpression: NSRegularExpression(pattern: "^[1-9]{2,3}$"))

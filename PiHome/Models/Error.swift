@@ -87,8 +87,16 @@ open class Error: Swift.Error {
             
             do {
                 
-                // TO DO
+                if let response = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [AnyHashable: Any] {
                 
+                    if let description = response["description"] as? String {
+                        
+                        userInfo[NSLocalizedDescriptionKey] = description
+                    }
+                    
+                } else {
+                    userInfo[NSLocalizedDescriptionKey] = error.localizedDescription
+                }
             } catch _ {
                 userInfo[NSLocalizedDescriptionKey] = error.localizedDescription
             }

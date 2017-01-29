@@ -25,4 +25,14 @@ class UIColorExtensionTests: XCTestCase {
         XCTAssertEqual(blue, 204/255.0)
         XCTAssertEqual(alpha, 1)
     }
+    
+    func testMantis() {
+        
+        UIColor.mantis.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        XCTAssertEqual(red, 147/255.0)
+        XCTAssertEqual(green, 200/255.0)
+        XCTAssertEqual(blue, 106/255.0)
+        XCTAssertEqual(alpha, 1)
+    }
 }

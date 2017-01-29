@@ -10,6 +10,11 @@
 		13F136D0F96FFA648FD3687D /* Pods_PiHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62542766ABD25EE9D5C36EA6 /* Pods_PiHome.framework */; };
 		989A34E7EB3B3B394E56B5FC /* Pods_PiHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2D118C512042F846DB338 /* Pods_PiHomeTests.framework */; };
 		B7D36F8A777B22B9F7A5823D /* Pods_PiHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E11098F5A0A2EAD76256D7 /* Pods_PiHomeUITests.framework */; };
+		C100F3B01E3E54190078B21C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3AF1E3E54190078B21C /* TableViewCell.swift */; };
+		C100F3B21E3E55520078B21C /* AttributedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B11E3E55520078B21C /* AttributedButtonTests.swift */; };
+		C100F3B41E3E557F0078B21C /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B31E3E557F0078B21C /* AttributedButton.swift */; };
+		C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */; };
+		C100F3B81E3E5E920078B21C /* DeviceStateButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */; };
 		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
 		C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Device.storyboard */; };
 		C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9581E12CB090070EF53 /* AttributedTextView.swift */; };
@@ -20,7 +25,7 @@
 		C12CE9641E12D0010070EF53 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */; };
 		C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */; };
 		C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */; };
-		C12CE96C1E12D3A00070EF53 /* ShowDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96B1E12D3A00070EF53 /* ShowDeviceViewController.swift */; };
+		C12CE96C1E12D3A00070EF53 /* DetialDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96B1E12D3A00070EF53 /* DetialDeviceViewController.swift */; };
 		C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96D1E16C7DC0070EF53 /* Settings.swift */; };
 		C12CE9701E16C9830070EF53 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96F1E16C9830070EF53 /* String+Extension.swift */; };
 		C12CE9721E16C99E0070EF53 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */; };
@@ -109,6 +114,11 @@
 		9FB7FE92A347F1A435E25FEB /* Pods-PiHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHomeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiHomeTests/Pods-PiHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8035415279CD557F33B67E4 /* Pods-PiHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiHome/Pods-PiHome.release.xcconfig"; sourceTree = "<group>"; };
 		B3A582817A8D8BF07EF1CCEB /* Pods-PiHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiHomeUITests/Pods-PiHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C100F3AF1E3E54190078B21C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C100F3B11E3E55520078B21C /* AttributedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedButtonTests.swift; sourceTree = "<group>"; };
+		C100F3B31E3E557F0078B21C /* AttributedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
+		C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButton.swift; sourceTree = "<group>"; };
+		C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButtonTests.swift; sourceTree = "<group>"; };
 		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		C12CE9561E12C3ED0070EF53 /* Device.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		C12CE9581E12CB090070EF53 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
@@ -119,7 +129,7 @@
 		C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
-		C12CE96B1E12D3A00070EF53 /* ShowDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDeviceViewController.swift; sourceTree = "<group>"; };
+		C12CE96B1E12D3A00070EF53 /* DetialDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialDeviceViewController.swift; sourceTree = "<group>"; };
 		C12CE96D1E16C7DC0070EF53 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C12CE96F1E16C9830070EF53 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -226,6 +236,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C100F3AE1E3E54000078B21C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C100F3AF1E3E54190078B21C /* TableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		C12CE95C1E12CBBA0070EF53 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */,
-				C12CE96B1E12D3A00070EF53 /* ShowDeviceViewController.swift */,
+				C12CE96B1E12D3A00070EF53 /* DetialDeviceViewController.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -557,9 +575,12 @@
 		C1E9BB3A1E0DE817009A59E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */,
-				C12CE9581E12CB090070EF53 /* AttributedTextView.swift */,
+				C100F3AE1E3E54000078B21C /* TableViewCells */,
+				C100F3B31E3E557F0078B21C /* AttributedButton.swift */,
 				C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */,
+				C12CE9581E12CB090070EF53 /* AttributedTextView.swift */,
+				C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */,
+				C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -583,9 +604,11 @@
 		C1E9BB3F1E0DE91B009A59E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */,
-				C12CE95F1E12CC190070EF53 /* AttributetTextViewTests.swift */,
+				C100F3B11E3E55520078B21C /* AttributedButtonTests.swift */,
 				C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */,
+				C12CE95F1E12CC190070EF53 /* AttributetTextViewTests.swift */,
+				C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */,
+				C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -927,8 +950,11 @@
 				C1E9BB2B1E0DBAD7009A59E1 /* ContainerViewController.swift in Sources */,
 				C12CE97C1E16D1310070EF53 /* CoreDataAssistant.swift in Sources */,
 				C12CE9741E16CDBD0070EF53 /* Error.swift in Sources */,
+				C100F3B41E3E557F0078B21C /* AttributedButton.swift in Sources */,
 				C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */,
+				C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */,
 				C12CE9881E16D1FD0070EF53 /* NetworkRequestType.swift in Sources */,
+				C100F3B01E3E54190078B21C /* TableViewCell.swift in Sources */,
 				C1B5E3501E1FE30A00F043CE /* SettingsViewController.swift in Sources */,
 				C1D82FAD1E197ECE007379CA /* AttributedNavigationBar.swift in Sources */,
 				C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */,
@@ -941,7 +967,7 @@
 				C12CE9841E16D19C0070EF53 /* NetworkAssistant.swift in Sources */,
 				C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */,
 				C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */,
-				C12CE96C1E12D3A00070EF53 /* ShowDeviceViewController.swift in Sources */,
+				C12CE96C1E12D3A00070EF53 /* DetialDeviceViewController.swift in Sources */,
 				C13CE79C1E2041D000F6D8FF /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -953,6 +979,7 @@
 				C12CE95E1E12CBD30070EF53 /* UIFontExtensionTests.swift in Sources */,
 				C1E9BB411E0DE93D009A59E1 /* AttributedViewTests.swift in Sources */,
 				C12CE9771E16CFCB0070EF53 /* ErrorTests.swift in Sources */,
+				C100F3B21E3E55520078B21C /* AttributedButtonTests.swift in Sources */,
 				C13514AB1E20366600AC0C21 /* NetworkAssistantDeviceTests.swift in Sources */,
 				C12CE9951E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift in Sources */,
 				C12CE9A31E16E1670070EF53 /* CoreDataAssistantUserTests.swift in Sources */,
@@ -968,6 +995,7 @@
 				C13CE79E1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift in Sources */,
 				C12CE99C1E16DB190070EF53 /* UserTests.swift in Sources */,
 				C1D82FB31E1ABA7C007379CA /* NetworkAssistantServerTests.swift in Sources */,
+				C100F3B81E3E5E920078B21C /* DeviceStateButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

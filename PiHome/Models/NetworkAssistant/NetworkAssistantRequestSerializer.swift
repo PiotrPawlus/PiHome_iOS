@@ -30,7 +30,7 @@ class NetworkAssistantRequestSerializer: AFJSONRequestSerializer {
         params["timestamp"] = Date().timeIntervalSince1970
         
         if let user = Settings.currentUser {
-            setValue(user.authenticationToken, forHTTPHeaderField: "X-User-Token")
+            setValue("Basic " + user.authenticationToken, forHTTPHeaderField: "Authorization")
         }
         
         return super.request(bySerializingRequest: request, withParameters: params, error: error)

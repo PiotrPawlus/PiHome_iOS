@@ -6,7 +6,12 @@
 //  Copyright © 2016 Piotr Pawluś. All rights reserved.
 //
 
-class DevicesViewController: UITableViewController {
+private let DeviceTableViewCellIdentifier = "DeviceTableViewCellIdentifier"
+private let DetailDeviceSegueIdentifier = "DetailDeviceSegueIdentifier"
+
+class DevicesViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    private var fetchedResultsController: NSFetchedResultsController<Device>!
     
     //MARK: - Class Methods
     
@@ -14,8 +19,13 @@ class DevicesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
+        fetchDevices()
         setupMenuGestureRecognizer()
+        setupFetchedResultsController()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
     
     //MARK: - Deinitialization
@@ -32,5 +42,113 @@ class DevicesViewController: UITableViewController {
     
     //MARK: - Private
     
+    private func fetchDevices() {
+        
+        SVProgressHUD.show()
+        
+        NetworkAssistant.shared.devices { error in
+            
+            SVProgressHUD.dismiss()
+            UIAlertController.show(from: error)
+            
+            if error == nil {
+                self.updateView()
+            }
+        }
+    }
+    
+    private func setupFetchedResultsController() {
+        
+        let context = NSManagedObjectContext.mr_default()
+        let fetchRequest = NSFetchRequest<Device>(entityName: "Device")
+        let identifierDescriptor = NSSortDescriptor(key: "identifier", ascending: true)
+        
+        fetchRequest.predicate = NSPredicate(value: true)
+        fetchRequest.sortDescriptors = [identifierDescriptor]
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
+        
+        try! fetchedResultsController.performFetch()
+        tableView.reloadData()
+    }
+    
+    private func updateView() {
+        tableView.reloadData()
+    }
+    
     //MARK: - Overridden
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let controller = segue.destination as? DetailDeviceViewController, let device = sender as? Device {
+            controller.device = device
+        }
+    }
+    
+    //MARK: - NSFetchedResultsControllerDelegate
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .insert:
+            
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+            
+        case .delete:
+            
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            
+        case .update:
+            
+            if let indexPath = indexPath {
+                tableView.reloadRows(at: [indexPath], with: .fade)
+            }
+            
+        case .move:
+            
+            if let indexPath = indexPath, let newIndexPath = newIndexPath {
+                
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+        }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        
+        tableView.endUpdates()
+        updateView()
+    }
+    
+    //MARK: - UITableViewDataSource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fetchedResultsController.fetchedObjects!.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let device = fetchedResultsController.object(at: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: DeviceTableViewCellIdentifier, for: indexPath) as! TableViewCell
+        
+        cell.configure(with: device)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let device = fetchedResultsController.object(at: indexPath)
+        
+        performSegue(withIdentifier: DetailDeviceSegueIdentifier, sender: device)
+    }
 }

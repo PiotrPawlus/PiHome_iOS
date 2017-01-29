@@ -12,6 +12,10 @@ extension String {
         return try! isMatching(regularExpression: NSRegularExpression(pattern: "^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,}$"))
     }
     
+    var base68: String {
+        return data(using: String.Encoding.utf8)!.base64EncodedString()
+    }
+    
     //MARK: - Class Methods
     
     //MARK: - Initailization

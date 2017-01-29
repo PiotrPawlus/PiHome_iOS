@@ -32,7 +32,7 @@ class User: NSManagedObject {
         user!.identifier = Int64(identifier)
 
         if let authenticationToken = dictionary["authentication_token"] as? String {
-            user!.authenticationToken = authenticationToken
+            user!.authenticationToken = (authenticationToken + ":unused").base68
         }
         
         if let email = dictionary["email"] as? String {

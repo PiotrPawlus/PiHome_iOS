@@ -1,12 +1,14 @@
 //
-//  ShowDeviceViewController.swift
+//  DetialDeviceViewController.swift
 //  PiHome
 //
 //  Created by Piotr Pawluś on 27/12/2016.
 //  Copyright © 2016 Piotr Pawluś. All rights reserved.
 //
 
-class ShowDeviceViewController: UIViewController {
+class DetailDeviceViewController: UIViewController {
+    
+    var device: Device!
     
     //MARK: - Class Methods
     
@@ -15,7 +17,7 @@ class ShowDeviceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("New Device View Controller")
+        print("DetailDeviceViewController")
     }
     
     //MARK: - Deinitialization

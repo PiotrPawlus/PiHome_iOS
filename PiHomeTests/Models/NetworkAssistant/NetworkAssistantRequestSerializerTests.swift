@@ -41,6 +41,6 @@ class NetworkAssistantRequestSerializerTests: CoreDataTestCase {
         let serializedUrlRequest = requestSerializer.request(bySerializingRequest: urlRequest, withParameters: nil, error: &error)
         
         XCTAssertTrue(serializedUrlRequest!.url!.absoluteString.contains("www.domain.com?timestamp"))
-        XCTAssertEqual(serializedUrlRequest!.value(forHTTPHeaderField: "X-User-Token"), "12345")
+        XCTAssertEqual(serializedUrlRequest!.value(forHTTPHeaderField: "Authorization"), "Basic MTIzNDU6dW51c2Vk")
     }
 }

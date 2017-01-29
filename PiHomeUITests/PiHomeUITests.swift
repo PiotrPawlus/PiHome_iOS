@@ -47,6 +47,7 @@ class PiHomeUITests: XCTestCase {
     
     //TableViews
     
+    private var devicesTableView: XCUIElement!
     private var menuTableView: XCUIElement!
     
     //TableViewCells
@@ -102,6 +103,7 @@ class PiHomeUITests: XCTestCase {
         
         //TableViews
         
+        devicesTableView = app.tables["devicesTableView"]
         menuTableView = app.tables["menuTableView"]
         
         //TableViewCells
@@ -236,6 +238,11 @@ class PiHomeUITests: XCTestCase {
         
         menuBarButtonItem.tap()
         devicesTableViewCell.tapIfExists()
+        
+        devicesTableView.tapCell(atIndex: 0)
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        devicesTableView.cells.element(boundBy: 0).buttons["stateButton"].tap()
+        
         menuBarButtonItem.tap()
         settingsTableViewCell.tapIfExists()
         sleep(1)
