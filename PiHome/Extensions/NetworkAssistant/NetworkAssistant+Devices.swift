@@ -52,6 +52,29 @@ extension NetworkAssistant {
         })
     }
     
+    func remove(device: Device, completion: @escaping ErrorHandler) {
+        
+        requestType = .removeDevice
+        
+        let query = "device/\(device.identifier)"
+        
+        _ = delete(query, parameters: nil, success: { _, response in
+            
+            MagicalRecord.save({ context in
+                
+                Device.remove(device: device, in: context)
+                
+            }, completion: { _, error in
+                
+                completion(Error(error: error))
+            })
+            
+        }, failure: { _, error in
+            
+            completion(Error(error: error))
+        })
+    }
+    
     //MARK: - Private
     
     //MARK: - Overridden

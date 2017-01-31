@@ -54,10 +54,12 @@ class Device: NSManagedObject {
         return Device.mr_findFirst(byAttribute: "identifier", withValue: identifier, in: context)
     }
     
+    class func remove(device: Device, in context: NSManagedObjectContext) {
+        Device.mr_deleteAll(matching: NSPredicate(format: "identifier = %lld", device.identifier), in: context)
+    }
+    
     class func removeOrphaned(in context: NSManagedObjectContext) {
-        
-        let predicate = NSPredicate(format: "user = nil")
-        Device.mr_deleteAll(matching: predicate, in: context)
+        Device.mr_deleteAll(matching: NSPredicate(format: "user = nil"), in: context)
     }
     
     //MARK: - Initailization

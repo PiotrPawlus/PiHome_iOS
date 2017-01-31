@@ -46,6 +46,29 @@ extension CoreDataAssistant {
         }
     }
     
+    class func parseAndSaveUsers(with response: Any?, completion: @escaping ErrorHandler) {
+        
+        if let dictionaries = (response as? [AnyHashable: Any])?["users"] as? [[AnyHashable: Any]] {
+
+            MagicalRecord.save({ context in
+
+                for dictionary in dictionaries {
+                    
+                    if let identifier = dictionary["id"] as? Int, Int64(identifier) != Settings.currentUser?.identifier {
+                        User.createOrUpdate(with: dictionary, in: context).user = Settings.currentUser?.mr_(in: context)
+                    }
+                }
+                
+            }, completion: { _, error in
+                
+                completion(Error(error: error))
+            })
+            
+        } else {
+            completion(Error(error: .noDataFound))
+        }
+    }
+    
     //MARK: - Initailization
     
     //MARK: - Deinitialization

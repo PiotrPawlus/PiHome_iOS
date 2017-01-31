@@ -11,6 +11,12 @@ import XCTest
 
 class UserTests: CoreDataTestCase {
     
+    override func setUp() {
+        super.setUp()
+        
+        User.mr_deleteAll(matching: NSPredicate(value: true))
+    }
+    
     func testFullName() {
         
         let user = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
@@ -27,6 +33,7 @@ class UserTests: CoreDataTestCase {
         XCTAssertEqual(user.lastName, "Little")
         XCTAssertEqual(user.authenticationToken, "MTIzNDU6dW51c2Vk")
         XCTAssertTrue(user.isAuthorized)
+        XCTAssertFalse(user.administrator)
     }
     
     func testDelete() {
@@ -42,5 +49,20 @@ class UserTests: CoreDataTestCase {
         _ = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
         
         XCTAssertNotNil(User.find(withIdentifier: 1, in: MagicalRecord.context))
+    }
+    
+    func testRemoveAllUsersInContext() {
+        
+        let adminUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(administrator: true), in: MagicalRecord.context)
+        let user = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(withIdentifier: 2), in: MagicalRecord.context)
+        
+        user.user = adminUser
+        
+        XCTAssertNotNil(User.find(withIdentifier: 1, in: MagicalRecord.context))
+        XCTAssertNotNil(User.find(withIdentifier: 2, in: MagicalRecord.context))
+        
+        User.removeAll(for: adminUser, in: MagicalRecord.context)
+        
+        XCTAssertNil(User.find(withIdentifier: 2, in: MagicalRecord.context))
     }
 }

@@ -58,6 +58,24 @@ class NetworkAssistant: AFHTTPSessionManager {
     
     //MARK: - Overridden
     
+    override func delete(_ URLString: String, parameters: Any?, success: NetworkAssistantSuccessHandler?, failure: NetworkAssistantFailureHandler? = nil) -> URLSessionDataTask? {
+        
+        return super.delete(URLString, parameters: parameters, success: { sessionDataTask, response in
+            
+            print("DELETE \(sessionDataTask.originalRequest?.url)")
+            print("DELETE \(response)")
+            
+            success?(sessionDataTask, response)
+            
+        }, failure: { sessionDataTask, error in
+            
+            print("DELETE \(sessionDataTask?.originalRequest?.url)")
+            print("DELETE \(sessionDataTask?.response)")
+            
+            failure?(sessionDataTask, error)
+        })
+    }
+    
     override func get(_ URLString: String, parameters: Any?, progress downloadProgress: ProgressHandler?, success: NetworkAssistantSuccessHandler?, failure: NetworkAssistantFailureHandler? = nil) -> URLSessionDataTask? {
         
         return super.get(URLString, parameters: parameters, progress: downloadProgress, success: { sessionDataTask, response in

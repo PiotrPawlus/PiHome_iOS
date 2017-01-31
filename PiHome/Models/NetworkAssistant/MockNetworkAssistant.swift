@@ -37,6 +37,17 @@ class MockNetworkAssistant: NetworkAssistant {
     
     //MARK: - Overridden
     
+    override func delete(_ URLString: String, parameters: Any?, success: NetworkAssistantSuccessHandler?, failure: NetworkAssistantFailureHandler?) -> URLSessionDataTask? {
+        
+        if case .failure = responseType {
+            failure?(sessionDataTask, Error(error: .noDataFound))
+        } else {
+            success?(sessionDataTask, requestType.mockResponse)
+        }
+        
+        return sessionDataTask
+    }
+    
     override func get(_ URLString: String, parameters: Any?, progress downloadProgress: ProgressHandler?, success: NetworkAssistantSuccessHandler?, failure: NetworkAssistantFailureHandler? = nil) -> URLSessionDataTask? {
         
         if case .failure = responseType {

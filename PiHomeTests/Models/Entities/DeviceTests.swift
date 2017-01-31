@@ -47,6 +47,17 @@ class DeviceTests: CoreDataTestCase {
         
         XCTAssertNil(Device.mr_findFirst(byAttribute: "identifier", withValue: 1, in: MagicalRecord.context))
     }
+    
+    func testRemoveDeviceWithIdentifier() {
+        
+        let device = Device.createOrUpdate(with: MockResponse.mockDictionaryForDevice(), in: MagicalRecord.context)
+        
+        XCTAssertNotNil(Device.find(withIdentifier: 1, in: MagicalRecord.context))
+        
+        Device.remove(device: device, in: MagicalRecord.context)
+        
+        XCTAssertNil(Device.find(withIdentifier: 1, in: MagicalRecord.context))
+    }
 
     func testRemoveOrphanedDevicesShouldNotRemove() {
         

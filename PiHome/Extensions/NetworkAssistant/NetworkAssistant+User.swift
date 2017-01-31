@@ -20,6 +20,42 @@ extension NetworkAssistant {
     
     //MARK: - Internal
     
+    func administration(for user: User, completion: @escaping ErrorHandler) {
+        
+        requestType = .administration
+        
+        let query = "users/\(user.identifier)/administration"
+        
+        _ = post(query, parameters: nil, progress: nil, success: { _, response in
+            
+            CoreDataAssistant.parseAndSaveUser(with: response, completion: { _, error in
+                completion(error)
+            })
+            
+        }, failure: { _, error in
+            
+            completion(Error(error: error))
+        })
+    }
+    
+    func authorization(for user: User, completion: @escaping ErrorHandler) {
+        
+        requestType = .authorization
+        
+        let query = "users/\(user.identifier)/authorization"
+        
+        _ = post(query, parameters: nil, progress: nil, success: { _, response in
+            
+            CoreDataAssistant.parseAndSaveUser(with: response, completion: { _, error in
+                completion(error)
+            })
+            
+        }, failure: { _, error in
+            
+            completion(Error(error: error))
+        })
+    }
+    
     func login(withEmail email: String, password: String, completion: @escaping UserHandler) {
         
         let parameters = [
@@ -50,6 +86,20 @@ extension NetworkAssistant {
         }, failure: { _, error in
             
             completion(nil, Error(error: error))
+        })
+    }
+    
+    func users(completion: @escaping ErrorHandler) {
+        
+        requestType = .users
+        
+        _ = get("users", parameters: nil, progress: nil, success: { _, response in
+            
+            CoreDataAssistant.parseAndSaveUsers(with: response, completion: completion)
+            
+        }, failure: { _, error in
+            
+            completion(Error(error: error))
         })
     }
     

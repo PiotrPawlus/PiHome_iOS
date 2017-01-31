@@ -59,4 +59,32 @@ class CoreDataAssistatntUserTests: CoreDataTestCase {
             XCTAssertNotNil(error)
         }
     }
+    
+    func testParseAndSaveUsersWithCorrectResponse() {
+        
+        let expectation = self.expectation(description: "")
+        
+        CoreDataAssistant.parseAndSaveUsers(with: NetworkRequestType.users.mockResponse) { error in
+        
+            expectation.fulfill()
+            
+            XCTAssertNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testParseAndSaveUsersWithincorrectResponse() {
+        
+        let expectation = self.expectation(description: "")
+        
+        CoreDataAssistant.parseAndSaveUsers(with: nil) { error in
+            
+            expectation.fulfill()
+            
+            XCTAssertNotNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
 }

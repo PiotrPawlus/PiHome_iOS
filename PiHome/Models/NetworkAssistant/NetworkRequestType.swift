@@ -8,17 +8,29 @@
 
 enum NetworkRequestType {
     
+    case administration
+    case authorization
     case device
     case devices
     case login(String)
     case register
+    case removeDevice
     case server(String)
+    case users
     
     var mockResponse: Any {
         
         var mockResponse: Any?
         
         switch self {
+        case .administration:
+            
+            mockResponse = MockResponse.mockDictionaryForUser(withIdentifier: 4, administrator: true)
+            
+        case .authorization:
+            
+            mockResponse = MockResponse.mockDictionaryForUser(withIdentifier: 5, isAuthorized: true)
+            
         case .device:
             
             mockResponse = MockResponse.mockDictionaryForDevice(state: true)
@@ -37,16 +49,33 @@ enum NetworkRequestType {
         case .login(let email):
         
             if email == "j.l@example.com" {
-                mockResponse = MockResponse.mockDictionaryForUser(withIdentifier: 2)
+                mockResponse = MockResponse.mockDictionaryForUser(withIdentifier: 2, administrator: true)
             }
             
         case .register:
             
             mockResponse = MockResponse.mockDictionaryForUser(withIdentifier: 3, isAuthorized: false)
             
+        case .removeDevice:
+            
+            mockResponse = nil
+            
         case .server(let address):
             
             mockResponse = address == "www.example.com" ? MockResponse.mockDictionaryForServerAddress(withAddress: address) : nil
+            
+        case .users:
+            
+            mockResponse = [
+             
+                "users": [
+                
+                    MockResponse.mockDictionaryForUser(),
+                    MockResponse.mockDictionaryForUser(withIdentifier: 2, administrator: true),
+                    MockResponse.mockDictionaryForUser(withIdentifier: 3, isAuthorized: false),
+                    MockResponse.mockDictionaryForUser(withIdentifier: 4, administrator: true)
+                ]
+            ]
         }
         
         return mockResponse ?? [:]
