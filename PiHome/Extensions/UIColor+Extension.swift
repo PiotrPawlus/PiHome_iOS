@@ -12,6 +12,10 @@ extension UIColor {
         return UIColor(red: 199/255.0, green: 199/255.0, blue: 204/255.0, alpha: 1)
     }
     
+    static var lynch: UIColor {
+        return UIColor(red: 101/255.0, green: 117/255.0, blue: 147/255.0, alpha: 1)
+    }
+    
     static var mantis: UIColor {
         return UIColor(red: 147/255.0, green: 200/255.0, blue: 106/255.0, alpha: 1)
     }

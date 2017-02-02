@@ -48,7 +48,7 @@ class MenuViewController: UITableViewController {
                 
             } else if case SettingsRestorationIdentifier = restorationIdentifier {
                 
-                AppContainerViewController.setSettingsViewController()
+                AppContainerViewController.setUsersViewController()
                 
             } else if case LogoutRestorationIdentifier = restorationIdentifier {
                 
@@ -60,8 +60,6 @@ class MenuViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        print("section \(indexPath.section) index \(indexPath.row)")
     
         if indexPath.section == 1 && indexPath.row == 0 {
             

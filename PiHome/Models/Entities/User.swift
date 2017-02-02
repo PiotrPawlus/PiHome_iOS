@@ -9,7 +9,7 @@
 @objc(User)
 class User: NSManagedObject {
     
-    @NSManaged var authenticationToken: String
+    @NSManaged var authenticationToken: String?
     @NSManaged var email: String
     @NSManaged var firstName: String
     @NSManaged var identifier: Int64

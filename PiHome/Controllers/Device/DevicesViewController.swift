@@ -9,7 +9,9 @@
 private let DeviceTableViewCellIdentifier = "DeviceTableViewCellIdentifier"
 private let DetailDeviceSegueIdentifier = "DetailDeviceSegueIdentifier"
 
-class DevicesViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet private var tableView: UITableView!
     
     private var fetchedResultsController: NSFetchedResultsController<Device>!
     
@@ -124,14 +126,14 @@ class DevicesViewController: UITableViewController, NSFetchedResultsControllerDe
     
     //MARK: - UITableViewDataSource
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.fetchedObjects!.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let device = fetchedResultsController.object(at: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: DeviceTableViewCellIdentifier, for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: DeviceTableViewCellIdentifier, for: indexPath) as! DeviceTableViewCell
         
         cell.configure(with: device)
         

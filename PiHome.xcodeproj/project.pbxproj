@@ -16,6 +16,9 @@
 		C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */; };
 		C100F3B81E3E5E920078B21C /* DeviceStateButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */; };
 		C113A4A21E43123000290509 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A11E43123000290509 /* UsersViewController.swift */; };
+		C113A4A81E431EE400290509 /* UserStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A71E431EE400290509 /* UserStateView.swift */; };
+		C113A4AA1E4320CA00290509 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */; };
+		C113A4AC1E43236B00290509 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AB1E43236B00290509 /* UserTableViewCell.swift */; };
 		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
 		C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Device.storyboard */; };
 		C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9581E12CB090070EF53 /* AttributedTextView.swift */; };
@@ -68,7 +71,7 @@
 		C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A461E0D681700944760 /* LaunchScreen.storyboard */; };
 		C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A5D1E0D681700944760 /* PiHomeUITests.swift */; };
 		C1735A741E0D6C0100944760 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A721E0D6C0100944760 /* Login.storyboard */; };
-		C1B5E34D1E1FDD6B00F043CE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5E34B1E1FDD6B00F043CE /* Settings.storyboard */; };
+		C1B5E34D1E1FDD6B00F043CE /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5E34B1E1FDD6B00F043CE /* Users.storyboard */; };
 		C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
 		C1D82FAA1E197E59007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
 		C1D82FAB1E197E5A007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
@@ -119,6 +122,9 @@
 		C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButton.swift; sourceTree = "<group>"; };
 		C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButtonTests.swift; sourceTree = "<group>"; };
 		C113A4A11E43123000290509 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		C113A4A71E431EE400290509 /* UserStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateView.swift; sourceTree = "<group>"; };
+		C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		C113A4AB1E43236B00290509 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		C12CE9561E12C3ED0070EF53 /* Device.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		C12CE9581E12CB090070EF53 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
@@ -177,7 +183,7 @@
 		C1735A5D1E0D681700944760 /* PiHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHomeUITests.swift; sourceTree = "<group>"; };
 		C1735A5F1E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1735A731E0D6C0100944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
-		C1B5E34C1E1FDD6B00F043CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		C1B5E34C1E1FDD6B00F043CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Users.storyboard; sourceTree = "<group>"; };
 		C1D82FA81E197E53007379CA /* Icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icomoon.ttf; sourceTree = "<group>"; };
 		C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBar.swift; sourceTree = "<group>"; };
 		C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBarTests.swift; sourceTree = "<group>"; };
@@ -237,7 +243,9 @@
 		C100F3AE1E3E54000078B21C /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */,
 				C100F3AF1E3E54190078B21C /* TableViewCell.swift */,
+				C113A4AB1E43236B00290509 /* UserTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -506,7 +514,7 @@
 				C1735A721E0D6C0100944760 /* Login.storyboard */,
 				C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */,
 				C12CE9531E12AE820070EF53 /* Register.storyboard */,
-				C1B5E34B1E1FDD6B00F043CE /* Settings.storyboard */,
+				C1B5E34B1E1FDD6B00F043CE /* Users.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -578,6 +586,7 @@
 				C12CE9581E12CB090070EF53 /* AttributedTextView.swift */,
 				C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */,
 				C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */,
+				C113A4A71E431EE400290509 /* UserStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -759,7 +768,7 @@
 				C1735A451E0D681700944760 /* Assets.xcassets in Resources */,
 				C1E9BB391E0DE746009A59E1 /* Backgrounds.xcassets in Resources */,
 				C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */,
-				C1B5E34D1E1FDD6B00F043CE /* Settings.storyboard in Resources */,
+				C1B5E34D1E1FDD6B00F043CE /* Users.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,6 +937,7 @@
 				C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */,
 				C1D82FB11E1AB937007379CA /* NetworkAssistant+Server.swift in Sources */,
 				C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */,
+				C113A4AA1E4320CA00290509 /* DeviceTableViewCell.swift in Sources */,
 				C12CE9861E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift in Sources */,
 				C1E9BB301E0DBC28009A59E1 /* MenuViewController.swift in Sources */,
 				C12CE9981E16D82B0070EF53 /* User.swift in Sources */,
@@ -947,6 +957,7 @@
 				C1E9BB2B1E0DBAD7009A59E1 /* ContainerViewController.swift in Sources */,
 				C12CE97C1E16D1310070EF53 /* CoreDataAssistant.swift in Sources */,
 				C12CE9741E16CDBD0070EF53 /* Error.swift in Sources */,
+				C113A4AC1E43236B00290509 /* UserTableViewCell.swift in Sources */,
 				C100F3B41E3E557F0078B21C /* AttributedButton.swift in Sources */,
 				C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */,
 				C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */,
@@ -963,6 +974,7 @@
 				C12CE9841E16D19C0070EF53 /* NetworkAssistant.swift in Sources */,
 				C113A4A21E43123000290509 /* UsersViewController.swift in Sources */,
 				C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */,
+				C113A4A81E431EE400290509 /* UserStateView.swift in Sources */,
 				C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */,
 				C13CE79C1E2041D000F6D8FF /* Device.swift in Sources */,
 			);
@@ -1044,12 +1056,12 @@
 			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
-		C1B5E34B1E1FDD6B00F043CE /* Settings.storyboard */ = {
+		C1B5E34B1E1FDD6B00F043CE /* Users.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C1B5E34C1E1FDD6B00F043CE /* Base */,
 			);
-			name = Settings.storyboard;
+			name = Users.storyboard;
 			sourceTree = "<group>";
 		};
 		C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */ = {

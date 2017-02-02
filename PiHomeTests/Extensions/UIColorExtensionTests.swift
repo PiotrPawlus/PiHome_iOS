@@ -26,6 +26,16 @@ class UIColorExtensionTests: XCTestCase {
         XCTAssertEqual(alpha, 1)
     }
     
+    func testLynch() {
+        
+        UIColor.lynch.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        XCTAssertEqual(red, 101/255.0)
+        XCTAssertEqual(green, 117/255.0)
+        XCTAssertEqual(blue, 147/255.0)
+        XCTAssertEqual(alpha, 1)
+    }
+    
     func testMantis() {
         
         UIColor.mantis.getRed(&red, green: &green, blue: &blue, alpha: &alpha)

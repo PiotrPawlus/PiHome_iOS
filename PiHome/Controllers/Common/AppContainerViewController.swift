@@ -38,8 +38,8 @@ class AppContainerViewController: ContainerViewController {
         loadControllerIntoContainer(controller: UIStoryboard(name: "Register", bundle: nil).instantiateInitialViewController())
     }
     
-    class func setSettingsViewController() {
-        loadControllerIntoContainer(controller: UIStoryboard(name: "Settings", bundle: nil).instantiateInitialViewController())
+    class func setUsersViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Users", bundle: nil).instantiateInitialViewController())
     }
     
     //MARK: - Initialization
