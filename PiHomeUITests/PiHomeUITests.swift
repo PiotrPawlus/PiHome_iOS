@@ -31,6 +31,8 @@ class PiHomeUITests: XCTestCase {
     
     //Buttons
     
+    private var administrateButton: XCUIElement!
+    private var authorizeButton: XCUIElement!
     private var connectButton: XCUIElement!
     private var signInButton: XCUIElement!
     private var signUpButton: XCUIElement!
@@ -49,12 +51,13 @@ class PiHomeUITests: XCTestCase {
     
     private var devicesTableView: XCUIElement!
     private var menuTableView: XCUIElement!
+    private var usersTableView: XCUIElement!
     
     //TableViewCells
     
     private var devicesTableViewCell: XCUIElement!
-    private var settingsTableViewCell: XCUIElement!
     private var logOutTableViewCell: XCUIElement!
+    private var usersTableViewCell: XCUIElement!
     
     //StaticText
     
@@ -87,6 +90,8 @@ class PiHomeUITests: XCTestCase {
         
         //Buttons
         
+        administrateButton = app.buttons["administrateButton"]
+        authorizeButton = app.buttons["authorizeButton"]
         connectButton = app.buttons["connectButton"]
         signInButton = app.buttons["signInButton"]
         signUpButton = app.buttons["signUpButton"]
@@ -105,12 +110,13 @@ class PiHomeUITests: XCTestCase {
         
         devicesTableView = app.tables["devicesTableView"]
         menuTableView = app.tables["menuTableView"]
+        usersTableView = app.tables["usersTableView"]
         
         //TableViewCells
         
         devicesTableViewCell = menuTableView.cells["devicesTableViewCell"]
-        settingsTableViewCell = menuTableView.cells["settingsTableViewCell"]
         logOutTableViewCell = menuTableView.cells["logOutTableViewCell"]
+        usersTableViewCell = menuTableView.cells["usersTableViewCell"]
         
         //StaticText
         
@@ -131,6 +137,43 @@ class PiHomeUITests: XCTestCase {
     
     func testPiHome() {
         
+        connect()
+        
+        signUpButton.tap()
+        backBarButtonItem.tap()
+        signUpButton.tap()
+        
+        register()
+        confirmAfterRegister()
+        login()
+        
+        devicesMenu()
+        devices()
+        usersMenu()
+        users()
+        logoutMenu()
+    }
+    
+    //MARK: - Private
+    
+    private func backIfEnabled() {
+        
+        if backBarButtonItem.exists {
+            backBarButtonItem.tap()
+        }
+    }
+    
+    private func dismissTouchIdAlertIfExist() {
+        
+        if touchIdAlert.exists {
+            touchIdAlert.cancel()
+        }
+    }
+    
+    //MARK: - Connect
+    
+    private func connect() {
+    
         dismissTouchIdAlertIfExist()
         backIfEnabled()
         
@@ -152,10 +195,71 @@ class PiHomeUITests: XCTestCase {
         backBarButtonItem.tapIfExists()
         addressTextField.type(text: "www.example.com")
         connectButton.tap()
+    }
+    
+    //MARK: - Devices
+    
+    private func devices() {
+        devicesTableView.cells.element(boundBy: 0).buttons["stateButton"].tap()
+    }
+    
+    //MARK: - Login
+    
+    private func confirmAfterRegister() {
         
-        signUpButton.tap()
-        backBarButtonItem.tap()
-        signUpButton.tap()
+        XCTAssertTrue(unauthorizedAlert.exists)
+        unauthorizedAlert.confirm()
+    }
+    
+    private func login() {
+    
+        emailTextField.pressReturn()
+        passwordTextField.pressReturn()
+        
+        XCTAssertTrue(emailAlert.exists)
+        
+        emailAlert.confirm()
+        emailTextField.type(text: "john.little")
+        informationStaticText.tap()
+        signInButton.tap()
+        
+        XCTAssertTrue(emailAlert.exists)
+        
+        emailAlert.confirm()
+        emailTextField.clear()
+        emailTextField.type(text: "j.l@example.com")
+        signInButton.tap()
+        
+        XCTAssertTrue(passwordAlert.exists)
+        
+        passwordAlert.confirm()
+        passwordTextField.type(text: "Password1")
+        signInButton.tap()
+    }
+    
+    //MARK: - Menu
+    
+    private func devicesMenu() {
+        
+        menuBarButtonItem.tap()
+        devicesTableViewCell.tapIfExists()
+    }
+    
+    private func usersMenu() {
+        
+        menuBarButtonItem.tap()
+        usersTableViewCell.tapIfExists()
+    }
+    
+    private func logoutMenu() {
+        
+        menuBarButtonItem.tap()
+        logOutTableViewCell.tapIfExists()
+    }
+    
+    //MARK: - Register
+    
+    private func register() {
         
         firstNameTextField.pressReturn()
         lastNameTextField.pressReturn()
@@ -209,61 +313,16 @@ class PiHomeUITests: XCTestCase {
         passwordsAlert.confirm()
         confirmPasswordTextField.type(text: "Password1")
         submitButton.tap()
+    }
+    
+    //MARK: - Users
+    
+    private func users() {
         
-        XCTAssertTrue(unauthorizedAlert.exists)
-        
-        unauthorizedAlert.confirm()
-        emailTextField.pressReturn()
-        passwordTextField.pressReturn()
-        
-        XCTAssertTrue(emailAlert.exists)
-        
-        emailAlert.confirm()
-        emailTextField.type(text: "john.little")
-        informationStaticText.tap()
-        signInButton.tap()
-        
-        XCTAssertTrue(emailAlert.exists)
-        
-        emailAlert.confirm()
-        emailTextField.clear()
-        emailTextField.type(text: "j.l@example.com")
-        signInButton.tap()
-        
-        XCTAssertTrue(passwordAlert.exists)
-        
-        passwordAlert.confirm()
-        passwordTextField.type(text: "Password1")
-        signInButton.tap()
-        
-        menuBarButtonItem.tap()
-        devicesTableViewCell.tapIfExists()
-        
-        devicesTableView.tapCell(atIndex: 0)
+        usersTableView.tapCell(atIndex: 0)
+        authorizeButton.tap()
+        administrateButton.tap()
         app.navigationBars.buttons.element(boundBy: 0).tap()
-        devicesTableView.cells.element(boundBy: 0).buttons["stateButton"].tap()
-        
-        menuBarButtonItem.tap()
-        settingsTableViewCell.tapIfExists()
-        sleep(1)
-        menuBarButtonItem.tap()
-        logOutTableViewCell.tapIfExists()
-    }
-    
-    //MARK: - Private
-    
-    private func backIfEnabled() {
-        
-        if backBarButtonItem.exists {
-            backBarButtonItem.tap()
-        }
-    }
-    
-    private func dismissTouchIdAlertIfExist() {
-        
-        if touchIdAlert.exists {
-            touchIdAlert.cancel()
-        }
     }
     
     //MARK: - Overridden

@@ -62,7 +62,7 @@ enum NetworkRequestType {
             
         case .server(let address):
             
-            mockResponse = address == "www.example.com" ? MockResponse.mockDictionaryForServerAddress(withAddress: address) : nil
+            mockResponse = MockResponse.mockDictionaryForServerAddress(withAddress: address)
             
         case .users:
             

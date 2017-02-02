@@ -41,8 +41,7 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
         
         SVProgressHUD.show()
         
-        
-        NetworkAssistant(baseURL: URL(string: "http://" + address + NetworkAssistantSufixUrl)).connect(toAddress: address) { error in
+        NetworkAssistant.shared(forAddress: address).connect(toAddress: address) { error in // TO FIX
             
             SVProgressHUD.dismiss()
             error == nil ? AppContainerViewController.setLoginViewController() : UIAlertController.show(from: error)

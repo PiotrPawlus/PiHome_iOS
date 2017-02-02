@@ -8,7 +8,7 @@
 
 private let DevicesRestorationIdentifier = "DevicesRestorationIdentifier"
 private let LogoutRestorationIdentifier = "LogoutRestorationIdentifier"
-private let SettingsRestorationIdentifier = "SettingsRestorationIdentifier"
+private let UsersRestorationIdentifier = "UsersRestorationIdentifier"
 
 class MenuViewController: UITableViewController {
 
@@ -46,7 +46,7 @@ class MenuViewController: UITableViewController {
                 
                 AppContainerViewController.setDevicesViewController()
                 
-            } else if case SettingsRestorationIdentifier = restorationIdentifier {
+            } else if case UsersRestorationIdentifier = restorationIdentifier {
                 
                 AppContainerViewController.setUsersViewController()
                 

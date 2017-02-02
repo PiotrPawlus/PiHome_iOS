@@ -21,10 +21,10 @@ let NetworkAssistantSufixUrl = ":9090/api/v1"
 class NetworkAssistant: AFHTTPSessionManager {
 
     static var networkAssistant: NetworkAssistant? {
-        
+
         if let address = UserDefaults.standard.string(forKey: NetworkAssistantUrl) {
             return NetworkAssistant(baseURL: URL(string: address))
-        }
+        } 
         
         return nil
     }
@@ -32,10 +32,19 @@ class NetworkAssistant: AFHTTPSessionManager {
     var requestType = NetworkRequestType.register
     
     static var shared: NetworkAssistant {
-        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant!
+        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant! // TO DO
     }
     
     //MARK: - Class Methods
+    
+    class func shared(forAddress address: String) -> NetworkAssistant {
+        
+        guard !ProcessInfo.isTesting else {
+            return MockNetworkAssistant()
+        }
+        
+        return NetworkAssistant(baseURL: URL(string: "http://" + address + NetworkAssistantSufixUrl))
+    }
     
     //MARK: - Initailization
     

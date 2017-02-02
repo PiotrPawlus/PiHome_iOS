@@ -132,7 +132,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Account" id="nYZ-D3-Z7i">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SettingsRestorationIdentifier" selectionStyle="none" indentationWidth="10" rowHeight="50" id="YWa-EP-Pra">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UsersRestorationIdentifier" selectionStyle="none" indentationWidth="10" rowHeight="50" id="YWa-EP-Pra">
                                         <rect key="frame" x="0.0" y="138" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YWa-EP-Pra" id="m9U-5O-NMK">
@@ -154,7 +154,7 @@
                                                 <constraint firstItem="aZ1-Na-ceg" firstAttribute="leading" secondItem="m9U-5O-NMK" secondAttribute="leadingMargin" constant="10" id="vGy-5l-JS1"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="settingsTableViewCell"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="usersTableViewCell"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LogoutRestorationIdentifier" selectionStyle="none" indentationWidth="10" id="i2E-Pp-fFF">
                                         <rect key="frame" x="0.0" y="188" width="375" height="44"/>
