@@ -76,7 +76,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="enH-kS-7I9" id="3f4-kZ-W4r">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage doors " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-Se-Ruh">
@@ -85,21 +85,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEM-MI-bM8" customClass="DeviceStateButton" customModule="PiHome" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEM-MI-bM8" customClass="AttributedButton" customModule="PiHome" customModuleProvider="target">
                                                     <rect key="frame" x="341" y="65" width="50" height="50"/>
-                                                    <color key="backgroundColor" red="0.57647058823529407" green="0.78431372549019607" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="stateButton"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="TRY-l8-jpo"/>
                                                         <constraint firstAttribute="width" constant="50" id="xqu-wA-4NM"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
-                                                    <state key="normal" title="ON">
+                                                    <state key="normal" image="icon-power">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.57488459349999999" green="0.7857613564" blue="0.41712623830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="0.69999999999999996"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -127,7 +131,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="detailLabel" destination="JDi-d9-XJC" id="Pn4-x0-qnZ"/>
-                                            <outlet property="stateButton" destination="DEM-MI-bM8" id="rmY-Qe-nf3"/>
                                             <outlet property="titleLabel" destination="JlR-Se-Ruh" id="6km-MP-q3a"/>
                                         </connections>
                                     </tableViewCell>
@@ -189,4 +192,7 @@
             <point key="canvasLocation" x="1302.8985507246377" y="593.47826086956525"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-power" width="60" height="60"/>
+    </resources>
 </document>

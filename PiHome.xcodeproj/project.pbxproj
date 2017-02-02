@@ -14,7 +14,7 @@
 		C100F3B21E3E55520078B21C /* AttributedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B11E3E55520078B21C /* AttributedButtonTests.swift */; };
 		C100F3B41E3E557F0078B21C /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B31E3E557F0078B21C /* AttributedButton.swift */; };
 		C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */; };
-		C100F3B81E3E5E920078B21C /* DeviceStateButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */; };
+		C10957271E43642600859DCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10957261E43642600859DCB /* Assets.xcassets */; };
 		C113A4A21E43123000290509 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A11E43123000290509 /* UsersViewController.swift */; };
 		C113A4A81E431EE400290509 /* UserStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A71E431EE400290509 /* UserStateView.swift */; };
 		C113A4AA1E4320CA00290509 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */; };
@@ -68,7 +68,6 @@
 		C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3A1E0D681700944760 /* AppDelegate.swift */; };
 		C1735A3D1E0D681700944760 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A3C1E0D681700944760 /* LoginViewController.swift */; };
 		C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1735A411E0D681700944760 /* PiHome.xcdatamodeld */; };
-		C1735A451E0D681700944760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1735A441E0D681700944760 /* Assets.xcassets */; };
 		C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A461E0D681700944760 /* LaunchScreen.storyboard */; };
 		C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A5D1E0D681700944760 /* PiHomeUITests.swift */; };
 		C1735A741E0D6C0100944760 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A721E0D6C0100944760 /* Login.storyboard */; };
@@ -121,7 +120,7 @@
 		C100F3B11E3E55520078B21C /* AttributedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedButtonTests.swift; sourceTree = "<group>"; };
 		C100F3B31E3E557F0078B21C /* AttributedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
 		C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButton.swift; sourceTree = "<group>"; };
-		C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButtonTests.swift; sourceTree = "<group>"; };
+		C10957261E43642600859DCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C113A4A11E43123000290509 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		C113A4A71E431EE400290509 /* UserStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateView.swift; sourceTree = "<group>"; };
 		C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
@@ -176,7 +175,6 @@
 		C1735A3A1E0D681700944760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1735A3C1E0D681700944760 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C1735A421E0D681700944760 /* PiHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PiHome.xcdatamodel; sourceTree = "<group>"; };
-		C1735A441E0D681700944760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1735A471E0D681700944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1735A491E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1735A4E1E0D681700944760 /* PiHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -446,7 +444,7 @@
 		C1735A6B1E0D6A5300944760 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C1735A441E0D681700944760 /* Assets.xcassets */,
+				C10957261E43642600859DCB /* Assets.xcassets */,
 				C1E9BB381E0DE746009A59E1 /* Backgrounds.xcassets */,
 			);
 			path = Assets;
@@ -617,7 +615,6 @@
 				C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */,
 				C12CE95F1E12CC190070EF53 /* AttributetTextViewTests.swift */,
 				C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */,
-				C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -766,9 +763,9 @@
 				C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */,
 				C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */,
 				C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */,
+				C10957271E43642600859DCB /* Assets.xcassets in Resources */,
 				C1E9BB281E0DBA6E009A59E1 /* PiHome.storyboard in Resources */,
 				C1E9BB461E0F5BF8009A59E1 /* Connect.storyboard in Resources */,
-				C1735A451E0D681700944760 /* Assets.xcassets in Resources */,
 				C1E9BB391E0DE746009A59E1 /* Backgrounds.xcassets in Resources */,
 				C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */,
 				C1B5E34D1E1FDD6B00F043CE /* Users.storyboard in Resources */,
@@ -1007,7 +1004,6 @@
 				C13CE79E1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift in Sources */,
 				C12CE99C1E16DB190070EF53 /* UserTests.swift in Sources */,
 				C1D82FB31E1ABA7C007379CA /* NetworkAssistantServerTests.swift in Sources */,
-				C100F3B81E3E5E920078B21C /* DeviceStateButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

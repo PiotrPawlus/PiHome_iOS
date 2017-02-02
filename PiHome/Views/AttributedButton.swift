@@ -13,7 +13,7 @@
         didSet {
             
             layer.borderColor = borderColor.cgColor
-            layer.borderWidth = 1
+            layer.borderWidth = 3
         }
     }
     
@@ -23,6 +23,23 @@
             
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = true
+        }
+    }
+    
+    @IBInspectable var imageScale: CGFloat = 1 {
+        
+        didSet {
+            
+            if let imageView = imageView {
+                
+                let size = CGSize(width: imageView.frame.size.width * imageScale, height: imageView.frame.size.height * imageScale)
+                UIGraphicsBeginImageContextWithOptions(size, false, 0)
+                
+                imageView.image?.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+                setImage(UIGraphicsGetImageFromCurrentImageContext(), for: .normal)
+                
+                UIGraphicsEndImageContext()
+            }
         }
     }
 }

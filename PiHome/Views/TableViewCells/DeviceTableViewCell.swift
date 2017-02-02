@@ -9,7 +9,6 @@
 class DeviceTableViewCell: TableViewCell {
     
     @IBOutlet private var detailLabel: UILabel!
-    @IBOutlet private var stateButton: DeviceStateButton!
     
     private var device: Device?
     
@@ -24,6 +23,7 @@ class DeviceTableViewCell: TableViewCell {
     @IBAction func changeDeviceState(_ sender: AttributedButton) {
         
         SVProgressHUD.show()
+        sender.borderColor = UIColor.red
         
         NetworkAssistant.shared.changeState(of: device!) { error in
             
@@ -31,7 +31,7 @@ class DeviceTableViewCell: TableViewCell {
             UIAlertController.show(from: error)
             
             if error == nil {
-                self.stateButton.deviceState = !self.stateButton.deviceState
+                sender.borderColor = UIColor.mantis
             }
         }
     }
@@ -44,7 +44,6 @@ class DeviceTableViewCell: TableViewCell {
         
         super.configure(withTitle: device.name)
         detailLabel.text = device.information
-        stateButton.deviceState = device.state
         
         self.device = device
     }

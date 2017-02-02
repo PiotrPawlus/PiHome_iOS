@@ -8,6 +8,8 @@
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet private var bottomLayoutConstraint: NSLayoutConstraint!
+
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     
@@ -18,10 +20,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+        
         quickLogin()
     }
     
     //MARK: - Deinitialization
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     //MARK: - Actions
     
@@ -51,6 +60,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Public
     
     //MARK: - Internal
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardHeight = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size.height {
+            updateConstraints(with: keyboardHeight)
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        updateConstraints()
+    }
     
     //MARK: - Private
     
@@ -85,6 +105,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         login(withEmail: emailTextField.text!, password: passwordTextField.text!)
+    }
+    
+    private func updateConstraints(with height: CGFloat = 0) {
+        
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+            
+            self.bottomLayoutConstraint.constant = max(height, 0)
+            self.view.layoutIfNeeded()
+        })
     }
     
     private func quickLogin() {

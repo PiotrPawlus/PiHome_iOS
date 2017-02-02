@@ -160,7 +160,7 @@
                                     <constraint firstItem="wHg-i0-m6C" firstAttribute="leading" secondItem="2D7-k0-f9k" secondAttribute="leading" id="33Y-Vl-qIU"/>
                                     <constraint firstItem="Pfj-50-CAi" firstAttribute="leading" secondItem="kQQ-Ag-D5w" secondAttribute="leading" id="4IC-kf-6N3"/>
                                     <constraint firstItem="Olm-45-6iy" firstAttribute="top" secondItem="eBS-Nl-rGo" secondAttribute="top" id="4l1-ck-Am1"/>
-                                    <constraint firstAttribute="bottom" secondItem="wHg-i0-m6C" secondAttribute="bottom" constant="226" id="52I-db-BUS"/>
+                                    <constraint firstAttribute="bottom" secondItem="wHg-i0-m6C" secondAttribute="bottom" constant="30" id="52I-db-BUS"/>
                                     <constraint firstItem="74s-2m-NUF" firstAttribute="top" secondItem="k5R-za-6Jc" secondAttribute="bottom" constant="10" id="5GP-hc-s3Z"/>
                                     <constraint firstItem="Olm-45-6iy" firstAttribute="leading" secondItem="eBS-Nl-rGo" secondAttribute="leading" id="7bI-lu-9wL"/>
                                     <constraint firstItem="k5R-za-6Jc" firstAttribute="top" secondItem="Pfj-50-CAi" secondAttribute="bottom" constant="10" id="C97-8F-lqr"/>
@@ -239,6 +239,7 @@
                         <barButtonItem key="leftBarButtonItem" title="" id="CWG-Vy-PeA"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomLayoutConstraint" destination="dtF-cH-X6X" id="CTr-Rq-vpP"/>
                         <outlet property="confirmPasswordTextField" destination="6nq-bi-eUC" id="vCQ-X0-zYv"/>
                         <outlet property="emailTextField" destination="k5R-za-6Jc" id="6mD-Du-30X"/>
                         <outlet property="firstNameTextField" destination="2D7-k0-f9k" id="unR-it-xF5"/>

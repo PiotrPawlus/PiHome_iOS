@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,7 +35,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-Tn-SC1">
-                                        <rect key="frame" x="20" y="150" width="335" height="30"/>
+                                        <rect key="frame" x="20" y="50" width="335" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="450" id="kMM-5k-JTd"/>
@@ -58,7 +58,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Brq-Bt-tjz">
-                                        <rect key="frame" x="20" y="190" width="335" height="30"/>
+                                        <rect key="frame" x="20" y="90" width="335" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                         <color key="textColor" red="0.40528047080000001" green="0.47204595799999999" blue="0.60492491719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -68,7 +68,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKE-lo-bD2">
-                                        <rect key="frame" x="20" y="235" width="335" height="45"/>
+                                        <rect key="frame" x="20" y="135" width="335" height="45"/>
                                         <color key="backgroundColor" red="0.63780669761273212" green="0.63780669761273212" blue="0.63780669761273212" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="signInButton"/>
                                         <constraints>
@@ -83,14 +83,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1Y-jO-aWo">
-                                        <rect key="frame" x="174.5" y="305" width="27" height="23"/>
+                                        <rect key="frame" x="174" y="205" width="27" height="23"/>
                                         <accessibility key="accessibilityConfiguration" identifier="informationStaticText"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Va-Qm-e9Y">
-                                        <rect key="frame" x="20" y="353" width="335" height="45"/>
+                                        <rect key="frame" x="20" y="253" width="335" height="45"/>
                                         <color key="backgroundColor" red="0.63780669759999997" green="0.63780669759999997" blue="0.63780669759999997" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="signUpButton"/>
                                         <constraints>
@@ -107,7 +107,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Brq-Bt-tjz" firstAttribute="trailing" secondItem="gsE-Tn-SC1" secondAttribute="trailing" id="3DL-LQ-koF"/>
-                                    <constraint firstAttribute="bottom" secondItem="8Va-Qm-e9Y" secondAttribute="bottom" constant="218" id="4sO-Dd-kQU"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Va-Qm-e9Y" secondAttribute="bottom" constant="30" id="4sO-Dd-kQU"/>
                                     <constraint firstItem="kKE-lo-bD2" firstAttribute="leading" secondItem="Brq-Bt-tjz" secondAttribute="leading" id="ATv-e3-vxc"/>
                                     <constraint firstItem="R1Y-jO-aWo" firstAttribute="top" secondItem="kKE-lo-bD2" secondAttribute="bottom" constant="25" id="Io0-FS-TXy"/>
                                     <constraint firstItem="kKE-lo-bD2" firstAttribute="trailing" secondItem="Brq-Bt-tjz" secondAttribute="trailing" id="KFr-Lz-zGj"/>
@@ -116,7 +116,7 @@
                                     <constraint firstItem="8Va-Qm-e9Y" firstAttribute="leading" secondItem="gsE-Tn-SC1" secondAttribute="leading" id="RlX-Zc-JuB"/>
                                     <constraint firstItem="Brq-Bt-tjz" firstAttribute="top" secondItem="gsE-Tn-SC1" secondAttribute="bottom" constant="10" id="VOl-aB-Ush"/>
                                     <constraint firstAttribute="trailing" secondItem="pwV-dI-Wgs" secondAttribute="trailing" id="Wzx-1l-kee"/>
-                                    <constraint firstItem="gsE-Tn-SC1" firstAttribute="top" secondItem="pwV-dI-Wgs" secondAttribute="bottom" constant="150" id="dHh-LT-cp2"/>
+                                    <constraint firstItem="gsE-Tn-SC1" firstAttribute="top" secondItem="pwV-dI-Wgs" secondAttribute="bottom" constant="50" id="dHh-LT-cp2"/>
                                     <constraint firstItem="pwV-dI-Wgs" firstAttribute="leading" secondItem="znU-hj-epj" secondAttribute="leading" id="gQW-gk-oae"/>
                                     <constraint firstItem="8Va-Qm-e9Y" firstAttribute="trailing" secondItem="gsE-Tn-SC1" secondAttribute="trailing" id="hbO-of-b0n"/>
                                     <constraint firstAttribute="trailing" secondItem="gsE-Tn-SC1" secondAttribute="trailing" constant="20" id="m90-aL-EqU"/>
@@ -207,6 +207,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="bottomLayoutConstraint" destination="f5W-Pi-2fJ" id="4Vg-Lk-eyP"/>
                         <outlet property="emailTextField" destination="gsE-Tn-SC1" id="9Vb-Lv-FGO"/>
                         <outlet property="passwordTextField" destination="Brq-Bt-tjz" id="GyI-QX-7AN"/>
                     </connections>

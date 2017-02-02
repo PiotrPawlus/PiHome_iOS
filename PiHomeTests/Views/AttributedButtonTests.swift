@@ -17,7 +17,7 @@ class AttributedButtonTests: XCTestCase {
         button.borderColor = UIColor.red
         
         XCTAssertNotNil(button.layer.borderColor)
-        XCTAssertEqual(button.layer.borderWidth, 1)
+        XCTAssertEqual(button.layer.borderWidth, 3)
     }
     
     func testCornerRadius() {

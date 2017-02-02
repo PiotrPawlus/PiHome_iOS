@@ -35,7 +35,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW4-M1-XWc" userLabel="Wraper View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="296.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="298"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Little" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-8n-ZxI">
                                                 <rect key="frame" x="145" y="20" width="86" height="20"/>
@@ -44,31 +44,31 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klU-Gk-h9a">
-                                                <rect key="frame" x="20" y="56" width="55.5" height="18.5"/>
+                                                <rect key="frame" x="20" y="56" width="56" height="19"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUTHORIZED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-dV-sQ5">
-                                                <rect key="frame" x="48" y="124.5" width="110.5" height="18.5"/>
+                                                <rect key="frame" x="48" y="125" width="111" height="19"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADMINISTRATOR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zx-1I-eT9">
-                                                <rect key="frame" x="20" y="158" width="138.5" height="18.5"/>
+                                                <rect key="frame" x="20" y="159" width="139" height="19"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="johnt.little@pihome.com" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcu-ls-HZm">
-                                                <rect key="frame" x="20" y="89.5" width="335" height="20"/>
+                                                <rect key="frame" x="20" y="90" width="335" height="20"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4T9-og-WcH" customClass="UserStateView" customModule="PiHome" customModuleProvider="target">
-                                                <rect key="frame" x="178.5" y="124" width="20" height="20"/>
+                                                <rect key="frame" x="179" y="125" width="20" height="20"/>
                                                 <color key="backgroundColor" red="0.39607843139999999" green="0.45882352939999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="5YS-pR-IG8"/>
@@ -83,7 +83,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WC3-Bb-oWM" customClass="UserStateView" customModule="PiHome" customModuleProvider="target">
-                                                <rect key="frame" x="178.5" y="158" width="20" height="20"/>
+                                                <rect key="frame" x="179" y="159" width="20" height="20"/>
                                                 <color key="backgroundColor" red="0.39607843139999999" green="0.45882352939999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="WC3-Bb-oWM" secondAttribute="height" multiplier="1:1" id="dBm-nn-OUk"/>
@@ -99,7 +99,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-wT-XLI" customClass="UserStateButton" customModule="PiHome" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="226.5" width="157.5" height="40"/>
+                                                <rect key="frame" x="20" y="228" width="158" height="40"/>
                                                 <color key="backgroundColor" red="0.57647058819999997" green="0.7843137255" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="odg-hi-K3t"/>
@@ -118,7 +118,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZM-J4-z1b" customClass="UserStateButton" customModule="PiHome" customModuleProvider="target">
-                                                <rect key="frame" x="197.5" y="226.5" width="157.5" height="40"/>
+                                                <rect key="frame" x="198" y="228" width="157" height="40"/>
                                                 <color key="backgroundColor" red="0.67401995029999995" green="0.27491340040000001" blue="0.18382757050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 <state key="normal" title="ADMINISTRATE">
@@ -249,7 +249,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piotr Pawluś" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUO-xl-qaN">
-                                            <rect key="frame" x="23" y="13" width="329" height="34"/>
+                                            <rect key="frame" x="23" y="13" width="329" height="33"/>
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -293,7 +293,7 @@
         <scene sceneID="L3U-5Q-RbD">
             <objects>
                 <navigationController id="iNZ-x3-cNP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="b7K-aq-NcL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b7K-aq-NcL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
