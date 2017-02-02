@@ -7,6 +7,7 @@
 //
 
 private let UserTableViewCellIdentifier = "UserTableViewCellIdentifier"
+private let UserDetailViewControllerSegueIdentifier = "UserDetailViewControllerSegueIdentifier"
 
 class UsersViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
@@ -75,6 +76,16 @@ class UsersViewController: UITableViewController, NSFetchedResultsControllerDele
     
     //MARK: - Overridden
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let cell = sender as? TableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            
+            if let controller = segue.destination as? UserDetailViewController {
+                controller.user = fetchedResultsController.object(at: indexPath)
+            }
+        }
+    }
+    
     //MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -127,9 +138,9 @@ class UsersViewController: UITableViewController, NSFetchedResultsControllerDele
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let user = fetchedResultsController.object(at: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCellIdentifier, for: indexPath) as! UserTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCellIdentifier, for: indexPath) as! TableViewCell
         
-        cell.configure(with: user)
+        cell.configure(withTitle: user.fullName)
         
         return cell
     }

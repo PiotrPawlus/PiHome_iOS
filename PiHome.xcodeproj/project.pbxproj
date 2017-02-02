@@ -18,7 +18,8 @@
 		C113A4A21E43123000290509 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A11E43123000290509 /* UsersViewController.swift */; };
 		C113A4A81E431EE400290509 /* UserStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A71E431EE400290509 /* UserStateView.swift */; };
 		C113A4AA1E4320CA00290509 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */; };
-		C113A4AC1E43236B00290509 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AB1E43236B00290509 /* UserTableViewCell.swift */; };
+		C113A4AE1E43364700290509 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AD1E43364700290509 /* UserDetailViewController.swift */; };
+		C113A4B01E433ECC00290509 /* UserStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AF1E433ECB00290509 /* UserStateButton.swift */; };
 		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
 		C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Device.storyboard */; };
 		C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9581E12CB090070EF53 /* AttributedTextView.swift */; };
@@ -124,7 +125,8 @@
 		C113A4A11E43123000290509 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		C113A4A71E431EE400290509 /* UserStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateView.swift; sourceTree = "<group>"; };
 		C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
-		C113A4AB1E43236B00290509 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		C113A4AD1E43364700290509 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		C113A4AF1E433ECB00290509 /* UserStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateButton.swift; sourceTree = "<group>"; };
 		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		C12CE9561E12C3ED0070EF53 /* Device.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		C12CE9581E12CB090070EF53 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
@@ -245,7 +247,6 @@
 			children = (
 				C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */,
 				C100F3AF1E3E54190078B21C /* TableViewCell.swift */,
-				C113A4AB1E43236B00290509 /* UserTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -538,6 +539,7 @@
 		C1B5E34E1E1FE2F100F043CE /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				C113A4AD1E43364700290509 /* UserDetailViewController.swift */,
 				C113A4A11E43123000290509 /* UsersViewController.swift */,
 			);
 			path = Users;
@@ -586,6 +588,7 @@
 				C12CE9581E12CB090070EF53 /* AttributedTextView.swift */,
 				C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */,
 				C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */,
+				C113A4AF1E433ECB00290509 /* UserStateButton.swift */,
 				C113A4A71E431EE400290509 /* UserStateView.swift */,
 			);
 			path = Views;
@@ -944,6 +947,7 @@
 				C12CE9AA1E16E4D50070EF53 /* UIAlertController+Extension.swift in Sources */,
 				C1E9BB3D1E0DE8BA009A59E1 /* AttributedView.swift in Sources */,
 				C13514AF1E203B9000AC0C21 /* CoreDataAssistant+Device.swift in Sources */,
+				C113A4AE1E43364700290509 /* UserDetailViewController.swift in Sources */,
 				C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */,
 				C12CE9911E16D6A90070EF53 /* MagicalRecord.swift in Sources */,
 				C12CE98A1E16D2080070EF53 /* NetworkResponseType.swift in Sources */,
@@ -957,13 +961,13 @@
 				C1E9BB2B1E0DBAD7009A59E1 /* ContainerViewController.swift in Sources */,
 				C12CE97C1E16D1310070EF53 /* CoreDataAssistant.swift in Sources */,
 				C12CE9741E16CDBD0070EF53 /* Error.swift in Sources */,
-				C113A4AC1E43236B00290509 /* UserTableViewCell.swift in Sources */,
 				C100F3B41E3E557F0078B21C /* AttributedButton.swift in Sources */,
 				C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */,
 				C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */,
 				C12CE9881E16D1FD0070EF53 /* NetworkRequestType.swift in Sources */,
 				C100F3B01E3E54190078B21C /* TableViewCell.swift in Sources */,
 				C1D82FAD1E197ECE007379CA /* AttributedNavigationBar.swift in Sources */,
+				C113A4B01E433ECC00290509 /* UserStateButton.swift in Sources */,
 				C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */,
 				C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */,
 				C13514AD1E20372100AC0C21 /* NetworkAssistant+Devices.swift in Sources */,
