@@ -58,4 +58,18 @@ class MenuViewController: UITableViewController {
             AppContainerViewController.dismissMenuViewController()
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        print("section \(indexPath.section) index \(indexPath.row)")
+    
+        if indexPath.section == 1 && indexPath.row == 0 {
+            
+            if let user = Settings.currentUser {
+                return user.administrator ? 50 : 0
+            }
+        }
+        
+        return 50
+    }
 }

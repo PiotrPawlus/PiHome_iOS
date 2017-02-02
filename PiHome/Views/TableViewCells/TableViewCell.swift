@@ -9,6 +9,7 @@
 class TableViewCell: UITableViewCell {
     
     @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var detailLabel: UILabel!
     @IBOutlet private var stateButton: DeviceStateButton!
     
     private var device: Device?
@@ -43,6 +44,7 @@ class TableViewCell: UITableViewCell {
     func configure(with device: Device) {
         
         titleLabel.text = device.name
+        detailLabel.text = device.information
         stateButton.deviceState = device.state
         
         self.device = device

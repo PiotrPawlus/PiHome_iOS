@@ -15,6 +15,7 @@
 		C100F3B41E3E557F0078B21C /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B31E3E557F0078B21C /* AttributedButton.swift */; };
 		C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */; };
 		C100F3B81E3E5E920078B21C /* DeviceStateButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */; };
+		C113A4A21E43123000290509 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A11E43123000290509 /* UsersViewController.swift */; };
 		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
 		C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Device.storyboard */; };
 		C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9581E12CB090070EF53 /* AttributedTextView.swift */; };
@@ -25,7 +26,6 @@
 		C12CE9641E12D0010070EF53 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */; };
 		C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */; };
 		C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */; };
-		C12CE96C1E12D3A00070EF53 /* DetialDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96B1E12D3A00070EF53 /* DetialDeviceViewController.swift */; };
 		C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96D1E16C7DC0070EF53 /* Settings.swift */; };
 		C12CE9701E16C9830070EF53 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE96F1E16C9830070EF53 /* String+Extension.swift */; };
 		C12CE9721E16C99E0070EF53 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */; };
@@ -69,7 +69,6 @@
 		C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A5D1E0D681700944760 /* PiHomeUITests.swift */; };
 		C1735A741E0D6C0100944760 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A721E0D6C0100944760 /* Login.storyboard */; };
 		C1B5E34D1E1FDD6B00F043CE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5E34B1E1FDD6B00F043CE /* Settings.storyboard */; };
-		C1B5E3501E1FE30A00F043CE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5E34F1E1FE30A00F043CE /* SettingsViewController.swift */; };
 		C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
 		C1D82FAA1E197E59007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
 		C1D82FAB1E197E5A007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
@@ -119,6 +118,7 @@
 		C100F3B31E3E557F0078B21C /* AttributedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
 		C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButton.swift; sourceTree = "<group>"; };
 		C100F3B71E3E5E920078B21C /* DeviceStateButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButtonTests.swift; sourceTree = "<group>"; };
+		C113A4A11E43123000290509 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		C12CE9561E12C3ED0070EF53 /* Device.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		C12CE9581E12CB090070EF53 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
@@ -129,7 +129,6 @@
 		C12CE9631E12D0010070EF53 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		C12CE9661E12D2F30070EF53 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
-		C12CE96B1E12D3A00070EF53 /* DetialDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialDeviceViewController.swift; sourceTree = "<group>"; };
 		C12CE96D1E16C7DC0070EF53 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C12CE96F1E16C9830070EF53 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C12CE9711E16C99E0070EF53 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -179,7 +178,6 @@
 		C1735A5F1E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1735A731E0D6C0100944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C1B5E34C1E1FDD6B00F043CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
-		C1B5E34F1E1FE30A00F043CE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C1D82FA81E197E53007379CA /* Icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icomoon.ttf; sourceTree = "<group>"; };
 		C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBar.swift; sourceTree = "<group>"; };
 		C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBarTests.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				C12CE9691E12D35C0070EF53 /* DevicesViewController.swift */,
-				C12CE96B1E12D3A00070EF53 /* DetialDeviceViewController.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -455,7 +452,7 @@
 				C1E9BB371E0DE08A009A59E1 /* Login */,
 				C1E9BB2E1E0DBC13009A59E1 /* Menu */,
 				C12CE9651E12D2A10070EF53 /* Register */,
-				C1B5E34E1E1FE2F100F043CE /* Settings */,
+				C1B5E34E1E1FE2F100F043CE /* Users */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -530,12 +527,12 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		C1B5E34E1E1FE2F100F043CE /* Settings */ = {
+		C1B5E34E1E1FE2F100F043CE /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				C1B5E34F1E1FE30A00F043CE /* SettingsViewController.swift */,
+				C113A4A11E43123000290509 /* UsersViewController.swift */,
 			);
-			path = Settings;
+			path = Users;
 			sourceTree = "<group>";
 		};
 		C1D82FA71E197E35007379CA /* Fonts */ = {
@@ -955,7 +952,6 @@
 				C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */,
 				C12CE9881E16D1FD0070EF53 /* NetworkRequestType.swift in Sources */,
 				C100F3B01E3E54190078B21C /* TableViewCell.swift in Sources */,
-				C1B5E3501E1FE30A00F043CE /* SettingsViewController.swift in Sources */,
 				C1D82FAD1E197ECE007379CA /* AttributedNavigationBar.swift in Sources */,
 				C1735A3B1E0D681700944760 /* AppDelegate.swift in Sources */,
 				C12CE96E1E16C7DC0070EF53 /* Settings.swift in Sources */,
@@ -965,9 +961,9 @@
 				C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */,
 				C12CE95B1E12CB580070EF53 /* UIFont+Extension.swift in Sources */,
 				C12CE9841E16D19C0070EF53 /* NetworkAssistant.swift in Sources */,
+				C113A4A21E43123000290509 /* UsersViewController.swift in Sources */,
 				C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */,
 				C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */,
-				C12CE96C1E12D3A00070EF53 /* DetialDeviceViewController.swift in Sources */,
 				C13CE79C1E2041D000F6D8FF /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

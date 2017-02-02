@@ -79,13 +79,6 @@ class DevicesViewController: UITableViewController, NSFetchedResultsControllerDe
     
     //MARK: - Overridden
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let controller = segue.destination as? DetailDeviceViewController, let device = sender as? Device {
-            controller.device = device
-        }
-    }
-    
     //MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -143,12 +136,5 @@ class DevicesViewController: UITableViewController, NSFetchedResultsControllerDe
         cell.configure(with: device)
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let device = fetchedResultsController.object(at: indexPath)
-        
-        performSegue(withIdentifier: DetailDeviceSegueIdentifier, sender: device)
     }
 }
