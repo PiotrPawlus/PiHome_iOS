@@ -8,7 +8,7 @@
 
 class MockResponse {
     
-    class func mockDictionaryForDevice(withIdentifier identifier: Int = 1, state: Bool = false, type: String = "gate") -> [AnyHashable: Any] {
+    class func mockDictionaryForDevice(withIdentifier identifier: Int = 1, state: Bool = false) -> [AnyHashable: Any] {
         
         return [
             
@@ -17,7 +17,6 @@ class MockResponse {
             "name": "Gate 11",
             "pin": 11,
             "state": state,
-            "type": type
         ]
     }
     

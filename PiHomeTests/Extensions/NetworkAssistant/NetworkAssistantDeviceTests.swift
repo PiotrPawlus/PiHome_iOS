@@ -11,29 +11,6 @@ import XCTest
 
 class NetworkAssistantDeviceTests: CoreDataTestCase {
     
-    func testDevicesWithSuccess() {
-        
-        let expectation = self.expectation(description: "")
-        
-        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
-        
-        MockNetworkAssistant().devices { error in
-            
-            expectation.fulfill()
-            
-            XCTAssertNil(error)
-        }
-        
-        waitForExpectations(timeout: 2)
-    }
-    
-    func testDevicesWithFailure() {
-        
-        MockNetworkAssistant(responseType: .failure).devices { error in
-            XCTAssertNotNil(error)
-        }
-    }
-    
     func testDeviceChangeStateWithSuccess() {
         
         let expectation = self.expectation(description: "")
@@ -56,6 +33,50 @@ class NetworkAssistantDeviceTests: CoreDataTestCase {
         let device = Device.createOrUpdate(with: MockResponse.mockDictionaryForDevice(), in: MagicalRecord.context)
         
         MockNetworkAssistant(responseType: .failure).changeState(of: device) { error in
+            XCTAssertNotNil(error)
+        }
+    }
+    
+    func testCreateDeviceWithSuccess() {
+        
+        let expectation = self.expectation(description: "")
+        
+        MockNetworkAssistant().createDevice(with: [:]) { error in
+        
+            expectation.fulfill()
+            
+            XCTAssertNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testCreateDeviceWithFailure() {
+     
+        MockNetworkAssistant(responseType: .failure).createDevice(with: [:]) { error in
+            XCTAssertNotNil(error)
+        }
+    }
+    
+    func testDevicesWithSuccess() {
+        
+        let expectation = self.expectation(description: "")
+        
+        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        
+        MockNetworkAssistant().devices { error in
+            
+            expectation.fulfill()
+            
+            XCTAssertNil(error)
+        }
+        
+        waitForExpectations(timeout: 2)
+    }
+    
+    func testDevicesWithFailure() {
+        
+        MockNetworkAssistant(responseType: .failure).devices { error in
             XCTAssertNotNil(error)
         }
     }

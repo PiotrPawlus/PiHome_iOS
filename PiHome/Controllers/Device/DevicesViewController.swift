@@ -12,6 +12,7 @@ private let DetailDeviceSegueIdentifier = "DetailDeviceSegueIdentifier"
 class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var createDeviceBarButtonItem: AttributedBarButtonItem!
     
     private var fetchedResultsController: NSFetchedResultsController<Device>!
     
@@ -28,6 +29,8 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+        
+        createDeviceBarButtonItem.isHidden = !Settings.currentUser!.administrator
     }
     
     //MARK: - Deinitialization

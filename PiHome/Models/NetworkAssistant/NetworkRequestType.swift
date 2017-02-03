@@ -13,6 +13,7 @@ enum NetworkRequestType {
     case device
     case devices
     case login(String)
+    case newDevice
     case register
     case removeDevice
     case server(String)
@@ -39,8 +40,8 @@ enum NetworkRequestType {
             
             mockResponse = [ "devices": [
                     MockResponse.mockDictionaryForDevice(),
-                    MockResponse.mockDictionaryForDevice(withIdentifier: 2, type: "light"),
-                    MockResponse.mockDictionaryForDevice(withIdentifier: 3, type: "garage"),
+                    MockResponse.mockDictionaryForDevice(withIdentifier: 2),
+                    MockResponse.mockDictionaryForDevice(withIdentifier: 3),
                     MockResponse.mockDictionaryForDevice(withIdentifier: 4),
                     MockResponse.mockDictionaryForDevice(withIdentifier: 5)
                 ]
@@ -51,6 +52,10 @@ enum NetworkRequestType {
             if email == "j.l@example.com" {
                 mockResponse = MockResponse.mockDictionaryForUser(withIdentifier: 2, administrator: true)
             }
+            
+        case .newDevice:
+            
+            mockResponse = MockResponse.mockDictionaryForDevice(withIdentifier: 6)
             
         case .register:
             

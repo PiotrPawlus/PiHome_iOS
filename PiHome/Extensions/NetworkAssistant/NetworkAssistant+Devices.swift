@@ -36,6 +36,20 @@ extension NetworkAssistant {
         })
     }
     
+    func createDevice(with parameters: [AnyHashable: Any], completion: @escaping ErrorHandler) {
+        
+        requestType = .newDevice
+        
+        _ = post("device", parameters: parameters, progress: nil, success: { _, response in
+            
+            CoreDataAssistant.parseAndSaveDevice(with: response, completion: completion)
+            
+        }, failure: { _, error in
+            
+            completion(Error(error: error))
+        })
+    }
+    
     func devices(completion: @escaping ErrorHandler) {
      
         requestType = .devices
