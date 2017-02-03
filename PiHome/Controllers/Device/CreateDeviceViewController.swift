@@ -45,6 +45,7 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet private var pinsPickerView: UIPickerView!
     
     private let GPIOPinsKeys = Array(GPIOPins.keys)
+    
     private var selectedPin: Int?
     
     //MARK: - Class Methods
@@ -56,6 +57,8 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+        
+        selectedPin = GPIOPins[GPIOPinsKeys[0]]!
     }
     
     //MARK: - Deinitialization
@@ -94,7 +97,7 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     private func createNewDevice() throws {
         
-        guard let name = deviceNameTextField.text else {
+        guard !deviceNameTextField.text!.isEmpty, let name = deviceNameTextField.text else {
             throw Error.Name.cannotBeEmpty("Device name")
         }
         
@@ -117,7 +120,7 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
             UIAlertController.show(from: error)
             
             if error == nil {
-                self.dismiss(animated: true)
+                _ = self.navigationController?.popViewController(animated: true)
             }
         }
     }

@@ -44,6 +44,10 @@ extension XCUIElement {
         typeText("\n")
     }
     
+    func swipeLeft(atIndex index: UInt) {
+        cells.element(boundBy: index).swipeLeft()
+    }
+    
     func tapCell(atIndex index: UInt) {
         cells.element(boundBy: index).tap()
     }

@@ -24,7 +24,6 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
         super.viewDidLoad()
      
         fetchDevices()
-        setupMenuGestureRecognizer()
         setupFetchedResultsController()
         
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -46,6 +45,21 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
     //MARK: - Internal
     
     //MARK: - Private
+    
+    private func delete(device: Device) {
+        
+        SVProgressHUD.show()
+        
+        NetworkAssistant.shared.remove(device: device) { error in
+            
+            SVProgressHUD.dismiss()
+            UIAlertController.show(from: error)
+            
+            if error == nil {
+                self.updateView()
+            }
+        }
+    }
     
     private func fetchDevices() {
         
@@ -141,5 +155,21 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
         cell.configure(with: device)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        if let user = Settings.currentUser {
+            return user.administrator
+        }
+        
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == .delete) {
+            delete(device: fetchedResultsController.object(at: indexPath))
+        }
     }
 }

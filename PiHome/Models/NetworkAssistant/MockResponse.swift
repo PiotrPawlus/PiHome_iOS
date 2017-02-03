@@ -17,6 +17,7 @@ class MockResponse {
             "name": "Gate 11",
             "pin": 11,
             "state": state,
+            "type": "gate"
         ]
     }
     

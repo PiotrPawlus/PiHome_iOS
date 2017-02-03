@@ -16,6 +16,8 @@ class PiHomeUITests: XCTestCase {
     
     private var confirmationPasswordAlert: XCUIElement!
     private var connectAletr: XCUIElement!
+    private var deviceNameAlert: XCUIElement!
+    private var devicePinAlert: XCUIElement!
     private var emailAlert: XCUIElement!
     private var firstNameAlert: XCUIElement!
     private var lastNameAlert: XCUIElement!
@@ -26,6 +28,7 @@ class PiHomeUITests: XCTestCase {
 
     //BarButtonItems
     
+    private var addDeviceBarButtonItem: XCUIElement!
     private var backBarButtonItem: XCUIElement!
     private var menuBarButtonItem: XCUIElement!
     
@@ -34,6 +37,7 @@ class PiHomeUITests: XCTestCase {
     private var administrateButton: XCUIElement!
     private var authorizeButton: XCUIElement!
     private var connectButton: XCUIElement!
+    private var createButton: XCUIElement!
     private var signInButton: XCUIElement!
     private var signUpButton: XCUIElement!
     private var submitButton: XCUIElement!
@@ -45,7 +49,12 @@ class PiHomeUITests: XCTestCase {
     private var emailTextField: XCUIElement!
     private var firstNameTextField: XCUIElement!
     private var lastNameTextField: XCUIElement!
+    private var nameTextField: XCUIElement!
     private var passwordTextField: XCUIElement!
+    
+    //TextViews
+    
+    private var descriptionTextView: XCUIElement!
     
     //TableViews
     
@@ -58,6 +67,10 @@ class PiHomeUITests: XCTestCase {
     private var devicesTableViewCell: XCUIElement!
     private var logOutTableViewCell: XCUIElement!
     private var usersTableViewCell: XCUIElement!
+    
+    //PickerWheels
+    
+    private var pinPickerWheel: XCUIElement!
     
     //StaticText
     
@@ -75,6 +88,8 @@ class PiHomeUITests: XCTestCase {
         
         confirmationPasswordAlert = app.alerts["Confirm password"]
         connectAletr = app.alerts["Server Address"]
+        deviceNameAlert = app.alerts["Device name"]
+        devicePinAlert = app.alerts["Device pin"]
         emailAlert = app.alerts["Email"]
         firstNameAlert = app.alerts["First Name"]
         lastNameAlert = app.alerts["Last Name"]
@@ -85,6 +100,7 @@ class PiHomeUITests: XCTestCase {
 
         //BarButtonItems
         
+        addDeviceBarButtonItem = app.buttons["addDeviceBarButtonItem"]
         backBarButtonItem = app.buttons["backBarButtonItem"]
         menuBarButtonItem = app.buttons["menuBarButtonItem"]
         
@@ -93,6 +109,7 @@ class PiHomeUITests: XCTestCase {
         administrateButton = app.buttons["administrateButton"]
         authorizeButton = app.buttons["authorizeButton"]
         connectButton = app.buttons["connectButton"]
+        createButton = app.buttons["createButton"]
         signInButton = app.buttons["signInButton"]
         signUpButton = app.buttons["signUpButton"]
         submitButton = app.buttons["submitButton"]
@@ -104,7 +121,12 @@ class PiHomeUITests: XCTestCase {
         emailTextField = app.textFields["emailTextField"]
         firstNameTextField = app.textFields["firstNameTextField"]
         lastNameTextField = app.textFields["lastNameTextField"]
+        nameTextField = app.textFields["nameTextField"]
         passwordTextField = app.secureTextFields["passwordTextField"]
+        
+        //TextViews
+        
+        descriptionTextView = app.textViews["descriptionTextView"]
         
         //TableViews
         
@@ -121,6 +143,10 @@ class PiHomeUITests: XCTestCase {
         //StaticText
         
         informationStaticText = app.staticTexts["informationStaticText"]
+        
+        //PickerWheels
+        
+        pinPickerWheel = app.otherElements["pinPickerWheel"] // TO DO
     }
     
     //MARK: - Class Methods
@@ -149,6 +175,7 @@ class PiHomeUITests: XCTestCase {
         
         devicesMenu()
         devices()
+        addDevice()
         usersMenu()
         users()
         logoutMenu()
@@ -200,7 +227,27 @@ class PiHomeUITests: XCTestCase {
     //MARK: - Devices
     
     private func devices() {
+        
+        devicesTableView.swipeLeft(atIndex: 0)
+        devicesTableView.cells.element(boundBy: 0).buttons["Delete"].tap()
         devicesTableView.cells.element(boundBy: 0).buttons["stateButton"].tap()
+    }
+    
+    private func addDevice() {
+        
+        addDeviceBarButtonItem.tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        addDeviceBarButtonItem.tap()
+     
+        nameTextField.pressReturn()
+        createButton.tap()
+        
+        XCTAssert(deviceNameAlert.exists)
+        
+        deviceNameAlert.confirm()
+        nameTextField.type(text: "Device 1")
+        descriptionTextView.type(text: "Device 1 description.")
+        createButton.tap()
     }
     
     //MARK: - Login
