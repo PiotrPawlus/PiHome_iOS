@@ -10,8 +10,8 @@ class UserDetailViewController: UIViewController {
     
     @IBOutlet private var fullNameLabel: UILabel!
     @IBOutlet private var emailLabel: UILabel!
-    @IBOutlet private var isAuthorizedUserStateView: UserStateView!
-    @IBOutlet private var administratorUserStateView: UserStateView!
+    @IBOutlet private var isAuthorizedUserStateView: StateView!
+    @IBOutlet private var administratorUserStateView: StateView!
     @IBOutlet private var isAuthorizedUserStateButton: UserStateButton!
     @IBOutlet private var administratorUserStateButton: UserStateButton!
     @IBOutlet private var wraperView: UIView!

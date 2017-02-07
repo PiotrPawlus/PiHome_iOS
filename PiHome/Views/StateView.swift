@@ -1,12 +1,12 @@
 //
-//  UserStateView.swift
+//  StateView.swift
 //  PiHome
 //
 //  Created by Piotr Pawluś on 02/02/2017.
 //  Copyright © 2017 Piotr Pawluś. All rights reserved.
 //
 
-@IBDesignable class UserStateView: AttributedView {
+@IBDesignable class StateView: AttributedView {
     
     @IBInspectable var isActive: Bool = false {
         

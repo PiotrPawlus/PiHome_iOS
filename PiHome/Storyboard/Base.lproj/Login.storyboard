@@ -67,7 +67,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="oXI-tm-X4p"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKE-lo-bD2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKE-lo-bD2" customClass="AttributedButton" customModule="PiHome" customModuleProvider="target">
                                         <rect key="frame" x="20" y="135" width="335" height="45"/>
                                         <color key="backgroundColor" red="0.63780669761273212" green="0.63780669761273212" blue="0.63780669761273212" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="signInButton"/>
@@ -78,6 +78,11 @@
                                         <state key="normal" title="SIGN IN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRH-EZ-j0l"/>
                                         </connections>
@@ -89,7 +94,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Va-Qm-e9Y">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Va-Qm-e9Y" customClass="AttributedButton" customModule="PiHome" customModuleProvider="target">
                                         <rect key="frame" x="20" y="253" width="335" height="45"/>
                                         <color key="backgroundColor" red="0.63780669759999997" green="0.63780669759999997" blue="0.63780669759999997" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="signUpButton"/>
@@ -100,6 +105,11 @@
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signUpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGE-9c-s45"/>
                                         </connections>

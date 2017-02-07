@@ -29,4 +29,3 @@ class AttributedBarButtonItemTests: XCTestCase {
         XCTAssertNil(barButtonItem.tintColor)
     }
 }
-

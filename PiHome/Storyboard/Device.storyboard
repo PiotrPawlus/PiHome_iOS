@@ -14,7 +14,7 @@
         <scene sceneID="Q4F-gy-Lr3">
             <objects>
                 <navigationController id="Bdd-7K-MpI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V8B-Nl-dXg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="V8B-Nl-dXg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,17 +47,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BKb-Ln-dql">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="Ezr-Vg-alO"/>
+                                    <constraint firstAttribute="width" constant="450" id="xL2-jQ-HlO"/>
                                 </constraints>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="MQf-T9-l19">
-                                    <rect key="frame" x="0.0" y="208" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="388" width="450" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you want to add new device please contact with system administrator." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMa-xS-mnx">
-                                            <rect key="frame" x="15" y="5" width="384" height="40"/>
+                                            <rect key="frame" x="15" y="5" width="420" height="40"/>
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -72,21 +73,21 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceTableViewCellIdentifier" rowHeight="180" id="enH-kS-7I9" customClass="DeviceTableViewCell" customModule="PiHome" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="180"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceButtonTableViewCellIdentifier" rowHeight="180" id="enH-kS-7I9" customClass="DeviceButtonTableViewCell" customModule="PiHome" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="450" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="enH-kS-7I9" id="3f4-kZ-W4r">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage doors " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-Se-Ruh">
-                                                    <rect key="frame" x="28" y="18" width="298" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light 1" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-Se-Ruh">
+                                                    <rect key="frame" x="28" y="18" width="334" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEM-MI-bM8" customClass="AttributedButton" customModule="PiHome" customModuleProvider="target">
-                                                    <rect key="frame" x="341" y="65" width="50" height="50"/>
+                                                    <rect key="frame" x="377" y="65" width="50" height="50"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="stateButton"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="TRY-l8-jpo"/>
@@ -111,7 +112,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDi-d9-XJC">
-                                                    <rect key="frame" x="28" y="44" width="298" height="122.66666666666666"/>
+                                                    <rect key="frame" x="28" y="44" width="334" height="122.66666666666666"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -132,6 +133,65 @@
                                         <connections>
                                             <outlet property="detailLabel" destination="JDi-d9-XJC" id="Pn4-x0-qnZ"/>
                                             <outlet property="titleLabel" destination="JlR-Se-Ruh" id="6km-MP-q3a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceSwitchTableViewCellIdentifier" rowHeight="180" id="Jdp-TI-xNP" customClass="DeviceSwitchTableViewCell" customModule="PiHome" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="450" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdp-TI-xNP" id="KfQ-5V-fNr">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="179"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light 1" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-rt-xjt">
+                                                    <rect key="frame" x="28" y="18" width="334" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBL-vX-NWG">
+                                                    <rect key="frame" x="28" y="44" width="334" height="122.66666666666666"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gm-aL-rg7" customClass="DeviceStateButton" customModule="PiHome" customModuleProvider="target">
+                                                    <rect key="frame" x="377" y="65" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.57647058819999997" green="0.7843137255" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="switchButton"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="VJZ-h0-8hH"/>
+                                                        <constraint firstAttribute="height" constant="50" id="meK-ex-02G"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                                    <state key="normal" title="ON">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="changeDeviceState:" destination="Jdp-TI-xNP" eventType="touchUpInside" id="hz6-VV-eHy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7gm-aL-rg7" secondAttribute="trailing" constant="15" id="5Xm-lU-vGE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hBL-vX-NWG" secondAttribute="bottom" constant="5" id="7Nz-yb-fhp"/>
+                                                <constraint firstItem="hBL-vX-NWG" firstAttribute="trailing" secondItem="lVE-rt-xjt" secondAttribute="trailing" id="BAE-w5-crd"/>
+                                                <constraint firstItem="7gm-aL-rg7" firstAttribute="leading" secondItem="hBL-vX-NWG" secondAttribute="trailing" constant="15" id="D0l-Jn-5yS"/>
+                                                <constraint firstItem="lVE-rt-xjt" firstAttribute="top" secondItem="KfQ-5V-fNr" secondAttribute="topMargin" constant="10" id="JMA-WW-rxW"/>
+                                                <constraint firstItem="hBL-vX-NWG" firstAttribute="leading" secondItem="lVE-rt-xjt" secondAttribute="leading" id="YqY-2Z-dKf"/>
+                                                <constraint firstItem="7gm-aL-rg7" firstAttribute="centerY" secondItem="KfQ-5V-fNr" secondAttribute="centerY" id="fIO-XK-x7K"/>
+                                                <constraint firstItem="lVE-rt-xjt" firstAttribute="leading" secondItem="KfQ-5V-fNr" secondAttribute="leadingMargin" constant="20" id="gG8-Iy-c5m"/>
+                                                <constraint firstItem="hBL-vX-NWG" firstAttribute="top" secondItem="lVE-rt-xjt" secondAttribute="bottom" constant="5" id="uD1-mH-Wci"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="hBL-vX-NWG" id="L6z-4Z-kSs"/>
+                                            <outlet property="switchDeviceStateButton" destination="7gm-aL-rg7" id="42M-NH-XrO"/>
+                                            <outlet property="titleLabel" destination="lVE-rt-xjt" id="B6n-a3-CEY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -232,11 +292,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcz-sP-cV7" userLabel="WraperView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="519"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="568.33333333333337"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMj-L1-OKP">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Device name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMj-L1-OKP">
                                                 <rect key="frame" x="20" y="30" width="374" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="nameTextField"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="KpU-rr-iV0"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -244,14 +307,21 @@
                                                     <outlet property="delegate" destination="aXD-yI-HJM" id="Kki-c5-8zi"/>
                                                 </connections>
                                             </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-Sg-PQV">
+                                                <rect key="frame" x="20" y="59" width="374" height="1"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Jqy-ZF-T8c"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-gm-QVq">
-                                                <rect key="frame" x="20" y="70" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="120.00000000000001" width="374" height="17.333333333333357"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa6-Ca-IMh">
-                                                <rect key="frame" x="0.0" y="213" width="414" height="216"/>
+                                                <rect key="frame" x="0.0" y="262.33333333333337" width="414" height="216.00000000000006"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="pinPickerWheel"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="aXD-yI-HJM" id="W93-fh-c9j"/>
@@ -259,7 +329,7 @@
                                                 </connections>
                                             </pickerView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-fU-od4">
-                                                <rect key="frame" x="20" y="93" width="374" height="100"/>
+                                                <rect key="frame" x="20" y="142.33333333333331" width="374" height="99.999999999999972"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="descriptionTextView"/>
                                                 <constraints>
@@ -272,7 +342,7 @@
                                                 </connections>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ro5-Rh-y5K" customClass="AttributedButton" customModule="PiHome" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="449" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="498.33333333333337" width="374" height="50"/>
                                                 <color key="backgroundColor" red="0.39607843139999999" green="0.45882352939999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="createButton"/>
                                                 <constraints>
@@ -291,26 +361,109 @@
                                                     <action selector="addNewDevice:" destination="aXD-yI-HJM" eventType="touchUpInside" id="H67-XA-7rg"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqz-hC-8Yr" userLabel="StateButtonsWraperView">
+                                                <rect key="frame" x="170" y="75" width="75" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAR-ot-ksx" customClass="DeviceTypeButton" customModule="PiHome" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <color key="backgroundColor" red="0.39607843139999999" green="0.45882352939999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="switchStateButton"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="akp-cU-gnL"/>
+                                                            <constraint firstAttribute="height" constant="30" id="sAd-ft-F8r"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.39607843139999999" green="0.45882352939999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="deviceState" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="stateButtonTapped:" destination="aXD-yI-HJM" eventType="touchUpInside" id="ScD-hF-ZjS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-cU-fGd" customClass="DeviceTypeButton" customModule="PiHome" customModuleProvider="target">
+                                                        <rect key="frame" x="45" y="0.0" width="30" height="30"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="buttonStateButton"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.39607843139999999" green="0.45882352939999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="deviceState" value="NO"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="stateButtonTapped:" destination="aXD-yI-HJM" eventType="touchUpInside" id="rea-6U-crg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="0xq-cU-fGd" secondAttribute="trailing" id="39q-Nh-nPe"/>
+                                                    <constraint firstItem="0xq-cU-fGd" firstAttribute="width" secondItem="SAR-ot-ksx" secondAttribute="width" id="5Zg-P0-WjP"/>
+                                                    <constraint firstItem="SAR-ot-ksx" firstAttribute="leading" secondItem="hqz-hC-8Yr" secondAttribute="leading" id="J4m-Jx-54W"/>
+                                                    <constraint firstItem="SAR-ot-ksx" firstAttribute="top" secondItem="hqz-hC-8Yr" secondAttribute="top" id="KkY-NN-1uC"/>
+                                                    <constraint firstItem="0xq-cU-fGd" firstAttribute="leading" secondItem="SAR-ot-ksx" secondAttribute="trailing" constant="15" id="Tv8-QY-fOc"/>
+                                                    <constraint firstItem="0xq-cU-fGd" firstAttribute="height" secondItem="SAR-ot-ksx" secondAttribute="height" id="UhJ-NL-HMs"/>
+                                                    <constraint firstItem="0xq-cU-fGd" firstAttribute="top" secondItem="hqz-hC-8Yr" secondAttribute="top" id="aEH-xd-TpD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0xq-cU-fGd" secondAttribute="bottom" id="k2X-Gq-rW1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SAR-ot-ksx" secondAttribute="bottom" id="nUb-Uv-oL0"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx0-a7-MdB">
+                                                <rect key="frame" x="20" y="80.333333333333343" width="135" height="19.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xer-yg-M73">
+                                                <rect key="frame" x="260" y="80.333333333333343" width="134" height="19.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4w-x0-ZJX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="19.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="Wx0-a7-MdB" firstAttribute="leading" secondItem="xcz-sP-cV7" secondAttribute="leading" constant="20" id="3hh-Cw-cSG"/>
                                             <constraint firstItem="Ro5-Rh-y5K" firstAttribute="top" secondItem="wa6-Ca-IMh" secondAttribute="bottom" constant="20" id="54k-gG-ADT"/>
+                                            <constraint firstItem="xer-yg-M73" firstAttribute="leading" secondItem="hqz-hC-8Yr" secondAttribute="trailing" constant="15" id="59r-wp-Maw"/>
                                             <constraint firstItem="wa6-Ca-IMh" firstAttribute="leading" secondItem="xcz-sP-cV7" secondAttribute="leading" id="5K1-VA-zmE"/>
                                             <constraint firstItem="pMj-L1-OKP" firstAttribute="top" secondItem="xcz-sP-cV7" secondAttribute="top" constant="30" id="9EH-0n-lIG"/>
-                                            <constraint firstItem="XIx-gm-QVq" firstAttribute="top" secondItem="pMj-L1-OKP" secondAttribute="bottom" constant="10" id="Wkt-Ga-FAb"/>
+                                            <constraint firstItem="hqz-hC-8Yr" firstAttribute="top" secondItem="pMj-L1-OKP" secondAttribute="bottom" constant="15" id="Cc9-9a-ocE"/>
+                                            <constraint firstItem="hqz-hC-8Yr" firstAttribute="leading" secondItem="Wx0-a7-MdB" secondAttribute="trailing" constant="15" id="DoM-rV-P5N"/>
+                                            <constraint firstAttribute="trailing" secondItem="xer-yg-M73" secondAttribute="trailing" constant="20" id="IyK-pv-orL"/>
+                                            <constraint firstItem="oqa-Sg-PQV" firstAttribute="trailing" secondItem="pMj-L1-OKP" secondAttribute="trailing" id="Nm4-rr-6Q8"/>
+                                            <constraint firstItem="Wx0-a7-MdB" firstAttribute="centerY" secondItem="hqz-hC-8Yr" secondAttribute="centerY" id="Q7A-DC-u7K"/>
                                             <constraint firstItem="wa6-Ca-IMh" firstAttribute="top" secondItem="4Ph-fU-od4" secondAttribute="bottom" constant="20" id="a6g-Hd-gOM"/>
                                             <constraint firstItem="4Ph-fU-od4" firstAttribute="top" secondItem="XIx-gm-QVq" secondAttribute="bottom" constant="5" id="bDI-29-ygU"/>
                                             <constraint firstAttribute="trailing" secondItem="wa6-Ca-IMh" secondAttribute="trailing" id="dE7-zb-Qla"/>
                                             <constraint firstItem="4Ph-fU-od4" firstAttribute="leading" secondItem="xcz-sP-cV7" secondAttribute="leading" constant="20" id="ePT-z1-mDB"/>
                                             <constraint firstAttribute="bottom" secondItem="Ro5-Rh-y5K" secondAttribute="bottom" constant="20" id="hiu-Yl-xRs"/>
+                                            <constraint firstItem="oqa-Sg-PQV" firstAttribute="leading" secondItem="pMj-L1-OKP" secondAttribute="leading" id="hll-Hi-sur"/>
+                                            <constraint firstItem="xer-yg-M73" firstAttribute="centerY" secondItem="hqz-hC-8Yr" secondAttribute="centerY" id="i9S-mi-XS3"/>
                                             <constraint firstAttribute="width" constant="450" id="jzc-Bh-bQr"/>
                                             <constraint firstItem="Ro5-Rh-y5K" firstAttribute="leading" secondItem="xcz-sP-cV7" secondAttribute="leading" constant="20" id="k72-o8-u7t"/>
                                             <constraint firstItem="XIx-gm-QVq" firstAttribute="leading" secondItem="xcz-sP-cV7" secondAttribute="leading" constant="20" id="ktn-0T-RYi"/>
                                             <constraint firstItem="pMj-L1-OKP" firstAttribute="leading" secondItem="xcz-sP-cV7" secondAttribute="leading" constant="20" id="l3w-dc-ZZD"/>
+                                            <constraint firstItem="XIx-gm-QVq" firstAttribute="top" secondItem="hqz-hC-8Yr" secondAttribute="bottom" constant="15" id="qWS-VN-XaW"/>
                                             <constraint firstAttribute="trailing" secondItem="pMj-L1-OKP" secondAttribute="trailing" constant="20" id="sdS-ff-ifM"/>
                                             <constraint firstAttribute="trailing" secondItem="Ro5-Rh-y5K" secondAttribute="trailing" constant="20" id="tgt-Cd-9oc"/>
+                                            <constraint firstItem="oqa-Sg-PQV" firstAttribute="bottom" secondItem="pMj-L1-OKP" secondAttribute="bottom" id="vVH-zY-tAX"/>
                                             <constraint firstAttribute="trailing" secondItem="XIx-gm-QVq" secondAttribute="trailing" constant="20" id="xe6-y5-a1v"/>
                                             <constraint firstAttribute="trailing" secondItem="4Ph-fU-od4" secondAttribute="trailing" constant="20" id="xeK-EB-cH5"/>
+                                            <constraint firstItem="hqz-hC-8Yr" firstAttribute="centerX" secondItem="xcz-sP-cV7" secondAttribute="centerX" id="yvL-vL-fNY"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -327,12 +480,14 @@
                                 <constraints>
                                     <constraint firstItem="xcz-sP-cV7" firstAttribute="top" secondItem="oR2-Oc-Taw" secondAttribute="bottom" id="2vs-T6-dQP"/>
                                     <constraint firstAttribute="trailing" secondItem="oR2-Oc-Taw" secondAttribute="trailing" id="5AM-ci-DPc"/>
+                                    <constraint firstAttribute="bottom" secondItem="xcz-sP-cV7" secondAttribute="bottom" id="AwR-da-DxG"/>
                                     <constraint firstItem="oR2-Oc-Taw" firstAttribute="top" secondItem="eFE-73-zkX" secondAttribute="top" id="UGl-Vx-OhH"/>
                                     <constraint firstItem="oR2-Oc-Taw" firstAttribute="leading" secondItem="eFE-73-zkX" secondAttribute="leading" id="eeJ-p2-nIs"/>
                                     <constraint firstItem="xcz-sP-cV7" firstAttribute="leading" secondItem="eFE-73-zkX" secondAttribute="leading" id="eg8-KY-t2F"/>
                                     <constraint firstAttribute="bottom" secondItem="xcz-sP-cV7" secondAttribute="bottom" id="g5y-Iq-d61"/>
                                     <constraint firstAttribute="trailing" secondItem="xcz-sP-cV7" secondAttribute="trailing" id="qqP-P1-uvK"/>
                                     <constraint firstItem="xcz-sP-cV7" firstAttribute="centerX" secondItem="eFE-73-zkX" secondAttribute="centerX" id="sQL-gm-Kfv"/>
+                                    <constraint firstItem="xcz-sP-cV7" firstAttribute="top" secondItem="oR2-Oc-Taw" secondAttribute="bottom" id="vIZ-u6-GLH"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -341,7 +496,10 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
+                                        <exclude reference="2vs-T6-dQP"/>
                                         <exclude reference="eg8-KY-t2F"/>
+                                        <exclude reference="g5y-Iq-d61"/>
+                                        <exclude reference="qqP-P1-uvK"/>
                                         <include reference="sQL-gm-Kfv"/>
                                     </mask>
                                 </variation>
@@ -364,9 +522,11 @@
                     </view>
                     <connections>
                         <outlet property="bottomLayoutConstraint" destination="h18-5G-TMQ" id="mth-Fe-MIe"/>
+                        <outlet property="buttonStateButton" destination="0xq-cU-fGd" id="Ldw-kI-oSh"/>
                         <outlet property="deviceDescriptionTextView" destination="4Ph-fU-od4" id="tD1-vY-J4N"/>
                         <outlet property="deviceNameTextField" destination="pMj-L1-OKP" id="1QR-FZ-Fom"/>
                         <outlet property="pinsPickerView" destination="wa6-Ca-IMh" id="dBi-cY-kZd"/>
+                        <outlet property="switchStateButton" destination="SAR-ot-ksx" id="B5S-zW-kEN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bC-cW-U2v" userLabel="First Responder" sceneMemberID="firstResponder"/>

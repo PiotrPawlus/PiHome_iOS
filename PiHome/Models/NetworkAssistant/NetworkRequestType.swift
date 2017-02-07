@@ -34,16 +34,16 @@ enum NetworkRequestType {
             
         case .device:
             
-            mockResponse = MockResponse.mockDictionaryForDevice(state: true)
+            mockResponse = MockResponse.mockDictionaryForDevice(state: 1)
             
         case .devices:
             
             mockResponse = [ "devices": [
                     MockResponse.mockDictionaryForDevice(),
                     MockResponse.mockDictionaryForDevice(withIdentifier: 2),
-                    MockResponse.mockDictionaryForDevice(withIdentifier: 3),
+                    MockResponse.mockDictionaryForDevice(withIdentifier: 3, type: "button"),
                     MockResponse.mockDictionaryForDevice(withIdentifier: 4),
-                    MockResponse.mockDictionaryForDevice(withIdentifier: 5)
+                    MockResponse.mockDictionaryForDevice(withIdentifier: 5, type: "button")
                 ]
             ]
             

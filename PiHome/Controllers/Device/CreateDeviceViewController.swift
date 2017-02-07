@@ -43,6 +43,8 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet private var deviceNameTextField: UITextField!
     @IBOutlet private var deviceDescriptionTextView: UITextView!
     @IBOutlet private var pinsPickerView: UIPickerView!
+    @IBOutlet private var switchStateButton: DeviceTypeButton!
+    @IBOutlet private var buttonStateButton: DeviceTypeButton!
     
     private let GPIOPinsKeys = Array(GPIOPins.keys)
     
@@ -59,6 +61,8 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
         
         selectedPin = GPIOPins[GPIOPinsKeys[0]]!
+        switchStateButton.isActive = true
+        buttonStateButton.isActive = false
     }
     
     //MARK: - Deinitialization
@@ -76,6 +80,12 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
         } catch {
             UIAlertController.show(from: error as! Error.Name)
         }
+    }
+    
+    @IBAction func stateButtonTapped(_ sender: DeviceStateButton) {
+    
+        switchStateButton.isActive = !switchStateButton.isActive
+        buttonStateButton.isActive = !buttonStateButton.isActive
     }
     
     //MARK: - Public
@@ -109,7 +119,8 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
             
             "name": name,
             "description": deviceDescriptionTextView.text ?? "",
-            "pin": pin
+            "pin": pin,
+            "type": switchStateButton.isActive ? "switch" : "button"
         ]
         
         SVProgressHUD.show()

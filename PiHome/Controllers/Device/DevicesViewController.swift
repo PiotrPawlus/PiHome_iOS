@@ -6,7 +6,8 @@
 //  Copyright © 2016 Piotr Pawluś. All rights reserved.
 //
 
-private let DeviceTableViewCellIdentifier = "DeviceTableViewCellIdentifier"
+private let DeviceButtonTableViewCellIdentifier = "DeviceButtonTableViewCellIdentifier"
+private let DeviceSwitchTableViewCellIdentifier = "DeviceSwitchTableViewCellIdentifier"
 private let DetailDeviceSegueIdentifier = "DetailDeviceSegueIdentifier"
 
 class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -15,7 +16,8 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
     @IBOutlet private var createDeviceBarButtonItem: AttributedBarButtonItem!
     
     private var fetchedResultsController: NSFetchedResultsController<Device>!
-    
+    private var refreshControl = UIRefreshControl()
+
     //MARK: - Class Methods
     
     //MARK: - Initailization
@@ -25,6 +27,11 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
      
         fetchDevices()
         setupFetchedResultsController()
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refreshDevices), for: .valueChanged)
+        
+        tableView.addSubview(refreshControl)
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
@@ -44,6 +51,13 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
     
     //MARK: - Internal
     
+    func refreshDevices() {
+        
+        fetchDevices {
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
     //MARK: - Private
     
     private func delete(device: Device) {
@@ -61,7 +75,7 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
         }
     }
     
-    private func fetchDevices() {
+    private func fetchDevices(completion: (()->())? = nil) {
         
         SVProgressHUD.show()
         
@@ -71,7 +85,9 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
             UIAlertController.show(from: error)
             
             if error == nil {
+                
                 self.updateView()
+                completion?()
             }
         }
     }
@@ -136,9 +152,7 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        
         tableView.endUpdates()
-        updateView()
     }
     
     //MARK: - UITableViewDataSource
@@ -150,11 +164,23 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let device = fetchedResultsController.object(at: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: DeviceTableViewCellIdentifier, for: indexPath) as! DeviceTableViewCell
         
-        cell.configure(with: device)
+        if device.type == "button" {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: DeviceButtonTableViewCellIdentifier, for: indexPath) as! DeviceButtonTableViewCell
+            cell.configure(with: device)
+            
+            return cell
+            
+        } else if device.type == "switch" {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: DeviceSwitchTableViewCellIdentifier, for: indexPath) as! DeviceSwitchTableViewCell
+            cell.configure(with: device)
+            
+            return cell
+        }
         
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

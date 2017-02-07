@@ -36,11 +36,13 @@ class PiHomeUITests: XCTestCase {
     
     private var administrateButton: XCUIElement!
     private var authorizeButton: XCUIElement!
+    private var buttonStateButton: XCUIElement!
     private var connectButton: XCUIElement!
     private var createButton: XCUIElement!
     private var signInButton: XCUIElement!
     private var signUpButton: XCUIElement!
     private var submitButton: XCUIElement!
+    private var switchStateButton: XCUIElement!
     
     //TextFields
     
@@ -67,10 +69,6 @@ class PiHomeUITests: XCTestCase {
     private var devicesTableViewCell: XCUIElement!
     private var logOutTableViewCell: XCUIElement!
     private var usersTableViewCell: XCUIElement!
-    
-    //PickerWheels
-    
-    private var pinPickerWheel: XCUIElement!
     
     //StaticText
     
@@ -108,11 +106,13 @@ class PiHomeUITests: XCTestCase {
         
         administrateButton = app.buttons["administrateButton"]
         authorizeButton = app.buttons["authorizeButton"]
+        buttonStateButton = app.buttons["buttonStateButton"]
         connectButton = app.buttons["connectButton"]
         createButton = app.buttons["createButton"]
         signInButton = app.buttons["signInButton"]
         signUpButton = app.buttons["signUpButton"]
         submitButton = app.buttons["submitButton"]
+        switchStateButton = app.buttons["switchStateButton"]
         
         //TextFields
         
@@ -143,10 +143,6 @@ class PiHomeUITests: XCTestCase {
         //StaticText
         
         informationStaticText = app.staticTexts["informationStaticText"]
-        
-        //PickerWheels
-        
-        pinPickerWheel = app.otherElements["pinPickerWheel"] // TO DO
     }
     
     //MARK: - Class Methods
@@ -228,9 +224,11 @@ class PiHomeUITests: XCTestCase {
     
     private func devices() {
         
+        devicesTableView.cells.element(boundBy: 0).buttons["switchButton"].tap()
+        devicesTableView.cells.element(boundBy: 0).buttons["switchButton"].tap()
+        devicesTableView.cells.element(boundBy: 2).buttons["stateButton"].tap()
         devicesTableView.swipeLeft(atIndex: 0)
         devicesTableView.cells.element(boundBy: 0).buttons["Delete"].tap()
-        devicesTableView.cells.element(boundBy: 0).buttons["stateButton"].tap()
     }
     
     private func addDevice() {
@@ -246,6 +244,8 @@ class PiHomeUITests: XCTestCase {
         
         deviceNameAlert.confirm()
         nameTextField.type(text: "Device 1")
+        buttonStateButton.tap()
+        switchStateButton.tap()
         descriptionTextView.type(text: "Device 1 description.")
         createButton.tap()
     }

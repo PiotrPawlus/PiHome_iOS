@@ -21,7 +21,7 @@ class DeviceTests: CoreDataTestCase {
         XCTAssertEqual(device.name, "Gate 11")
         XCTAssertEqual(device.pin, 11)
         XCTAssertEqual(device.state, false)
-        XCTAssertEqual(device.type, "gate")
+        XCTAssertEqual(device.type, "switch")
     }
     
     func testFindUserWithIdentifier() {

@@ -12,8 +12,8 @@
         
         didSet {
             
-            setTitle(deviceState ? "ON" : "OFF", for: .normal)
-            backgroundColor = deviceState ? UIColor.mantis : UIColor.red
+            setTitle(deviceState ? "OFF" : "ON", for: .normal)
+            backgroundColor = deviceState ? UIColor.red : UIColor.mantis
         }
     }
 }

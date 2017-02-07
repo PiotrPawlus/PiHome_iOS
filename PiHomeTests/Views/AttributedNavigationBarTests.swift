@@ -68,4 +68,3 @@ class AttributedNavigationBarTests: XCTestCase {
         XCTAssertNotNil(attributedNavigationBar.backgroundImage(for: .default))
     }
 }
-

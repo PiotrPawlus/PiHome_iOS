@@ -32,15 +32,13 @@ class NetworkAssistant: AFHTTPSessionManager {
     var requestType = NetworkRequestType.register
     
     static var shared: NetworkAssistant {
-        return MockNetworkAssistant()
-        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant! // TO DO
+        return ProcessInfo.isTesting ? MockNetworkAssistant() : networkAssistant!
     }
     
     //MARK: - Class Methods
     
     class func shared(forAddress address: String) -> NetworkAssistant {
         
-        return MockNetworkAssistant()
         guard !ProcessInfo.isTesting else {
             return MockNetworkAssistant()
         }

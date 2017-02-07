@@ -10,7 +10,7 @@
 class Device: NSManagedObject {
     
     @NSManaged var identifier: Int64
-    @NSManaged var information: String
+    @NSManaged var information: String?
     @NSManaged var name: String
     @NSManaged var pin: Int32
     @NSManaged var state: Bool
@@ -39,8 +39,8 @@ class Device: NSManagedObject {
             device!.pin = Int32(pin)
         }
         
-        if let state = dictionary["state"] as? Bool {
-            device!.state = state
+        if let state = dictionary["state"] as? Int {
+            device!.state = state == 1
         }
         
         if let type = dictionary["type"] as? String {

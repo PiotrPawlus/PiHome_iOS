@@ -16,8 +16,8 @@
 		C100F3B61E3E5D990078B21C /* DeviceStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */; };
 		C10957271E43642600859DCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10957261E43642600859DCB /* Assets.xcassets */; };
 		C113A4A21E43123000290509 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A11E43123000290509 /* UsersViewController.swift */; };
-		C113A4A81E431EE400290509 /* UserStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A71E431EE400290509 /* UserStateView.swift */; };
-		C113A4AA1E4320CA00290509 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */; };
+		C113A4A81E431EE400290509 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A71E431EE400290509 /* StateView.swift */; };
+		C113A4AA1E4320CA00290509 /* DeviceButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4A91E4320CA00290509 /* DeviceButtonTableViewCell.swift */; };
 		C113A4AE1E43364700290509 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AD1E43364700290509 /* UserDetailViewController.swift */; };
 		C113A4B01E433ECC00290509 /* UserStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AF1E433ECB00290509 /* UserStateButton.swift */; };
 		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
@@ -65,6 +65,11 @@
 		C14E125E1E4457CC0040F8AB /* AttributedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14E125D1E4457CC0040F8AB /* AttributedBarButtonItem.swift */; };
 		C14E12601E4457F50040F8AB /* AttributedBarButtonItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14E125F1E4457F50040F8AB /* AttributedBarButtonItemTests.swift */; };
 		C14E12621E4459B20040F8AB /* CreateDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14E12611E4459B20040F8AB /* CreateDeviceViewController.swift */; };
+		C165C10E1E4A577900E32ED9 /* DeviceStateButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165C10D1E4A577900E32ED9 /* DeviceStateButtonTests.swift */; };
+		C165C1101E4A583300E32ED9 /* DeviceTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165C10F1E4A583300E32ED9 /* DeviceTypeButton.swift */; };
+		C165C1121E4A604B00E32ED9 /* DeviceTypeButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165C1111E4A604B00E32ED9 /* DeviceTypeButtonTests.swift */; };
+		C165C1141E4A60A200E32ED9 /* StateViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165C1131E4A60A200E32ED9 /* StateViewTests.swift */; };
+		C165C1161E4A60D400E32ED9 /* UserStateButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165C1151E4A60D400E32ED9 /* UserStateButtonTests.swift */; };
 		C16E56D71E1ADDC000AFFA01 /* UserLocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */; };
 		C16E56DA1E1AEDD000AFFA01 /* XCUIElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */; };
 		C16E56DC1E1FC3BC00AFFA01 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E56DB1E1FC3BC00AFFA01 /* SplitViewController.swift */; };
@@ -91,6 +96,7 @@
 		C1E9BB411E0DE93D009A59E1 /* AttributedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */; };
 		C1E9BB461E0F5BF8009A59E1 /* Connect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */; };
 		C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB481E0F5C31009A59E1 /* ConnectViewController.swift */; };
+		C1F6090D1E4A4ACD00C340B9 /* DeviceSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6090C1E4A4ACD00C340B9 /* DeviceSwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,8 +131,8 @@
 		C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButton.swift; sourceTree = "<group>"; };
 		C10957261E43642600859DCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C113A4A11E43123000290509 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
-		C113A4A71E431EE400290509 /* UserStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateView.swift; sourceTree = "<group>"; };
-		C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		C113A4A71E431EE400290509 /* StateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		C113A4A91E4320CA00290509 /* DeviceButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceButtonTableViewCell.swift; sourceTree = "<group>"; };
 		C113A4AD1E43364700290509 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		C113A4AF1E433ECB00290509 /* UserStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateButton.swift; sourceTree = "<group>"; };
 		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
@@ -174,6 +180,11 @@
 		C14E125D1E4457CC0040F8AB /* AttributedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedBarButtonItem.swift; sourceTree = "<group>"; };
 		C14E125F1E4457F50040F8AB /* AttributedBarButtonItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedBarButtonItemTests.swift; sourceTree = "<group>"; };
 		C14E12611E4459B20040F8AB /* CreateDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDeviceViewController.swift; sourceTree = "<group>"; };
+		C165C10D1E4A577900E32ED9 /* DeviceStateButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateButtonTests.swift; sourceTree = "<group>"; };
+		C165C10F1E4A583300E32ED9 /* DeviceTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTypeButton.swift; sourceTree = "<group>"; };
+		C165C1111E4A604B00E32ED9 /* DeviceTypeButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTypeButtonTests.swift; sourceTree = "<group>"; };
+		C165C1131E4A60A200E32ED9 /* StateViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateViewTests.swift; sourceTree = "<group>"; };
+		C165C1151E4A60D400E32ED9 /* UserStateButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateButtonTests.swift; sourceTree = "<group>"; };
 		C16E56D61E1ADDC000AFFA01 /* UserLocalAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocalAuthentication.swift; sourceTree = "<group>"; };
 		C16E56D91E1AEDD000AFFA01 /* XCUIElement+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extension.swift"; sourceTree = "<group>"; };
 		C16E56DB1E1FC3BC00AFFA01 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +216,7 @@
 		C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedViewTests.swift; sourceTree = "<group>"; };
 		C1E9BB451E0F5BF8009A59E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Connect.storyboard; sourceTree = "<group>"; };
 		C1E9BB481E0F5C31009A59E1 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		C1F6090C1E4A4ACD00C340B9 /* DeviceSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSwitchTableViewCell.swift; sourceTree = "<group>"; };
 		C5E11098F5A0A2EAD76256D7 /* Pods_PiHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -249,7 +261,8 @@
 		C100F3AE1E3E54000078B21C /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				C113A4A91E4320CA00290509 /* DeviceTableViewCell.swift */,
+				C113A4A91E4320CA00290509 /* DeviceButtonTableViewCell.swift */,
+				C1F6090C1E4A4ACD00C340B9 /* DeviceSwitchTableViewCell.swift */,
 				C100F3AF1E3E54190078B21C /* TableViewCell.swift */,
 			);
 			path = TableViewCells;
@@ -594,8 +607,9 @@
 				C12CE9581E12CB090070EF53 /* AttributedTextView.swift */,
 				C1E9BB3C1E0DE8BA009A59E1 /* AttributedView.swift */,
 				C100F3B51E3E5D990078B21C /* DeviceStateButton.swift */,
+				C165C10F1E4A583300E32ED9 /* DeviceTypeButton.swift */,
+				C113A4A71E431EE400290509 /* StateView.swift */,
 				C113A4AF1E433ECB00290509 /* UserStateButton.swift */,
-				C113A4A71E431EE400290509 /* UserStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -624,6 +638,10 @@
 				C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */,
 				C12CE95F1E12CC190070EF53 /* AttributetTextViewTests.swift */,
 				C1E9BB401E0DE93D009A59E1 /* AttributedViewTests.swift */,
+				C165C10D1E4A577900E32ED9 /* DeviceStateButtonTests.swift */,
+				C165C1111E4A604B00E32ED9 /* DeviceTypeButtonTests.swift */,
+				C165C1131E4A60A200E32ED9 /* StateViewTests.swift */,
+				C165C1151E4A60D400E32ED9 /* UserStateButtonTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -946,7 +964,7 @@
 				C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */,
 				C1D82FB11E1AB937007379CA /* NetworkAssistant+Server.swift in Sources */,
 				C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */,
-				C113A4AA1E4320CA00290509 /* DeviceTableViewCell.swift in Sources */,
+				C113A4AA1E4320CA00290509 /* DeviceButtonTableViewCell.swift in Sources */,
 				C12CE9861E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift in Sources */,
 				C1E9BB301E0DBC28009A59E1 /* MenuViewController.swift in Sources */,
 				C12CE9981E16D82B0070EF53 /* User.swift in Sources */,
@@ -957,6 +975,7 @@
 				C12CE9671E12D2F30070EF53 /* RegisterViewController.swift in Sources */,
 				C12CE9911E16D6A90070EF53 /* MagicalRecord.swift in Sources */,
 				C12CE98A1E16D2080070EF53 /* NetworkResponseType.swift in Sources */,
+				C1F6090D1E4A4ACD00C340B9 /* DeviceSwitchTableViewCell.swift in Sources */,
 				C12CE9AC1E16E5030070EF53 /* UIViewController+Extension.swift in Sources */,
 				C12CE98F1E16D64F0070EF53 /* ProcesInfo+Extension.swift in Sources */,
 				C12CE9821E16D1930070EF53 /* MockResponse.swift in Sources */,
@@ -979,6 +998,7 @@
 				C13514AD1E20372100AC0C21 /* NetworkAssistant+Devices.swift in Sources */,
 				C1E9BB2D1E0DBB34009A59E1 /* AppContainerViewController.swift in Sources */,
 				C12CE9A51E16E3020070EF53 /* NetworkAssistant+User.swift in Sources */,
+				C165C1101E4A583300E32ED9 /* DeviceTypeButton.swift in Sources */,
 				C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */,
 				C12CE95B1E12CB580070EF53 /* UIFont+Extension.swift in Sources */,
 				C12CE9841E16D19C0070EF53 /* NetworkAssistant.swift in Sources */,
@@ -986,7 +1006,7 @@
 				C14E12621E4459B20040F8AB /* CreateDeviceViewController.swift in Sources */,
 				C12CE9801E16D18B0070EF53 /* MockNetworkAssistant.swift in Sources */,
 				C14E125E1E4457CC0040F8AB /* AttributedBarButtonItem.swift in Sources */,
-				C113A4A81E431EE400290509 /* UserStateView.swift in Sources */,
+				C113A4A81E431EE400290509 /* StateView.swift in Sources */,
 				C1E9BB491E0F5C31009A59E1 /* ConnectViewController.swift in Sources */,
 				C13CE79C1E2041D000F6D8FF /* Device.swift in Sources */,
 			);
@@ -997,17 +1017,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C12CE95E1E12CBD30070EF53 /* UIFontExtensionTests.swift in Sources */,
+				C165C1121E4A604B00E32ED9 /* DeviceTypeButtonTests.swift in Sources */,
 				C1E9BB411E0DE93D009A59E1 /* AttributedViewTests.swift in Sources */,
 				C12CE9771E16CFCB0070EF53 /* ErrorTests.swift in Sources */,
 				C100F3B21E3E55520078B21C /* AttributedButtonTests.swift in Sources */,
 				C13514AB1E20366600AC0C21 /* NetworkAssistantDeviceTests.swift in Sources */,
 				C12CE9951E16D77C0070EF53 /* NetworkAssistantRequestSerializerTests.swift in Sources */,
 				C12CE9A31E16E1670070EF53 /* CoreDataAssistantUserTests.swift in Sources */,
+				C165C10E1E4A577900E32ED9 /* DeviceStateButtonTests.swift in Sources */,
 				C1D82FAF1E197F01007379CA /* AttributedNavigationBarTests.swift in Sources */,
 				C14E12601E4457F50040F8AB /* AttributedBarButtonItemTests.swift in Sources */,
 				C13CE7A01E20F8F800F6D8FF /* DeviceTests.swift in Sources */,
+				C165C1161E4A60D400E32ED9 /* UserStateButtonTests.swift in Sources */,
 				C12CE9601E12CC190070EF53 /* AttributetTextViewTests.swift in Sources */,
 				C12CE9791E16CFD40070EF53 /* SettingsTests.swift in Sources */,
+				C165C1141E4A60A200E32ED9 /* StateViewTests.swift in Sources */,
 				C12CE9931E16D7360070EF53 /* NetworkAssistantTests.swift in Sources */,
 				C12CE9721E16C99E0070EF53 /* StringExtensionTests.swift in Sources */,
 				C12CE99A1E16D9520070EF53 /* CoreDataTestCase.swift in Sources */,

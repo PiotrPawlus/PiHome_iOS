@@ -1,14 +1,15 @@
 //
-//  DeviceTableViewCell.swift
+//  DeviceSwitchTableViewCell.swift
 //  PiHome
 //
-//  Created by Piotr Pawluś on 02/02/2017.
+//  Created by Piotr Pawluś on 07/02/2017.
 //  Copyright © 2017 Piotr Pawluś. All rights reserved.
 //
 
-class DeviceTableViewCell: TableViewCell {
+class DeviceSwitchTableViewCell: TableViewCell {
     
     @IBOutlet private var detailLabel: UILabel!
+    @IBOutlet private var switchDeviceStateButton: DeviceStateButton!
     
     private var device: Device?
     
@@ -20,19 +21,14 @@ class DeviceTableViewCell: TableViewCell {
     
     //MARK: - Actions
     
-    @IBAction func changeDeviceState(_ sender: AttributedButton) {
+    @IBAction func changeDeviceState(_ sender: DeviceStateButton) {
         
         SVProgressHUD.show()
-        sender.borderColor = UIColor.red
         
         NetworkAssistant.shared.changeState(of: device!) { error in
             
             SVProgressHUD.dismiss()
             UIAlertController.show(from: error)
-            
-            if error == nil {
-                sender.borderColor = UIColor.mantis
-            }
         }
     }
     
@@ -44,6 +40,7 @@ class DeviceTableViewCell: TableViewCell {
         
         super.configure(withTitle: device.name)
         detailLabel.text = device.information
+        switchDeviceStateButton.deviceState = device.state
         
         self.device = device
     }
@@ -52,3 +49,4 @@ class DeviceTableViewCell: TableViewCell {
     
     //MARK: - Overridden
 }
+
