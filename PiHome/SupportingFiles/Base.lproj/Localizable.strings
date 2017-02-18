@@ -1,0 +1,48 @@
+//Error titles
+
+"error" = "Error";
+"passwords" = "Passwords";
+"please_wait.title" = "Please wait...";
+"touch_id" = "Touch ID not available";
+
+//Error description
+
+"cannot_be_empty" = "Cannot be empty";
+"no_data_found" = "No data found";
+"passwords_must_match" = "Password and password confirmation must match.";
+"please_wait.description" = "Please wait for login permission from system administrator.";
+"try_again" = "Try again";
+"touch_id.description" = "Your device is not configured for Touch ID.";
+"valid_email" = "Email must be valid";
+
+//Custom fields
+"email" = "Email";
+"confirm_password" = "Confirm password";
+"device_name" = "Device name";
+"device_pin" = "Device pin";
+"first_name" = "First name";
+"last_name" = "Last name";
+"password" = "Password";
+"pull_to_refresh" = "Pull to refresh";
+"server_address" = "Server Address";
+
+//Touch ID
+"touch_id_permision" = "Use Touch ID for unlock PiHome";
+
+//General server errors
+"empty_parameters" = "Sended parameters cannot be empty";
+"not_found" = "No found";
+"not_implemented" = "Method not implemented";
+"missing_argumets" = "Missing argument in sended request!";
+
+//User server errors
+"email_already_registered" = "The email already registered";
+"cannot_update_yourself" = "Cannot update yourself";
+"user_not_active" = "User not active. Please contact with administrator";
+"user_not_found" = "User not found";
+"wrong_email_or_password" = "Wrong email or password";
+
+//Device server error
+"already_added" = "The device already added to system";
+"device_not_connected" = "Device is not connected";
+"device_not_found" = "Device not found";

@@ -19,7 +19,7 @@ extension UIAlertController {
         
         if let error = error, AFNetworkReachabilityManager.shared().isReachable {
             
-            let errorTitle = error.userInfo[LocalizedTitleKey] as? String ?? "Error"
+            let errorTitle = (error.userInfo[LocalizedTitleKey] as? String)?.localized ?? "error".localized
             let errorMessage = error.userInfo[NSLocalizedDescriptionKey] as? String ?? error.localizedDescription
             
             if error.code == 401 {

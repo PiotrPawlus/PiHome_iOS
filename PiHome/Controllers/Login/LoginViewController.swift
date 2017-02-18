@@ -101,7 +101,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         guard !passwordTextField.text!.isEmpty else {
-            throw Error.Name.cannotBeEmpty("Password")
+            throw Error.Name.cannotBeEmpty("password")
         }
         
         login(withEmail: emailTextField.text!, password: passwordTextField.text!)

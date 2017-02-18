@@ -6,8 +6,6 @@
 //  Copyright © 2017 Piotr Pawluś. All rights reserved.
 //
 
-private let UserLocalAuthenticationMessage = "Use Touch ID for unlock PiHome."
-
 class UserLocalAuthentication: LAContext {
     
     //MARK: - Class Methods
@@ -18,7 +16,7 @@ class UserLocalAuthentication: LAContext {
 
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: UserLocalAuthenticationMessage, reply: { success, error in
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "touch_id_permision".localized, reply: { success, error in
                 
                 DispatchQueue.main.async {
                     

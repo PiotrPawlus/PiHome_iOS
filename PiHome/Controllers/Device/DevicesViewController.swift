@@ -28,7 +28,7 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
         fetchDevices()
         setupFetchedResultsController()
         
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "pull_to_refresh".localized)
         refreshControl.addTarget(self, action: #selector(refreshDevices), for: .valueChanged)
         
         tableView.addSubview(refreshControl)

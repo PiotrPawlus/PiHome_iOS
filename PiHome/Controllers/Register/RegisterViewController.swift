@@ -70,11 +70,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     private func register() throws {
         
         guard !firstNameTextField.text!.isEmpty else {
-            throw Error.Name.cannotBeEmpty("First Name")
+            throw Error.Name.cannotBeEmpty("first_name")
         }
         
         guard !lastNameTextField.text!.isEmpty else {
-            throw Error.Name.cannotBeEmpty("Last Name")
+            throw Error.Name.cannotBeEmpty("last_name")
         }
         
         guard emailTextField.text!.isValidEmail else {
@@ -82,11 +82,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         
         guard !passwordTextField.text!.isEmpty else {
-            throw Error.Name.cannotBeEmpty("Password")
+            throw Error.Name.cannotBeEmpty("password")
         }
         
         guard !confirmPasswordTextField.text!.isEmpty else {
-            throw Error.Name.cannotBeEmpty("Confirm password")
+            throw Error.Name.cannotBeEmpty("confirm_password")
         }
         
         guard passwordTextField.text == confirmPasswordTextField.text else {

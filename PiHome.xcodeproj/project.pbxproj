@@ -21,7 +21,6 @@
 		C113A4AE1E43364700290509 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AD1E43364700290509 /* UserDetailViewController.swift */; };
 		C113A4B01E433ECC00290509 /* UserStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113A4AF1E433ECB00290509 /* UserStateButton.swift */; };
 		C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9531E12AE820070EF53 /* Register.storyboard */; };
-		C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12CE9561E12C3ED0070EF53 /* Device.storyboard */; };
 		C12CE9591E12CB090070EF53 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE9581E12CB090070EF53 /* AttributedTextView.swift */; };
 		C12CE95B1E12CB580070EF53 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE95A1E12CB580070EF53 /* UIFont+Extension.swift */; };
 		C12CE95E1E12CBD30070EF53 /* UIFontExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */; };
@@ -87,7 +86,10 @@
 		C1D82FAF1E197F01007379CA /* AttributedNavigationBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */; };
 		C1D82FB11E1AB937007379CA /* NetworkAssistant+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D82FB01E1AB937007379CA /* NetworkAssistant+Server.swift */; };
 		C1D82FB31E1ABA7C007379CA /* NetworkAssistantServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D82FB21E1ABA7C007379CA /* NetworkAssistantServerTests.swift */; };
-		C1E9BB281E0DBA6E009A59E1 /* PiHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */; };
+		C1E2C15F1E581522002CB8B6 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E2C1611E581522002CB8B6 /* Device.storyboard */; };
+		C1E2C1641E581965002CB8B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1E2C1661E581965002CB8B6 /* Localizable.strings */; };
+		C1E2C1681E582119002CB8B6 /* PiHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E2C16A1E582119002CB8B6 /* PiHome.storyboard */; };
+		C1E2C1721E583997002CB8B6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1E2C1711E583997002CB8B6 /* Info.plist */; };
 		C1E9BB2B1E0DBAD7009A59E1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB2A1E0DBAD7009A59E1 /* ContainerViewController.swift */; };
 		C1E9BB2D1E0DBB34009A59E1 /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB2C1E0DBB34009A59E1 /* AppContainerViewController.swift */; };
 		C1E9BB301E0DBC28009A59E1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BB2F1E0DBC28009A59E1 /* MenuViewController.swift */; };
@@ -136,7 +138,6 @@
 		C113A4AD1E43364700290509 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		C113A4AF1E433ECB00290509 /* UserStateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStateButton.swift; sourceTree = "<group>"; };
 		C12CE9541E12AE820070EF53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
-		C12CE9561E12C3ED0070EF53 /* Device.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		C12CE9581E12CB090070EF53 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
 		C12CE95A1E12CB580070EF53 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		C12CE95D1E12CBD30070EF53 /* UIFontExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensionTests.swift; sourceTree = "<group>"; };
@@ -193,7 +194,6 @@
 		C1735A3C1E0D681700944760 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C1735A421E0D681700944760 /* PiHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PiHome.xcdatamodel; sourceTree = "<group>"; };
 		C1735A471E0D681700944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C1735A491E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1735A4E1E0D681700944760 /* PiHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1735A541E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1735A591E0D681700944760 /* PiHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,8 +206,18 @@
 		C1D82FAE1E197F01007379CA /* AttributedNavigationBarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBarTests.swift; sourceTree = "<group>"; };
 		C1D82FB01E1AB937007379CA /* NetworkAssistant+Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkAssistant+Server.swift"; sourceTree = "<group>"; };
 		C1D82FB21E1ABA7C007379CA /* NetworkAssistantServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAssistantServerTests.swift; sourceTree = "<group>"; };
+		C1E2C15A1E58150F002CB8B6 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Connect.strings"; sourceTree = "<group>"; };
+		C1E2C15C1E58150F002CB8B6 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Login.strings"; sourceTree = "<group>"; };
+		C1E2C15D1E58150F002CB8B6 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Register.strings"; sourceTree = "<group>"; };
+		C1E2C15E1E58150F002CB8B6 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Users.strings"; sourceTree = "<group>"; };
+		C1E2C1601E581522002CB8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Device.storyboard; sourceTree = "<group>"; };
+		C1E2C1631E581526002CB8B6 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Device.strings"; sourceTree = "<group>"; };
+		C1E2C1651E581965002CB8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C1E2C1671E581968002CB8B6 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C1E2C1691E582119002CB8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PiHome.storyboard; sourceTree = "<group>"; };
+		C1E2C16C1E58211B002CB8B6 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/PiHome.strings"; sourceTree = "<group>"; };
+		C1E2C1711E583997002CB8B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1E9BB261E0D708B009A59E1 /* PiHome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiHome-Bridging-Header.h"; sourceTree = "<group>"; };
-		C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PiHome.storyboard; path = Base.lproj/PiHome.storyboard; sourceTree = "<group>"; };
 		C1E9BB2A1E0DBAD7009A59E1 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		C1E9BB2C1E0DBB34009A59E1 /* AppContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		C1E9BB2F1E0DBC28009A59E1 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -518,8 +528,9 @@
 			isa = PBXGroup;
 			children = (
 				C1D82FA71E197E35007379CA /* Fonts */,
-				C1735A491E0D681700944760 /* Info.plist */,
+				C1E2C1711E583997002CB8B6 /* Info.plist */,
 				C1E9BB261E0D708B009A59E1 /* PiHome-Bridging-Header.h */,
+				C1E2C1661E581965002CB8B6 /* Localizable.strings */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -528,10 +539,10 @@
 			isa = PBXGroup;
 			children = (
 				C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */,
-				C12CE9561E12C3ED0070EF53 /* Device.storyboard */,
+				C1E2C1611E581522002CB8B6 /* Device.storyboard */,
 				C1735A461E0D681700944760 /* LaunchScreen.storyboard */,
 				C1735A721E0D6C0100944760 /* Login.storyboard */,
-				C1E9BB271E0DBA6E009A59E1 /* PiHome.storyboard */,
+				C1E2C16A1E582119002CB8B6 /* PiHome.storyboard */,
 				C12CE9531E12AE820070EF53 /* Register.storyboard */,
 				C1B5E34B1E1FDD6B00F043CE /* Users.storyboard */,
 			);
@@ -768,6 +779,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pl-PL",
 			);
 			mainGroup = C1735A2E1E0D681600944760;
 			productRefGroup = C1735A381E0D681600944760 /* Products */;
@@ -788,13 +800,15 @@
 			files = (
 				C1735A741E0D6C0100944760 /* Login.storyboard in Resources */,
 				C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */,
+				C1E2C1641E581965002CB8B6 /* Localizable.strings in Resources */,
 				C12CE9551E12AE820070EF53 /* Register.storyboard in Resources */,
 				C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */,
 				C10957271E43642600859DCB /* Assets.xcassets in Resources */,
-				C1E9BB281E0DBA6E009A59E1 /* PiHome.storyboard in Resources */,
+				C1E2C1681E582119002CB8B6 /* PiHome.storyboard in Resources */,
 				C1E9BB461E0F5BF8009A59E1 /* Connect.storyboard in Resources */,
+				C1E2C1721E583997002CB8B6 /* Info.plist in Resources */,
 				C1E9BB391E0DE746009A59E1 /* Backgrounds.xcassets in Resources */,
-				C12CE9571E12C3ED0070EF53 /* Device.storyboard in Resources */,
+				C1E2C15F1E581522002CB8B6 /* Device.storyboard in Resources */,
 				C1B5E34D1E1FDD6B00F043CE /* Users.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1072,6 +1086,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C12CE9541E12AE820070EF53 /* Base */,
+				C1E2C15D1E58150F002CB8B6 /* pl-PL */,
 			);
 			name = Register.storyboard;
 			sourceTree = "<group>";
@@ -1088,6 +1103,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C1735A731E0D6C0100944760 /* Base */,
+				C1E2C15C1E58150F002CB8B6 /* pl-PL */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";
@@ -1096,14 +1112,44 @@
 			isa = PBXVariantGroup;
 			children = (
 				C1B5E34C1E1FDD6B00F043CE /* Base */,
+				C1E2C15E1E58150F002CB8B6 /* pl-PL */,
 			);
 			name = Users.storyboard;
+			sourceTree = "<group>";
+		};
+		C1E2C1611E581522002CB8B6 /* Device.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1E2C1601E581522002CB8B6 /* Base */,
+				C1E2C1631E581526002CB8B6 /* pl-PL */,
+			);
+			name = Device.storyboard;
+			sourceTree = "<group>";
+		};
+		C1E2C1661E581965002CB8B6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1E2C1651E581965002CB8B6 /* Base */,
+				C1E2C1671E581968002CB8B6 /* pl-PL */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C1E2C16A1E582119002CB8B6 /* PiHome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1E2C1691E582119002CB8B6 /* Base */,
+				C1E2C16C1E58211B002CB8B6 /* pl-PL */,
+			);
+			name = PiHome.storyboard;
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		C1E9BB441E0F5BF8009A59E1 /* Connect.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C1E9BB451E0F5BF8009A59E1 /* Base */,
+				C1E2C15A1E58150F002CB8B6 /* pl-PL */,
 			);
 			name = Connect.storyboard;
 			sourceTree = "<group>";
@@ -1115,6 +1161,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1165,6 +1212,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

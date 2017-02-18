@@ -19,19 +19,19 @@ class ErrorTests: XCTestCase {
         XCTAssertEqual(error.title, "title")
         
         error = .email
-        XCTAssertEqual(error.title, "Email")
+        XCTAssertEqual(error.title, "email".localized)
         
         error = .noDataFound
-        XCTAssertEqual(error.title, "No data found")
+        XCTAssertEqual(error.title, "no_data_found".localized)
         
         error = .passwords
-        XCTAssertEqual(error.title, "Passwords")
+        XCTAssertEqual(error.title, "passwords".localized)
         
         error = .touchIdNotAvailable
-        XCTAssertEqual(error.title, "Touch ID not available")
+        XCTAssertEqual(error.title, "touch_id.title".localized)
         
         error = .unauthorized
-        XCTAssertEqual(error.title, "Please wait...")
+        XCTAssertEqual(error.title, "please_wait.title".localized)
     }
     
     func testNameDescription() {
@@ -39,22 +39,22 @@ class ErrorTests: XCTestCase {
         var error = Error.Name.cannotBeEmpty("title")
         
         XCTAssertNotNil(error.description)
-        XCTAssertEqual(error.description, "Cannot be empty.")
+        XCTAssertEqual(error.description, "cannot_be_empty".localized)
         
         error = .email
-        XCTAssertEqual(error.description, "Email must be valid.")
+        XCTAssertEqual(error.description, "valid_email".localized)
         
         error = .noDataFound
-        XCTAssertEqual(error.description, "Try again.")
+        XCTAssertEqual(error.description, "try_again".localized)
         
         error = .passwords
-        XCTAssertEqual(error.description, "Password confirmation and Password must match.")
+        XCTAssertEqual(error.description, "passwords_must_match".localized)
         
         error = .touchIdNotAvailable
-        XCTAssertEqual(error.description, "Your device is not configured for Touch ID.")
+        XCTAssertEqual(error.description, "touch_id.description".localized)
         
         error = .unauthorized
-        XCTAssertEqual(error.description, "Please wait for permission from system administrator.")
+        XCTAssertEqual(error.description, "please_wait.description".localized)
     }
 }
 

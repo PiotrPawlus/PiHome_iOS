@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bdd-7K-MpI">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,7 @@
         <scene sceneID="Q4F-gy-Lr3">
             <objects>
                 <navigationController id="Bdd-7K-MpI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="V8B-Nl-dXg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V8B-Nl-dXg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,22 +43,18 @@
                         <viewControllerLayoutGuide type="bottom" id="UCB-AR-o5S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hqH-9J-nCH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BKb-Ln-dql">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="Ezr-Vg-alO"/>
-                                    <constraint firstAttribute="width" constant="450" id="xL2-jQ-HlO"/>
-                                </constraints>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="MQf-T9-l19">
-                                    <rect key="frame" x="0.0" y="388" width="450" height="50"/>
+                                    <rect key="frame" x="0.0" y="388" width="768" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you want to add new device please contact with system administrator." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMa-xS-mnx">
-                                            <rect key="frame" x="15" y="5" width="420" height="40"/>
+                                            <rect key="frame" x="15" y="5" width="738" height="40"/>
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -74,20 +70,20 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceButtonTableViewCellIdentifier" rowHeight="180" id="enH-kS-7I9" customClass="DeviceButtonTableViewCell" customModule="PiHome" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="450" height="180"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="enH-kS-7I9" id="3f4-kZ-W4r">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="179.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light 1" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-Se-Ruh">
-                                                    <rect key="frame" x="28" y="18" width="334" height="21"/>
+                                                    <rect key="frame" x="28" y="18" width="652" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEM-MI-bM8" customClass="AttributedButton" customModule="PiHome" customModuleProvider="target">
-                                                    <rect key="frame" x="377" y="65" width="50" height="50"/>
+                                                    <rect key="frame" x="695" y="65" width="50" height="50"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="stateButton"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="TRY-l8-jpo"/>
@@ -112,7 +108,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDi-d9-XJC">
-                                                    <rect key="frame" x="28" y="44" width="334" height="122.66666666666666"/>
+                                                    <rect key="frame" x="28" y="44" width="652" height="122.5"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -136,26 +132,26 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceSwitchTableViewCellIdentifier" rowHeight="180" id="Jdp-TI-xNP" customClass="DeviceSwitchTableViewCell" customModule="PiHome" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="450" height="180"/>
+                                        <rect key="frame" x="0.0" y="208" width="768" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdp-TI-xNP" id="KfQ-5V-fNr">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="179.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light 1" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-rt-xjt">
-                                                    <rect key="frame" x="28" y="18" width="334" height="21"/>
+                                                    <rect key="frame" x="28" y="18" width="652" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBL-vX-NWG">
-                                                    <rect key="frame" x="28" y="44" width="334" height="122.66666666666666"/>
+                                                    <rect key="frame" x="28" y="44" width="652" height="122.5"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gm-aL-rg7" customClass="DeviceStateButton" customModule="PiHome" customModuleProvider="target">
-                                                    <rect key="frame" x="377" y="65" width="50" height="50"/>
+                                                    <rect key="frame" x="695" y="65" width="50" height="50"/>
                                                     <color key="backgroundColor" red="0.57647058819999997" green="0.7843137255" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="switchButton"/>
                                                     <constraints>
@@ -198,16 +194,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="devicesTableView"/>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ezr-Vg-alO"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="Ezr-Vg-alO"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="ABj-RC-NoU" id="cfH-OD-mPl"/>
                                     <outlet property="delegate" destination="ABj-RC-NoU" id="rYS-qn-4wW"/>
@@ -218,22 +204,9 @@
                         <constraints>
                             <constraint firstItem="UCB-AR-o5S" firstAttribute="top" secondItem="BKb-Ln-dql" secondAttribute="bottom" id="BSd-vZ-dNa"/>
                             <constraint firstItem="BKb-Ln-dql" firstAttribute="top" secondItem="hqH-9J-nCH" secondAttribute="top" id="dDW-ab-QhF"/>
-                            <constraint firstItem="BKb-Ln-dql" firstAttribute="centerX" secondItem="hqH-9J-nCH" secondAttribute="centerX" id="reT-yS-bEL"/>
                             <constraint firstItem="BKb-Ln-dql" firstAttribute="leading" secondItem="hqH-9J-nCH" secondAttribute="leading" id="sAR-Qj-ZG8"/>
                             <constraint firstAttribute="trailing" secondItem="BKb-Ln-dql" secondAttribute="trailing" id="zi5-Qr-RwU"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="reT-yS-bEL"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="reT-yS-bEL"/>
-                                <exclude reference="sAR-Qj-ZG8"/>
-                                <exclude reference="zi5-Qr-RwU"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="o9B-Z1-yUy">
                         <barButtonItem key="leftBarButtonItem" title="MENU" id="vof-qO-v4a">
@@ -272,30 +245,30 @@
                         <viewControllerLayoutGuide type="bottom" id="c8v-H6-SK0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ECH-0Q-D0x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-mD-fll">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                                 <items>
                                     <navigationItem title="Create new device" id="7qq-4p-Mtd"/>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFE-73-zkX">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR2-Oc-Taw" userLabel="HelperView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="cFu-PZ-57x"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcz-sP-cV7" userLabel="WraperView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="568.33333333333337"/>
+                                        <rect key="frame" x="159" y="0.0" width="450" height="568.5"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Device name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMj-L1-OKP">
-                                                <rect key="frame" x="20" y="30" width="374" height="30"/>
+                                                <rect key="frame" x="20" y="30" width="410" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="nameTextField"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KpU-rr-iV0"/>
@@ -308,20 +281,20 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-Sg-PQV">
-                                                <rect key="frame" x="20" y="59" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="59" width="410" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Jqy-ZF-T8c"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-gm-QVq">
-                                                <rect key="frame" x="20" y="120.00000000000001" width="374" height="17.333333333333357"/>
+                                                <rect key="frame" x="20" y="120" width="410" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa6-Ca-IMh">
-                                                <rect key="frame" x="0.0" y="262.33333333333337" width="414" height="216.00000000000006"/>
+                                                <rect key="frame" x="0.0" y="262.5" width="450" height="216"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="pinPickerWheel"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="aXD-yI-HJM" id="W93-fh-c9j"/>
@@ -329,7 +302,7 @@
                                                 </connections>
                                             </pickerView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-fU-od4">
-                                                <rect key="frame" x="20" y="142.33333333333331" width="374" height="99.999999999999972"/>
+                                                <rect key="frame" x="20" y="142.5" width="410" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="descriptionTextView"/>
                                                 <constraints>
@@ -342,7 +315,7 @@
                                                 </connections>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ro5-Rh-y5K" customClass="AttributedButton" customModule="PiHome" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="498.33333333333337" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="498.5" width="410" height="50"/>
                                                 <color key="backgroundColor" red="0.39607843139999999" green="0.45882352939999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="createButton"/>
                                                 <constraints>
@@ -362,7 +335,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqz-hC-8Yr" userLabel="StateButtonsWraperView">
-                                                <rect key="frame" x="170" y="75" width="75" height="30"/>
+                                                <rect key="frame" x="188" y="75" width="75" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAR-ot-ksx" customClass="DeviceTypeButton" customModule="PiHome" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -417,16 +390,16 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx0-a7-MdB">
-                                                <rect key="frame" x="20" y="80.333333333333343" width="135" height="19.666666666666657"/>
+                                                <rect key="frame" x="20" y="80" width="153" height="20"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xer-yg-M73">
-                                                <rect key="frame" x="260" y="80.333333333333343" width="134" height="19.666666666666657"/>
+                                                <rect key="frame" x="278" y="80" width="152" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4w-x0-ZJX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="19.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="20"/>
                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>

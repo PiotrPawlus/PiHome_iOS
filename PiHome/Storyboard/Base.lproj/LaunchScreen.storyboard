@@ -33,7 +33,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfg-pD-87o">
-                                <rect key="frame" x="131" y="355.5" width="113" height="34"/>
+                                <rect key="frame" x="131" y="365.5" width="113" height="34"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="34"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                             <constraint firstItem="fm2-r4-O8l" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LxJ-FT-w8T"/>
                             <constraint firstItem="Yfg-pD-87o" firstAttribute="centerX" secondItem="8VM-iw-nfk" secondAttribute="centerX" id="NLx-ff-GyJ"/>
                             <constraint firstAttribute="trailing" secondItem="fm2-r4-O8l" secondAttribute="trailing" id="OEw-YB-C67"/>
-                            <constraint firstItem="Yfg-pD-87o" firstAttribute="top" secondItem="8VM-iw-nfk" secondAttribute="bottom" id="V69-1o-bXy"/>
+                            <constraint firstItem="Yfg-pD-87o" firstAttribute="top" secondItem="8VM-iw-nfk" secondAttribute="bottom" constant="10" id="V69-1o-bXy"/>
                             <constraint firstItem="8VM-iw-nfk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="e0J-xl-XgS"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fm2-r4-O8l" secondAttribute="bottom" id="raN-za-pK1"/>
                             <constraint firstItem="fm2-r4-O8l" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xwu-0H-3xV"/>
@@ -58,6 +58,6 @@
     </scenes>
     <resources>
         <image name="bacground-blue" width="260" height="566"/>
-        <image name="icon-pi" width="200" height="200"/>
+        <image name="icon-pi" width="106" height="103"/>
     </resources>
 </document>

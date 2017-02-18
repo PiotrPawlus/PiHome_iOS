@@ -36,12 +36,12 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
     private func connect() throws {
     
         guard let address = connectTextField.text, !address.isEmpty else {
-            throw Error.Name.cannotBeEmpty("Server Address")
+            throw Error.Name.cannotBeEmpty("server_address")
         }
         
         SVProgressHUD.show()
         
-        NetworkAssistant.shared(forAddress: address).connect(toAddress: address) { error in // TO FIX
+        NetworkAssistant.shared(forAddress: address).connect(toAddress: address) { error in
             
             SVProgressHUD.dismiss()
             error == nil ? AppContainerViewController.setLoginViewController() : UIAlertController.show(from: error)

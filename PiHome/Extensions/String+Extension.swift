@@ -8,6 +8,10 @@
 
 extension String {
     
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+    
     var isValidEmail: Bool {
         return try! isMatching(regularExpression: NSRegularExpression(pattern: "^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,}$"))
     }

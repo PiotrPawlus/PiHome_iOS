@@ -32,17 +32,17 @@ open class Error: Swift.Error {
             
             switch self {
             case .cannotBeEmpty(let errorTitle):
-                title = errorTitle
+                title = errorTitle.localized
             case .email:
-                title = "Email"
+                title = "email".localized
             case .noDataFound:
-                title = "No data found"
+                title = "no_data_found".localized
             case .passwords:
-                title = "Passwords"
+                title = "passwords".localized
             case .touchIdNotAvailable:
-                title = "Touch ID not available"
+                title = "touch_id.title".localized
             case .unauthorized:
-                title = "Please wait..."
+                title = "please_wait.title".localized
             }
             
             return title
@@ -54,17 +54,17 @@ open class Error: Swift.Error {
             
             switch self {
             case .cannotBeEmpty(_):
-                description = "Cannot be empty."
+                description = "cannot_be_empty".localized
             case .email:
-                description = "Email must be valid."
+                description = "valid_email".localized
             case .noDataFound:
-                description = "Try again."
+                description = "try_again".localized
             case .passwords:
-                description = "Password confirmation and Password must match."
+                description = "passwords_must_match".localized
             case .touchIdNotAvailable:
-                description = "Your device is not configured for Touch ID."
+                description = "touch_id.description".localized
             case .unauthorized:
-                description = "Please wait for permission from system administrator."
+                description = "please_wait.description".localized
             }
             
             return description
@@ -91,7 +91,7 @@ open class Error: Swift.Error {
                 
                     if let description = response["description"] as? String {
                         
-                        userInfo[NSLocalizedDescriptionKey] = description
+                        userInfo[NSLocalizedDescriptionKey] = description.localized
                     }
                     
                 } else {

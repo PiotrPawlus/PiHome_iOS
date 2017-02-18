@@ -108,11 +108,11 @@ class CreateDeviceViewController: UIViewController, UIPickerViewDataSource, UIPi
     private func createNewDevice() throws {
         
         guard !deviceNameTextField.text!.isEmpty, let name = deviceNameTextField.text else {
-            throw Error.Name.cannotBeEmpty("Device name")
+            throw Error.Name.cannotBeEmpty("device_name")
         }
         
         guard let pin = selectedPin else {
-            throw Error.Name.cannotBeEmpty("Device pin")
+            throw Error.Name.cannotBeEmpty("device_pin")
         }
         
         let parameters: [AnyHashable: Any] = [

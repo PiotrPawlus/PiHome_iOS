@@ -1,0 +1,49 @@
+
+//Error titles
+
+"error" = "Błąd";
+"passwords" = "Hasła";
+"please_wait.title" = "Proszę czekać...";
+"touch_id" = "Czytnik Touch ID niedostępny";
+
+//Error description
+
+"cannot_be_empty" = "Pole nie może być puste";
+"no_data_found" = "Brak danych";
+"passwords_must_match" = "Hasło oraz potwierdzenia hałsa muszą być identyczne.";
+"please_wait.description" = "Proszę czekać na akceptacje prawa do logowania przez administratora systemu.";
+"try_again" = "Spróbuj ponownie";
+"touch_id.description" = "Twoje urządzenie nie jest przystosowane do obsługi Touch ID.";
+"valid_email" = "Email musi być poprawny";
+
+//Custom fields
+"email" = "Email";
+"confirm_password" = "Potwierdzenie hasła";
+"device_name" = "Nazwa urządzenia";
+"device_pin" = "Pin urządzenia";
+"first_name" = "Imię";
+"last_name" = "Nazwisko";
+"password" = "Hasło";
+"pull_to_refresh" = "Pociągnij w dół aby odświeżyć";
+"server_address" = "Adres serwera";
+
+//Touch ID
+"touch_id_permision" = "Użyj czytnika Touch ID aby odblkować PiHome";
+
+//General server errors
+"empty_parameters" = "Wysłane parametry nie mogą być puste";
+"not_found" = "Nie odnaleziono";
+"not_implemented" = "Metoda nie może zostać obsłużona";
+"missing_argumets" = "Brakujące parametry w wysłanym żądaniu";
+
+//User server errors
+"email_already_registered" = "Podany email jest już zajęty";
+"cannot_update_yourself" = "Nie można edytować siebie samego";
+"user_not_active" = "Użytkownik nieaktywny. Proszę się skontaktować z administratorem systemu";
+"user_not_found" = "Użytkownik nie znaleziony";
+"wrong_email_or_password" = "Niepoprawny email lub hasło";
+
+//Device server error
+"already_added" = "Urządzenie zostało dodane wcześniej";
+"device_not_connected" = "Urządzenie niepodpięte";
+"device_not_found" = "Nie znaleziono urządzenia";
