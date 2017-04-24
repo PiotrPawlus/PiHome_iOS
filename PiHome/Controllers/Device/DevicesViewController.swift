@@ -36,7 +36,7 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
         
-        createDeviceBarButtonItem.isHidden = !Settings.currentUser!.administrator
+        createDeviceBarButtonItem.isHidden = !Settings.shared.currentUser!.administrator
     }
     
     //MARK: - Deinitialization
@@ -44,7 +44,7 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
     //MARK: - Actions
     
     @IBAction func menuBarButtonItemTapped(_ sender: UIBarButtonItem ) {
-        AppContainerViewController.presentMenuViewController()
+        AppContainerViewController.shared.presentMenuViewController()
     }
     
     //MARK: - Public
@@ -185,7 +185,7 @@ class DevicesViewController: UIViewController, NSFetchedResultsControllerDelegat
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
-        if let user = Settings.currentUser {
+        if let user = Settings.shared.currentUser {
             return user.administrator
         }
         

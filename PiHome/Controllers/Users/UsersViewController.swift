@@ -30,7 +30,7 @@ class UsersViewController: UITableViewController, NSFetchedResultsControllerDele
     //MARK: - Actions
     
     @IBAction func menuBarButtonItemTapped(_ sender: UIBarButtonItem) {
-        AppContainerViewController.presentMenuViewController()
+        AppContainerViewController.shared.presentMenuViewController()
     }
     
     //MARK: - Public

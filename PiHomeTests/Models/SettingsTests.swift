@@ -14,15 +14,15 @@ class SettingsTests: CoreDataTestCase {
     override func setUp() {
         super.setUp()
         
-        if Settings.currentUser != nil {
-            Settings.logoutUser()
+        if Settings.shared.currentUser != nil {
+            Settings.shared.logoutUser()
         }
     }
     
     func testIsUserLoggedIn() {
         
-        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        Settings.shared.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
 
-        XCTAssertTrue(Settings.isUserLoggedIn)
+        XCTAssertTrue(Settings.shared.isUserLoggedIn)
     }
 }

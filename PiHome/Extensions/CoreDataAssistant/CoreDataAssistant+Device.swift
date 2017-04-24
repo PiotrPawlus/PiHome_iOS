@@ -16,7 +16,7 @@ extension CoreDataAssistant {
             
             MagicalRecord.save({ context in
                 
-                if let user = Settings.currentUser?.mr_(in: context) {
+                if let user = Settings.shared.currentUser?.mr_(in: context) {
                 
                     let device = Device.createOrUpdate(with: dictionary, in: context)
                     device.user = user

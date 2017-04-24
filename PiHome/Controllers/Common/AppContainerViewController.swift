@@ -8,39 +8,25 @@
 
 private let SideMenuNavigationControllerIdentifier = "SideMenuNavigationControllerIdentifier"
 
-class AppContainerViewController: ContainerViewController {
+protocol AppContainerAssistantable {
     
-    static var appContainer: AppContainerViewController?
+    func dismissMenuViewController()
+    func dismissMenuViewController(withCompletion completion: (() -> ())?)
+    func presentMenuViewController()
+    func setConnectViewController()
+    func setDevicesViewController()
+    func setLoginViewController()
+    func setRegisterViewController()
+    func setUsersViewController()
+}
+
+class AppContainerViewController: ContainerViewController, AppContainerAssistantable {
+    
+    private var appContainer: AppContainerViewController?
+    
+    static var shared = AppContainerViewController()
     
     //MARK: - Class Methods
-    
-    class func dismissMenuViewController(withCompletion completion: (() -> ())? = nil) {
-        SideMenuManager.menuLeftNavigationController?.dismiss(animated: true, completion: completion)
-    }
-    
-    class func presentMenuViewController() {
-        appContainer?.present(SideMenuManager.menuLeftNavigationController!, animated: true)
-    }
-    
-    class func setConnectViewController() {
-        loadControllerIntoContainer(controller: UIStoryboard(name: "Connect", bundle: nil).instantiateInitialViewController())
-    }
-    
-    class func setLoginViewController() {
-        loadControllerIntoContainer(controller: UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController())
-    }
-    
-    class func setDevicesViewController() {
-        loadControllerIntoContainer(controller: UIStoryboard(name: "Device", bundle: nil).instantiateInitialViewController())
-    }
-    
-    class func setRegisterViewController() {
-        loadControllerIntoContainer(controller: UIStoryboard(name: "Register", bundle: nil).instantiateInitialViewController())
-    }
-    
-    class func setUsersViewController() {
-        loadControllerIntoContainer(controller: UIStoryboard(name: "Users", bundle: nil).instantiateInitialViewController())
-    }
     
     //MARK: - Initialization
     
@@ -54,9 +40,9 @@ class AppContainerViewController: ContainerViewController {
         SideMenuManager.menuLeftNavigationController = piHomeNavigationController
         SideMenuManager.menuWidth = 260
         
-        AppContainerViewController.appContainer = self
+        appContainer = self
         
-        UserDefaults.standard.string(forKey: NetworkAssistantUrl) != nil ? AppContainerViewController.setLoginViewController() : AppContainerViewController.setConnectViewController()
+        UserDefaults.standard.string(forKey: NetworkAssistantUrl) != nil ? setLoginViewController() : setConnectViewController()
     }
     
     //MARK: - Deinitialization
@@ -67,9 +53,41 @@ class AppContainerViewController: ContainerViewController {
     
     //MARK: - Internal
     
+    func dismissMenuViewController() {
+        SideMenuManager.menuLeftNavigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func dismissMenuViewController(withCompletion completion: (() -> ())?) {
+        SideMenuManager.menuLeftNavigationController?.dismiss(animated: true, completion: completion)
+    }
+    
+    func presentMenuViewController() {
+        appContainer?.present(SideMenuManager.menuLeftNavigationController!, animated: true)
+    }
+    
+    func setConnectViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Connect", bundle: nil).instantiateInitialViewController())
+    }
+    
+    func setDevicesViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Device", bundle: nil).instantiateInitialViewController())
+    }
+    
+    func setLoginViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController())
+    }
+    
+    func setRegisterViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Register", bundle: nil).instantiateInitialViewController())
+    }
+    
+    func setUsersViewController() {
+        loadControllerIntoContainer(controller: UIStoryboard(name: "Users", bundle: nil).instantiateInitialViewController())
+    }
+    
     //MARK: - Private
     
-    class private func loadControllerIntoContainer(controller: UIViewController?) {
+    private func loadControllerIntoContainer(controller: UIViewController?) {
         
         if let controller = controller, let appContainer = appContainer {
             

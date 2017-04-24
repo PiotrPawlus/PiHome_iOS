@@ -33,7 +33,7 @@ class CoreDataAssistatntUserTests: CoreDataTestCase {
         CoreDataAssistant.logOut(nil) { error in
             
             XCTAssertNotNil(error)
-            XCTAssertNil(Settings.currentUser)
+            XCTAssertNil(Settings.shared.currentUser)
         }
     }
     

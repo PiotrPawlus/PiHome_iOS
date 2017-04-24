@@ -78,6 +78,8 @@
 		C1735A481E0D681700944760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A461E0D681700944760 /* LaunchScreen.storyboard */; };
 		C1735A5E1E0D681700944760 /* PiHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1735A5D1E0D681700944760 /* PiHomeUITests.swift */; };
 		C1735A741E0D6C0100944760 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1735A721E0D6C0100944760 /* Login.storyboard */; };
+		C1A27D6E1EADD16B009A7060 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A27D6D1EADD16B009A7060 /* MenuViewModel.swift */; };
+		C1A27D731EADE8A9009A7060 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A27D721EADE8A9009A7060 /* MenuViewModelTests.swift */; };
 		C1B5E34D1E1FDD6B00F043CE /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5E34B1E1FDD6B00F043CE /* Users.storyboard */; };
 		C1D82FA91E197E57007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
 		C1D82FAA1E197E59007379CA /* Icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1D82FA81E197E53007379CA /* Icomoon.ttf */; };
@@ -200,6 +202,8 @@
 		C1735A5D1E0D681700944760 /* PiHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHomeUITests.swift; sourceTree = "<group>"; };
 		C1735A5F1E0D681700944760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1735A731E0D6C0100944760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C1A27D6D1EADD16B009A7060 /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		C1A27D721EADE8A9009A7060 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
 		C1B5E34C1E1FDD6B00F043CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Users.storyboard; sourceTree = "<group>"; };
 		C1D82FA81E197E53007379CA /* Icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icomoon.ttf; sourceTree = "<group>"; };
 		C1D82FAC1E197ECE007379CA /* AttributedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedNavigationBar.swift; sourceTree = "<group>"; };
@@ -453,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				C12CE9991E16D9520070EF53 /* CoreDataTestCase.swift */,
+				C1A27D6F1EADE803009A7060 /* Controllers */,
 				C12CE95C1E12CBBA0070EF53 /* Extensions */,
 				C12CE9751E16CFA60070EF53 /* Models */,
 				C1E9BB3F1E0DE91B009A59E1 /* Views */,
@@ -565,6 +570,22 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		C1A27D6F1EADE803009A7060 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1A27D701EADE817009A7060 /* Menu */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C1A27D701EADE817009A7060 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C1A27D721EADE8A9009A7060 /* MenuViewModelTests.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		C1B5E34E1E1FE2F100F043CE /* Users */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +617,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E9BB2F1E0DBC28009A59E1 /* MenuViewController.swift */,
+				C1A27D6D1EADD16B009A7060 /* MenuViewModel.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -977,6 +999,7 @@
 				C12CE9701E16C9830070EF53 /* String+Extension.swift in Sources */,
 				C12CE96A1E12D35C0070EF53 /* DevicesViewController.swift in Sources */,
 				C1D82FB11E1AB937007379CA /* NetworkAssistant+Server.swift in Sources */,
+				C1A27D6E1EADD16B009A7060 /* MenuViewModel.swift in Sources */,
 				C1735A431E0D681700944760 /* PiHome.xcdatamodeld in Sources */,
 				C113A4AA1E4320CA00290509 /* DeviceButtonTableViewCell.swift in Sources */,
 				C12CE9861E16D1AB0070EF53 /* NetworkAssistantRequestSerializer.swift in Sources */,
@@ -1052,6 +1075,7 @@
 				C12CE9A81E16E3970070EF53 /* NetworkAssistantUserTests.swift in Sources */,
 				C12CE9641E12D0010070EF53 /* UIColorExtensionTests.swift in Sources */,
 				C13CE79E1E20F6FA00F6D8FF /* CoreDataAssistantDeviceTests.swift in Sources */,
+				C1A27D731EADE8A9009A7060 /* MenuViewModelTests.swift in Sources */,
 				C12CE99C1E16DB190070EF53 /* UserTests.swift in Sources */,
 				C1D82FB31E1ABA7C007379CA /* NetworkAssistantServerTests.swift in Sources */,
 			);

@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Actions
     
     @IBAction func backBarButtonTapped(_ sender: UIBarButtonItem) {
-        AppContainerViewController.setLoginViewController()
+        AppContainerViewController.shared.setLoginViewController()
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
@@ -112,10 +112,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 _ = Keychain.save(self.emailTextField.text!, forKey: EmailPiHomeKeychain)
                 _ = Keychain.save(self.passwordTextField.text!, forKey: PasswordPiHomeKeychain)
                 
-                Settings.currentUser = user
+                Settings.shared.currentUser = user
                 
                 UIAlertController.show(from: Error(error: Error.Name.unauthorized))
-                AppContainerViewController.setLoginViewController()
+                AppContainerViewController.shared.setLoginViewController()
             }
         }
     }

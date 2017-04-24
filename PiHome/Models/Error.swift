@@ -77,7 +77,7 @@ open class Error: Swift.Error {
     
     init?(error: Swift.Error?) {
         
-        guard let error = error as? NSError else {
+        guard let error = error as NSError? else {
             return nil
         }
         

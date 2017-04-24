@@ -54,8 +54,8 @@ extension CoreDataAssistant {
 
                 for dictionary in dictionaries {
                     
-                    if let identifier = dictionary["id"] as? Int, Int64(identifier) != Settings.currentUser?.identifier {
-                        User.createOrUpdate(with: dictionary, in: context).user = Settings.currentUser?.mr_(in: context)
+                    if let identifier = dictionary["id"] as? Int, Int64(identifier) != Settings.shared.currentUser?.identifier {
+                        User.createOrUpdate(with: dictionary, in: context).user = Settings.shared.currentUser?.mr_(in: context)
                     }
                 }
                 

@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         _ = Keychain.delete(EmailPiHomeKeychain)
         _ = Keychain.delete(PasswordPiHomeKeychain)
         
-        AppContainerViewController.setConnectViewController()
+        AppContainerViewController.shared.setConnectViewController()
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
@@ -54,7 +54,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
-        AppContainerViewController.setRegisterViewController()
+        AppContainerViewController.shared.setRegisterViewController()
     }
     
     //MARK: - Public
@@ -87,9 +87,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 _ = Keychain.save(self.emailTextField.text!, forKey: EmailPiHomeKeychain)
                 _ = Keychain.save(self.passwordTextField.text!, forKey: PasswordPiHomeKeychain)
                 
-                Settings.currentUser = user
+                Settings.shared.currentUser = user
                 
-                AppContainerViewController.setDevicesViewController()
+                AppContainerViewController.shared.setDevicesViewController()
             }
         }
     }
@@ -126,7 +126,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if !Settings.isUserLoggedIn {
+        if !Settings.shared.isUserLoggedIn {
          
             UserLocalAuthentication.authenticate {
                 self.login(withEmail: email, password: password)

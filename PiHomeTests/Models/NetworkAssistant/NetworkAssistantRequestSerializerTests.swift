@@ -33,7 +33,7 @@ class NetworkAssistantRequestSerializerTests: CoreDataTestCase {
     
     func testRequestBySerializingRequestHeaders() {
         
-        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        Settings.shared.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
         
         let requestSerializer = NetworkAssistantRequestSerializer()
         let urlRequest = URLRequest(url: URL(string: "www.domain.com")!)

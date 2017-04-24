@@ -10,29 +10,25 @@ let CurrentUserIdentifierKey = "CurrentUserIdentifierKey"
 let EmailPiHomeKeychain = "EmailPiHomeKeychain"
 let PasswordPiHomeKeychain = "PasswordPiHomeKeychain"
 
-class Settings {
+protocol Settingsable {
     
-    static var currentUser: User?
+    var isUserLoggedIn: Bool { get }
+    var currentUser: User? { get set }
     
-    static var isUserLoggedIn: Bool {
+    func logoutUser()
+}
+
+class Settings: Settingsable {
+    
+    static var shared = Settings()
+    
+    var currentUser: User?
+    
+    var isUserLoggedIn: Bool {
         return currentUser != nil
     }
     
     //MARK: - Class Methods
-    
-    class func logoutUser() {
-        
-        CoreDataAssistant.logOut(currentUser) { error in
-            
-            UIAlertController.show(from: error)
-            
-            if error == nil {
-                
-                currentUser = nil
-                AppContainerViewController.setLoginViewController()
-            }
-        }
-    }
     
     //MARK: - Initailization
     
@@ -43,6 +39,20 @@ class Settings {
     //MARK: - Public
     
     //MARK: - Internal
+    
+    func logoutUser() {
+        
+        CoreDataAssistant.logOut(currentUser) { error in
+            
+            UIAlertController.show(from: error)
+            
+            if error == nil {
+                
+                self.currentUser = nil
+                AppContainerViewController.shared.setLoginViewController()
+            }
+        }
+    }
     
     //MARK: - Private
     

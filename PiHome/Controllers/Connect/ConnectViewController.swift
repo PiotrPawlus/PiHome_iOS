@@ -44,7 +44,7 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
         NetworkAssistant.shared(forAddress: address).connect(toAddress: address) { error in
             
             SVProgressHUD.dismiss()
-            error == nil ? AppContainerViewController.setLoginViewController() : UIAlertController.show(from: error)
+            error == nil ? AppContainerViewController.shared.setLoginViewController() : UIAlertController.show(from: error)
         }
     }
     

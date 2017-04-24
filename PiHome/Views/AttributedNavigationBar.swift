@@ -15,14 +15,7 @@
         }
     }
     
-    @IBInspectable var fontSize: CGFloat = 18 {
-        
-        didSet {
-            
-            self.icomoonLeftBarButtonItems = (icomoonLeftBarButtonItems)
-            self.icomoonRightBarButtonItems = (icomoonRightBarButtonItems)
-        }
-    }
+    @IBInspectable var fontSize: CGFloat = 18
     
     @IBInspectable var icomoonLeftBarButtonItems: Bool = false {
         

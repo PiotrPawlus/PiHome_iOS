@@ -10,10 +10,12 @@ private let DevicesRestorationIdentifier = "DevicesRestorationIdentifier"
 private let LogoutRestorationIdentifier = "LogoutRestorationIdentifier"
 private let UsersRestorationIdentifier = "UsersRestorationIdentifier"
 
-class MenuViewController: UITableViewController {
+class MenuViewController: UITableViewController, MenuViewModelOutput {
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
+    
+    private var eventHandler: MenuViewModel!
     
     //MARK: - Class Methods
     
@@ -22,8 +24,8 @@ class MenuViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        userNameLabel.text = Settings.currentUser?.fullName
-        userEmailLabel.text = Settings.currentUser?.email
+        eventHandler = MenuViewModel(userInterface: self, appContainer: AppContainerViewController.shared, settings: Settings.shared)
+        eventHandler.prepareView()
     }
     
     //MARK: - Deinitialization
@@ -41,33 +43,19 @@ class MenuViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let restorationIdentifier = tableView.cellForRow(at: indexPath)?.restorationIdentifier {
-
-            if case DevicesRestorationIdentifier = restorationIdentifier {
-                
-                AppContainerViewController.setDevicesViewController()
-                
-            } else if case UsersRestorationIdentifier = restorationIdentifier {
-                
-                AppContainerViewController.setUsersViewController()
-                
-            } else if case LogoutRestorationIdentifier = restorationIdentifier {
-                
-                Settings.logoutUser()
-            }
-            
-            AppContainerViewController.dismissMenuViewController()
+            eventHandler.matchController(forRestorationIdentfier: restorationIdentifier)
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return eventHandler.heightForRow(at: indexPath)
+    }
     
-        if indexPath.section == 1 && indexPath.row == 0 {
-            
-            if let user = Settings.currentUser {
-                return user.administrator ? 50 : 0
-            }
-        }
+    //MARK: - MenuViewModelOutput
+    
+    func update(withUserName userName: String, email: String) {
         
-        return 50
+        userNameLabel.text = userName
+        userEmailLabel.text = email
     }
 }

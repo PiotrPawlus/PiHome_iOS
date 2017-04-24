@@ -24,11 +24,11 @@ extension UIAlertController {
             
             if error.code == 401 {
                 
-                Settings.logoutUser()
+                Settings.shared.logoutUser()
                 AppContainerViewController.dismissModalControllers()
                 
                 if dismiss {
-                    AppContainerViewController.setLoginViewController()
+                    AppContainerViewController.shared.setLoginViewController()
                 }
             }
             

@@ -15,7 +15,7 @@ class NetworkAssistantDeviceTests: CoreDataTestCase {
         
         let expectation = self.expectation(description: "")
         
-        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        Settings.shared.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
         let device = Device.createOrUpdate(with: MockResponse.mockDictionaryForDevice(), in: MagicalRecord.context)
         
         MockNetworkAssistant().changeState(of: device) { error in
@@ -62,7 +62,7 @@ class NetworkAssistantDeviceTests: CoreDataTestCase {
         
         let expectation = self.expectation(description: "")
         
-        Settings.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
+        Settings.shared.currentUser = User.createOrUpdate(with: MockResponse.mockDictionaryForUser(), in: MagicalRecord.context)
         
         MockNetworkAssistant().devices { error in
             

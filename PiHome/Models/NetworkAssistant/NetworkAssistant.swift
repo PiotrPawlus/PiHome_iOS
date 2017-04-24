@@ -71,15 +71,15 @@ class NetworkAssistant: AFHTTPSessionManager {
         
         return super.delete(URLString, parameters: parameters, success: { sessionDataTask, response in
             
-            print("DELETE \(sessionDataTask.originalRequest?.url)")
-            print("DELETE \(response)")
+            print("DELETE " + String(describing: sessionDataTask.originalRequest?.url))
+            print("DELETE " + String(describing: response))
             
             success?(sessionDataTask, response)
             
         }, failure: { sessionDataTask, error in
             
-            print("DELETE \(sessionDataTask?.originalRequest?.url)")
-            print("DELETE \(sessionDataTask?.response)")
+            print("DELETE " + String(describing: sessionDataTask?.originalRequest?.url))
+            print("DELETE " + String(describing: sessionDataTask?.response))
             
             failure?(sessionDataTask, error)
         })
@@ -89,15 +89,15 @@ class NetworkAssistant: AFHTTPSessionManager {
         
         return super.get(URLString, parameters: parameters, progress: downloadProgress, success: { sessionDataTask, response in
             
-            print("GET \(sessionDataTask.originalRequest?.url)")
-            print("GET \(response)")
+            print("GET " + String(describing: sessionDataTask.originalRequest?.url))
+            print("GET " + String(describing: response))
             
             success?(sessionDataTask, response)
             
         }, failure: { sessionDataTask, error in
             
-            print("GET \(sessionDataTask?.originalRequest?.url)")
-            print("GET \(sessionDataTask?.response)")
+            print("GET " + String(describing: sessionDataTask?.originalRequest?.url))
+            print("GET " + String(describing: sessionDataTask?.response))
             
             failure?(sessionDataTask, error)
         })
@@ -107,15 +107,16 @@ class NetworkAssistant: AFHTTPSessionManager {
         
         return super.post(URLString, parameters: parameters, progress: uploadProgress, success: { sessionDataTask, response in
             
-            print("POST \(sessionDataTask.originalRequest?.url)")
-            print("POST \(response)")
+            print("POST " + String(describing: sessionDataTask.originalRequest?.url))
+            print("POST " + String(describing: response))
             
             success?(sessionDataTask, response)
             
         }, failure: { sessionDataTask, error in
             
-            print("POST \(sessionDataTask?.originalRequest?.url)")
-            print("POST \(sessionDataTask?.response)")
+            
+            print("POST " + String(describing: sessionDataTask?.originalRequest?.url))
+            print("POST " + String(describing: sessionDataTask?.response))
             
             failure?(sessionDataTask, error)
         })
