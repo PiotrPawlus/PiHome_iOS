@@ -1,4 +1,4 @@
-# Apikacja na platformę iOS
+# Apikacja na platformę iOS 
 
 **Aplikacja mobilna na platformę iOS do obsługi systemu inteligentnego domu zbudowanego na platformie Raspberry Pi**
 **(ang. Smart home mobile application for iOS based devices, with support for Raspberry Pi devices)**
